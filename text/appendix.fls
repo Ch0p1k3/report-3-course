@@ -1,0 +1,9 @@
+PWD /home/chop/Documents/template_report/text
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/chop/Documents/template_report/text/appendix.tex
+OUTPUT /home/chop/Documents/template_report/text/appendix.log
+OUTPUT /home/chop/Documents/template_report/text/appendix.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map

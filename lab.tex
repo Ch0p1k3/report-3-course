@@ -1,0 +1,36 @@
+%\PassOptionsToPackage{pdftex}{graphicx}
+\documentclass[a4paper,hidelinks,12pt]{extarticle}
+
+\input{sys/packages}        % Подключаемые пакеты
+\input{sys/styles}	    % Пользовательские стили
+
+% Generate the glossary
+\makeglossaries%Term definitions
+
+\addbibresource{papers.bib} % источники
+ 
+\begin{document}
+
+\input{sys/names}	   % Переопределение именований
+
+\input{text/title}	           % Титульный лист
+\setcounter{page}{2}
+
+
+\tableofcontents
+\newpage
+
+\pagestyle{jopa}
+\input{text/abstract}	
+\input{text/formulation}	
+\input{text/significance}             % Введение
+\input{text/theory}          % Обзор источников
+\input{text/main}            % Основная часть
+\input{text/conclusion}    % Заключение
+
+\printbibliography[heading=bibintoc]
+\newpage
+
+% \input{text/appendix}     % Приложения
+
+\end{document}

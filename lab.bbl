@@ -1,0 +1,128 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{ramamurthy2020blockchain}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fa81091bc80aaa40687a306be85471b6}{%
+           family={Ramamurthy},
+           familyi={R\bibinitperiod},
+           given={Bina},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {S.l}%
+      }
+      \list{publisher}{1}{%
+        {Manning Publications}%
+      }
+      \strng{namehash}{fa81091bc80aaa40687a306be85471b6}
+      \strng{fullhash}{fa81091bc80aaa40687a306be85471b6}
+      \strng{bibnamehash}{fa81091bc80aaa40687a306be85471b6}
+      \strng{authorbibnamehash}{fa81091bc80aaa40687a306be85471b6}
+      \strng{authornamehash}{fa81091bc80aaa40687a306be85471b6}
+      \strng{authorfullhash}{fa81091bc80aaa40687a306be85471b6}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781617296338}
+      \field{title}{Blockchain in Action}
+      \field{year}{2020}
+    \endentry
+    \entry{docsnear}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
+           family={Protocol},
+           familyi={P\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NEAR DOCS}
+      \verb{urlraw}
+      \verb https://docs.near.org/
+      \endverb
+      \verb{url}
+      \verb https://docs.near.org/
+      \endverb
+    \endentry
+    \entry{nearspec}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
+           family={Protocol},
+           familyi={P\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://nomicon.io/} and \url{https://nomicon.io/README.html}}
+      \field{title}{NEAR Protocol Specification}
+    \endentry
+    \entry{solanadoc}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=fcdd8b9b48156f3d0530a3bc5bd1ef12}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={Solana},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \strng{fullhash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \strng{bibnamehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \strng{authorbibnamehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \strng{authornamehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \strng{authorfullhash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SOLANA DOCUMENTATION}
+      \verb{urlraw}
+      \verb https://docs.solana.com/
+      \endverb
+      \verb{url}
+      \verb https://docs.solana.com/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,27 @@
+\babel@toc {russian}{}
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {russian}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{ Аннотация}{3}{Doc-Start}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{ Постановка задачи}{3}{Doc-Start}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{ Актуальность и значимость}{5}{Doc-Start}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{ Существующие работы и решения}{6}{figure.caption.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{ Предлагаемые подходы и методы }{7}{figure.caption.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{ Аккаунт}{7}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{ Access Key}{8}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{ Хранение в блокчейне}{8}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{ Машинное обучение в маркетплейсе}{8}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{ Ожидаемые результаты}{9}{figure.caption.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{ План работ}{10}{figure.caption.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Список источников}{10}{figure.caption.3}%
