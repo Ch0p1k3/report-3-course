@@ -2179,24 +2179,33 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex">papers.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex">text/papers.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">ramamurthy2020blockchain</bcf:citekey>
-    <bcf:citekey order="2">ramamurthy2020blockchain</bcf:citekey>
-    <bcf:citekey order="3">docsnear</bcf:citekey>
+    <bcf:citekey order="1">nearprotocol_2022</bcf:citekey>
+    <bcf:citekey order="2">nakamoto2012bitcoin</bcf:citekey>
+    <bcf:citekey order="3">ramamurthy2020blockchain</bcf:citekey>
     <bcf:citekey order="4">ramamurthy2020blockchain</bcf:citekey>
-    <bcf:citekey order="4">docsnear</bcf:citekey>
-    <bcf:citekey order="5">docsnear</bcf:citekey>
-    <bcf:citekey order="6">docsnear</bcf:citekey>
-    <bcf:citekey order="6">nearspec</bcf:citekey>
-    <bcf:citekey order="7">ramamurthy2020blockchain</bcf:citekey>
-    <bcf:citekey order="8">ramamurthy2020blockchain</bcf:citekey>
-    <bcf:citekey order="8">solanadoc</bcf:citekey>
-    <bcf:citekey order="9">nearspec</bcf:citekey>
-    <bcf:citekey order="10">nearspec</bcf:citekey>
+    <bcf:citekey order="5">solanaprogramlibrarydocs</bcf:citekey>
+    <bcf:citekey order="6">neardocumentationtransaction</bcf:citekey>
+    <bcf:citekey order="7">nearsdkrs</bcf:citekey>
+    <bcf:citekey order="8">nearsdkas</bcf:citekey>
+    <bcf:citekey order="9">ramamurthy2020blockchain</bcf:citekey>
+    <bcf:citekey order="9">docsnear</bcf:citekey>
+    <bcf:citekey order="10">docsnear</bcf:citekey>
     <bcf:citekey order="11">docsnear</bcf:citekey>
-    <bcf:citekey order="12">docsnear</bcf:citekey>
+    <bcf:citekey order="11">nearspec</bcf:citekey>
+    <bcf:citekey order="12">nearclasskeystore</bcf:citekey>
+    <bcf:citekey order="13">redis</bcf:citekey>
+    <bcf:citekey order="14">nearwallet</bcf:citekey>
+    <bcf:citekey order="15">nearclasstransaction</bcf:citekey>
+    <bcf:citekey order="16">nearclassaction</bcf:citekey>
+    <bcf:citekey order="17">discordjsslashcommands</bcf:citekey>
+    <bcf:citekey order="18">discordtscontextmenu</bcf:citekey>
+    <bcf:citekey order="19">nearspec</bcf:citekey>
+    <bcf:citekey order="20">nearspec</bcf:citekey>
+    <bcf:citekey order="21">docsnear</bcf:citekey>
+    <bcf:citekey order="22">docsnear</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

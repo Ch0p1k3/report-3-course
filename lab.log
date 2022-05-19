@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.1.20)  30 JAN 2022 11:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  19 MAY 2022 11:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/chop/Documents/template_report/lab.tex
-(/home/chop/Documents/template_report/lab.tex
+**/mnt/d/edu/report-3-course/lab.tex
+(/mnt/d/edu/report-3-course/lab.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/extsizes/size14.clo
+File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/exscale.sty
 Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
@@ -30,7 +30,7 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen135
-) (/home/chop/Documents/template_report/sys/packages.tex (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+) (/mnt/d/edu/report-3-course/sys/packages.tex (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2019/11/07 v1.0c TeX engine tests
@@ -77,17 +77,8 @@ Package: extsizes 1996/10/08 v1.0 Non Standard LaTeX Package
 Package ExtSizes Warning: It is better to use one of the extsizes classes,
  if you can.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
-LaTeX Info: The control sequence `\normalsize' is already robust on input line 56.
-LaTeX Info: Redefining \small on input line 58.
-LaTeX Info: Redefining \footnotesize on input line 69.
-LaTeX Info: Redefining \scriptsize on input line 80.
-LaTeX Info: Redefining \tiny on input line 81.
-LaTeX Info: Redefining \large on input line 82.
-LaTeX Info: Redefining \Large on input line 83.
-LaTeX Info: Redefining \LARGE on input line 84.
-LaTeX Info: Redefining \huge on input line 85.
+(/usr/share/texlive/texmf-dist/tex/latex/extsizes/size14.clo
+File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
 )) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box45
@@ -447,12 +438,16 @@ File: babel.def 2020/02/14 3.40 Babel common definitions
 \bbl@readstream=\read2
 \bbl@dirlevel=\count188
 )
+Package babel Info: \l@british = using hyphenrules for english
+(babel)             (\language0) on input line 82.
+Package babel Info: \l@UKenglish = using hyphenrules for english
+(babel)             (\language0) on input line 83.
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
-Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language67) on input line 105.
-Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language67) on input line 108.
+Package babel Info: \l@australian = using hyphenrules for english
+(babel)             (\language0) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for english
+(babel)             (\language0) on input line 108.
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel-russian/russianb.ldf
 Language: russian 2017/08/12 1.3j Russian support for the Babel system
 Package babel Info: Making " an active character on input line 120.
@@ -1830,7 +1825,7 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \bibhang=\skip134
 \blx@bcfin=\read3
 \blx@bcfout=\write3
-\blx@langwohyphens=\language85
+\blx@langwohyphens=\language16
 \c@mincomprange=\count358
 \c@maxcomprange=\count359
 \c@mincompwidth=\count360
@@ -2010,9 +2005,6 @@ File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4421.
-Package hyperref Info: Option `plainpages' set `false' on input line 4421.
-Package hyperref Info: Option `pdfpagelabels' set `false' on input line 4421.
 Package hyperref Info: Hyper figures OFF on input line 4547.
 Package hyperref Info: Link nesting OFF on input line 4552.
 Package hyperref Info: Hyper index ON on input line 4555.
@@ -2040,41 +2032,43 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6455.
 Package hyperref Info: PDF/A mode OFF on input line 6460.
 LaTeX Info: Redefining \ref on input line 6500.
 LaTeX Info: Redefining \pageref on input line 6504.
-\c@Item=\count446
-\c@Hfootnote=\count447
+\Hy@abspage=\count446
+\c@Item=\count447
+\c@Hfootnote=\count448
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
-\Fld@listcount=\count448
-\c@bookmark@seq@number=\count449
- (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
-Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
-) (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+)
+\Fld@listcount=\count449
+\c@bookmark@seq@number=\count450
+ (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip149
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count450
+\lst@mode=\count451
 \lst@gtempboxa=\box104
 \lst@token=\toks56
-\lst@length=\count451
+\lst@length=\count452
 \lst@currlwidth=\dimen273
-\lst@column=\count452
-\lst@pos=\count453
+\lst@column=\count453
+\lst@pos=\count454
 \lst@lostspace=\dimen274
 \lst@width=\dimen275
-\lst@newlines=\count454
-\lst@lineno=\count455
+\lst@newlines=\count455
+\lst@lineno=\count456
 \lst@maxwidth=\dimen276
  (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count456
-\lst@skipnumbers=\count457
+\c@lstnumber=\count457
+\lst@skipnumbers=\count458
 \lst@framebox=\box105
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/09/10 1.8c listings configuration
@@ -2112,14 +2106,14 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@yd=\dimen288
 \w@pgf@writea=\write4
 \r@pgf@reada=\read4
-\c@pgf@counta=\count458
-\c@pgf@countb=\count459
-\c@pgf@countc=\count460
-\c@pgf@countd=\count461
+\c@pgf@counta=\count459
+\c@pgf@countb=\count460
+\c@pgf@countc=\count461
+\c@pgf@countd=\count462
 \t@pgf@toka=\toks61
 \t@pgf@tokb=\toks62
 \t@pgf@tokc=\toks63
-\pgf@sys@id@count=\count462
+\pgf@sys@id@count=\count463
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -2130,21 +2124,21 @@ File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
 File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 ))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count463
-\pgfsyssoftpath@bigbuffer@items=\count464
+\pgfsyssoftpath@smallbuffer@items=\count464
+\pgfsyssoftpath@bigbuffer@items=\count465
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen289
-\pgfmath@count=\count465
+\pgfmath@count=\count466
 \pgfmath@box=\box107
 \pgfmath@toks=\toks64
 \pgfmath@stack@operand=\toks65
 \pgfmath@stack@operation=\toks66
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count466
+\c@pgfmathroundto@lastzeros=\count467
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@picminx=\dimen290
@@ -2174,7 +2168,7 @@ File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfpic=\box108
 \pgf@hbox=\box109
 \pgf@layerbox@main=\box110
-\pgf@picture@serial@count=\count467
+\pgf@picture@serial@count=\count468
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgflinewidth=\dimen308
@@ -2195,8 +2189,8 @@ File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@max=\dimen313
-\pgf@sys@shading@range@num=\count468
-\pgf@shadingcount=\count469
+\pgf@sys@shading@range@num=\count469
+\pgf@shadingcount=\count470
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
@@ -2232,7 +2226,7 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count470
+\pgf@plot@mark@count=\count471
 \pgfplotmarksize=\dimen318
 )
 \tikz@lastx=\dimen319
@@ -2247,17 +2241,17 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@figbox@bg=\box114
 \tikz@tempbox=\box115
 \tikz@tempbox@bg=\box116
-\tikztreelevel=\count471
-\tikznumberofchildren=\count472
-\tikznumberofcurrentchild=\count473
-\tikz@fig@count=\count474
+\tikztreelevel=\count472
+\tikznumberofchildren=\count473
+\tikznumberofcurrentchild=\count474
+\tikz@fig@count=\count475
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count475
-\pgfmatrixcurrentcolumn=\count476
-\pgf@matrix@numberofcolumns=\count477
+\pgfmatrixcurrentrow=\count476
+\pgfmatrixcurrentcolumn=\count477
+\pgf@matrix@numberofcolumns=\count478
 )
-\tikz@expandcount=\count478
+\tikz@expandcount=\count479
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/datetime2/datetime2.sty
@@ -2300,37 +2294,37 @@ File: pgflibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfcalendar.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfcalendar.code.tex
 File: pgfcalendar.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-\pgfcalendarcurrentjulian=\count479
-\pgf@cal@easter@Y=\count480
-\pgf@cal@easter@G=\count481
-\pgf@cal@easter@C=\count482
-\pgf@cal@easter@X=\count483
-\pgf@cal@easter@Z=\count484
-\pgf@cal@easter@D=\count485
-\pgf@cal@easter@E=\count486
-\pgf@cal@easter@N=\count487
-\pgf@cal@easter@M=\count488
-\pgf@cal@easter@julianday=\count489
+\pgfcalendarcurrentjulian=\count480
+\pgf@cal@easter@Y=\count481
+\pgf@cal@easter@G=\count482
+\pgf@cal@easter@C=\count483
+\pgf@cal@easter@X=\count484
+\pgf@cal@easter@Z=\count485
+\pgf@cal@easter@D=\count486
+\pgf@cal@easter@E=\count487
+\pgf@cal@easter@N=\count488
+\pgf@cal@easter@M=\count489
+\pgf@cal@easter@julianday=\count490
 ))
-\gtt@currentline=\count490
-\gtt@lasttitleline=\count491
-\gtt@currgrid=\count492
-\gtt@chartwidth=\count493
-\gtt@lasttitleslot=\count494
-\gtt@elementid=\count495
-\gtt@today@slot=\count496
-\gtt@startjulian=\count497
-\gtt@endjulian=\count498
-\gtt@chartid=\count499
-\gtt@vrule@slot=\count500
-\gtt@calendar@slots=\count501
-\gtt@calendar@weeknumber=\count502
-\gtt@calendar@startofweek=\count503
-\gtt@left@slot=\count504
-\gtt@right@slot=\count505
-) (/home/chop/Documents/template_report/sys/styles.tex
-\c@reflisti=\count506
-\enitdp@reflist=\count507
+\gtt@currentline=\count491
+\gtt@lasttitleline=\count492
+\gtt@currgrid=\count493
+\gtt@chartwidth=\count494
+\gtt@lasttitleslot=\count495
+\gtt@elementid=\count496
+\gtt@today@slot=\count497
+\gtt@startjulian=\count498
+\gtt@endjulian=\count499
+\gtt@chartid=\count500
+\gtt@vrule@slot=\count501
+\gtt@calendar@slots=\count502
+\gtt@calendar@weeknumber=\count503
+\gtt@calendar@startofweek=\count504
+\gtt@left@slot=\count505
+\gtt@right@slot=\count506
+) (/mnt/d/edu/report-3-course/sys/styles.tex
+\c@reflisti=\count507
+\enitdp@reflist=\count508
 )
 \glswrite=\write5
 \glo@main@file=\write6
@@ -2342,13 +2336,13 @@ Package glossaries Info: Writing glossary file lab.glo on input line 8.
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count508
-\@quotereset=\count509
+\@quotelevel=\count509
+\@quotereset=\count510
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count510
+\l__kernel_color_stack_int=\count511
 \l__pdf_internal_box=\box119
-) (/home/chop/Documents/template_report/lab.aux)
+) (/mnt/d/edu/report-3-course/lab.aux)
 \openout1 = `lab.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -2400,16 +2394,16 @@ LaTeX Font Info:    Trying to load font information for T2A+ftm on input line 12
 File: t2aftm.fd 2004/10/14 Fontinst v1.914 font definitions for T2A/ftm.
 ) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count511
+\scratchcounter=\count512
 \scratchdimen=\dimen328
 \scratchbox=\box120
-\nofMPsegments=\count512
-\nofMParguments=\count513
+\nofMPsegments=\count513
+\nofMParguments=\count514
 \everyMPshowfont=\toks69
-\MPscratchCnt=\count514
+\MPscratchCnt=\count515
 \MPscratchDim=\dimen329
-\MPnumerator=\count515
-\makeMPintoPDFobject=\count516
+\MPnumerator=\count516
+\makeMPintoPDFobject=\count517
 \everyMPtoPDFconversion=\toks70
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -2425,23 +2419,23 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 497.92325pt, 28.45274pt)
-* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* h-part:(L,W,R)=(71.13188pt, 483.69687pt, 42.67912pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=497.92325pt
-* \textheight=731.23584pt
+* \textwidth=483.69687pt
+* \textheight=759.6886pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-52.36449pt
-* \headheight=12.0pt
+* \topmargin=-68.59087pt
+* \headheight=14.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=14.0pt
 * \footskip=30.0pt
-* \marginparwidth=35.0pt
+* \marginparwidth=15.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=12.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -2452,8 +2446,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box121
-\c@mv@tabular=\count517
-\c@mv@boldtabular=\count518
+\c@mv@tabular=\count518
+\c@mv@boldtabular=\count519
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
@@ -2462,7 +2456,7 @@ Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-months-dictionary-English.dict
 Dictionary: translator-months-dictionary, Language: English 
-) (/home/chop/Documents/template_report/lab.glsdefs)
+) (/mnt/d/edu/report-3-course/lab.glsdefs)
 Package biblatex Info: Trying to load language 'russian'...
 Package biblatex Info: ... file 'russian.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/russian.lbx
@@ -2480,7 +2474,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'lab.bbl' found.
- (/home/chop/Documents/template_report/lab.bbl)
+ (/mnt/d/edu/report-3-course/lab.bbl)
 Package biblatex Info: Reference section=0 on input line 12.
 Package biblatex Info: Reference segment=0 on input line 12.
 Package hyperref Info: Link coloring OFF on input line 12.
@@ -2491,114 +2485,73 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count519
+\c@section@level=\count520
 )
 LaTeX Info: Redefining \ref on input line 12.
 LaTeX Info: Redefining \pageref on input line 12.
 LaTeX Info: Redefining \nameref on input line 12.
- (/home/chop/Documents/template_report/lab.out) (/home/chop/Documents/template_report/lab.out)
+ (/mnt/d/edu/report-3-course/lab.out) (/mnt/d/edu/report-3-course/lab.out)
 \@outlinefile=\write7
 \openout7 = `lab.out'.
 
-\c@lstlisting=\count520
- ABD: EveryShipout initializing macros (/home/chop/Documents/template_report/sys/names.tex) (/home/chop/Documents/template_report/text/title.tex
-LaTeX Font Info:    Font shape `T2A/ftm/b/n' in size <12> not available
+\c@lstlisting=\count521
+ ABD: EveryShipout initializing macros (/mnt/d/edu/report-3-course/sys/names.tex) (/mnt/d/edu/report-3-course/text/title.tex
+LaTeX Font Info:    Font shape `T2A/ftm/b/n' in size <14.4> not available
 (Font)              Font shape `T2A/ftm/bx/n' tried instead on input line 3.
-<<ot1.cmap>>
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 17.
-
-<<oml.cmap>>
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4> not available
-(Font)              size <5> substituted on input line 17.
-
-<<oms.cmap>>
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 17.
-
-<<omx.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+ [1
 
 \openout5 = `lab.ist'.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
-LaTeX Font Info:    Font shape `T2A/ftm/b/n' in size <14.4> not available
+LaTeX Font Info:    Font shape `T2A/ftm/b/n' in size <17.28> not available
 (Font)              Font shape `T2A/ftm/bx/n' tried instead on input line 20.
- (/home/chop/Documents/template_report/lab.toc
+ (/mnt/d/edu/report-3-course/lab.toc
 LaTeX Font Info:    Trying to load font information for T1+ftm on input line 1.
  (/usr/share/texmf/tex/latex/pscyr/t1ftm.fd
 File: t1ftm.fd 2004/03/23 Fontinst v1.914 font definitions for T1/ftm.
+)<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write8
 \openout8 = `lab.toc'.
 
- [2] (/home/chop/Documents/template_report/text/abstract.tex) (/home/chop/Documents/template_report/text/formulation.tex
-\@gls@deffile=\write9
-\openout9 = `lab.glsdefs'.
+ [2] (/mnt/d/edu/report-3-course/text/abstract.tex
+Underfull \hbox (badness 5711) in paragraph at lines 11--12
+[]\T2A/ftm/m/n/14.4 Блокчейн, near, smart-контракты, non-fungible token, генеративно-
+ []
 
+[3] [4]) (/mnt/d/edu/report-3-course/text/intro.tex [5]
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+[]\T2A/ftm/m/n/14.4 Изучить ос-но-вы ра-бо-ты с бра-у-зе-ром че-рез
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-[]\T2A/ftm/m/n/12 В DApps са-мой зна-чи-мой ча-стью ко-да яв-ля-ют-ся Smart-контракты. Ко-пии
+[6]) (/mnt/d/edu/report-3-course/text/theory.tex [7] [8]) (/mnt/d/edu/report-3-course/text/main.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+[]\T2A/ftm/m/n/14.4 Для про-ве-де-ния тран-зак-ций(исполнения Smart-контрактов) NEAR
  []
 
 
-Underfull \hbox (badness 2644) in paragraph at lines 13--14
-\T2A/ftm/m/n/12 Smart-контрактов раз-во-ра-чи-ва-ет-ся с по-мо-щью спе-ци-аль-ной тран-зак-ции на всех узлах-
+Underfull \hbox (badness 1546) in paragraph at lines 5--6
+\T2A/ftm/m/n/14.4 Так-же бы-ло при-ня-то ре-ше-ние, взять об-вяз-ку над этой биб-лио-те-кой -
  []
 
-[3]) (/home/chop/Documents/template_report/text/significance.tex [4]
-<fig/count_of_tr.png, id=122, 986.68625pt x 324.21124pt>
-File: fig/count_of_tr.png Graphic file (type png)
-<use fig/count_of_tr.png>
-Package pdftex.def Info: fig/count_of_tr.png  used on input line 16.
-(pdftex.def)             Requested size: 493.34192pt x 162.10522pt.
- [5 </home/chop/Documents/template_report/fig/count_of_tr.png>]) (/home/chop/Documents/template_report/text/theory.tex [6]) (/home/chop/Documents/template_report/text/main.tex
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 7.
 
-[7] [8]
-<fig/eth_near_cmp.png, id=177, 2455.1725pt x 1379.1525pt>
+[9] [10]
+<fig/eth_near_cmp.png, id=210, 2455.1725pt x 1379.1525pt>
 File: fig/eth_near_cmp.png Graphic file (type png)
 <use fig/eth_near_cmp.png>
 Package pdftex.def Info: fig/eth_near_cmp.png  used on input line 23.
 (pdftex.def)             Requested size: 368.26pt x 206.86395pt.
-) (/home/chop/Documents/template_report/text/conclusion.tex
-Overfull \hbox (5.75754pt too wide) in paragraph at lines 23--23
-[]|\T2A/ftm/m/n/12 ќ| 
- []
-
-
-Underfull \hbox (badness 1127) in paragraph at lines 27--27
-[]|\T2A/ftm/m/n/12 Добавление мо-ду-ля ав-то-ри-за-ции че-рез
- []
-
-
-Underfull \hbox (badness 1348) in paragraph at lines 29--29
-[]|\T2A/ftm/m/n/12 Добавление функ-ций по-куп-ки/-про-да-жи
- []
-
-)
-Overfull \hbox (7.72444pt too wide) in paragraph at lines 21--30
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--30
-
- []
-
-[9 </home/chop/Documents/template_report/fig/eth_near_cmp.png>] [10]
+) (/mnt/d/edu/report-3-course/text/conclusion.tex [11 </mnt/d/edu/report-3-course/fig/eth_near_cmp.png>]) (/mnt/d/edu/report-3-course/text/sources.tex) (/mnt/d/edu/report-3-course/text/appendix.tex)
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 60.
 See the caption package documentation for explanation.
@@ -2616,35 +2569,31 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
-(/home/chop/Documents/template_report/lab.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 36.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
+[12] [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
+ (/mnt/d/edu/report-3-course/lab.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
 Package rerunfilecheck Info: File `lab.out' has not changed.
-(rerunfilecheck)             Checksum: 14AB4AE4B1CBC628F16A294C0538BB96;2491.
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 3.0pt have occurred.
-
+(rerunfilecheck)             Checksum: 969E58E64B6E4CCC7EDC8E4C9B7FBB70;3410.
 Package logreq Info: Writing requests to 'lab.run.xml'.
 \openout1 = `lab.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45169 strings out of 481239
- 824652 string characters out of 5920377
- 1606938 words of memory out of 5000000
- 59486 multiletter control sequences out of 15000+600000
- 553368 words of font info for 63 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 67i,13n,108p,2570b,1892s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45202 strings out of 482584
+ 825776 string characters out of 5956256
+ 1603101 words of memory out of 5000000
+ 59285 multiletter control sequences out of 15000+600000
+ 548051 words of font info for 48 fonts, out of 8000000 for 9000
+ 475 hyphenation exceptions out of 8191
+ 67i,12n,108p,2560b,1892s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/pscyr/t2a.enc}</usr/share/texmf/fonts/type1/public/pscyr/times.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesbd.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesi.pfb>
-Output written on /home/chop/Documents/template_report/lab.pdf (10 pages, 241947 bytes).
+Output written on /mnt/d/edu/report-3-course/lab.pdf (13 pages, 211319 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 191 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 143 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 281 PDF objects out of 1000 (max. 8388607)
+ 252 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -19,6 +19,48 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{nearprotocol_2022}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NEAR Protocol}
+      \field{title}{NEAR Protocol}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://near.org/
+      \endverb
+      \verb{url}
+      \verb https://near.org/
+      \endverb
+    \endentry
+    \entry{nakamoto2012bitcoin}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1977190f018b398e43ede3de043de8ea}{%
+           family={Nakamoto},
+           familyi={N\bibinitperiod},
+           given={Satoshi},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1977190f018b398e43ede3de043de8ea}
+      \strng{fullhash}{1977190f018b398e43ede3de043de8ea}
+      \strng{bibnamehash}{1977190f018b398e43ede3de043de8ea}
+      \strng{authorbibnamehash}{1977190f018b398e43ede3de043de8ea}
+      \strng{authornamehash}{1977190f018b398e43ede3de043de8ea}
+      \strng{authorfullhash}{1977190f018b398e43ede3de043de8ea}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bitcoin: A peer-to-peer electronic cash system}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb http://www.bitcoin.org/bitcoin.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.bitcoin.org/bitcoin.pdf
+      \endverb
+      \keyw{imported}
+    \endentry
     \entry{ramamurthy2020blockchain}{book}{}
       \name{author}{1}{}{%
         {{hash=fa81091bc80aaa40687a306be85471b6}{%
@@ -39,13 +81,128 @@
       \strng{authorbibnamehash}{fa81091bc80aaa40687a306be85471b6}
       \strng{authornamehash}{fa81091bc80aaa40687a306be85471b6}
       \strng{authorfullhash}{fa81091bc80aaa40687a306be85471b6}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781617296338}
       \field{title}{Blockchain in Action}
       \field{year}{2020}
+    \endentry
+    \entry{solanaprogramlibrarydocs}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fcdd8b9b48156f3d0530a3bc5bd1ef12}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={Solana},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \strng{fullhash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \strng{bibnamehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \strng{authorbibnamehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \strng{authornamehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \strng{authorfullhash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Solana Program Library Docs}
+      \field{title}{Introduction}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://spl.solana.com/
+      \endverb
+      \verb{url}
+      \verb https://spl.solana.com/
+      \endverb
+    \endentry
+    \entry{neardocumentationtransaction}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
+           family={Protocol},
+           familyi={P\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NEAR Documentation}
+      \field{title}{Transaction}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://docs.near.org/docs/concepts/transaction
+      \endverb
+      \verb{url}
+      \verb https://docs.near.org/docs/concepts/transaction
+      \endverb
+    \endentry
+    \entry{nearsdkrs}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
+           family={Protocol},
+           familyi={P\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub}
+      \field{title}{Near/near-sdk-rs: Rust library for writing near Smart Contracts}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/near/near-sdk-rs
+      \endverb
+      \verb{url}
+      \verb https://github.com/near/near-sdk-rs
+      \endverb
+    \endentry
+    \entry{nearsdkas}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
+           family={Protocol},
+           familyi={P\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \field{extraname}{3}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub}
+      \field{title}{Near/near-sdk-as: AssemblyScript library for writing near Smart Contracts}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/near/near-sdk-as
+      \endverb
+      \verb{url}
+      \verb https://github.com/near/near-sdk-as
+      \endverb
     \endentry
     \entry{docsnear}{manual}{}
       \name{author}{1}{}{%
@@ -61,12 +218,13 @@
       \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
-      \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{extraname}{4}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{NEAR DOCS}
+      \field{year}{2022}
       \verb{urlraw}
       \verb https://docs.near.org/
       \endverb
@@ -88,38 +246,203 @@
       \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
-      \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{extraname}{5}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{\url{https://nomicon.io/} and \url{https://nomicon.io/README.html}}
       \field{title}{NEAR Protocol Specification}
+      \field{year}{2022}
     \endentry
-    \entry{solanadoc}{manual}{}
+    \entry{nearclasskeystore}{misc}{}
       \name{author}{1}{}{%
-        {{hash=fcdd8b9b48156f3d0530a3bc5bd1ef12}{%
-           family={Foundation},
-           familyi={F\bibinitperiod},
-           given={Solana},
-           giveni={S\bibinitperiod}}}%
+        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
+           family={Protocol},
+           familyi={P\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
       }
-      \strng{namehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
-      \strng{fullhash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
-      \strng{bibnamehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
-      \strng{authorbibnamehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
-      \strng{authornamehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
-      \strng{authorfullhash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \field{extraname}{6}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{SOLANA DOCUMENTATION}
+      \field{journaltitle}{near}
+      \field{title}{Class KeyStore}
+      \field{year}{2022}
       \verb{urlraw}
-      \verb https://docs.solana.com/
+      \verb https://near.github.io/near-api-js/classes/key_stores_keystore.keystore.html
       \endverb
       \verb{url}
-      \verb https://docs.solana.com/
+      \verb https://near.github.io/near-api-js/classes/key_stores_keystore.keystore.html
+      \endverb
+    \endentry
+    \entry{redis}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e94ca5fcb94b957425e893e7edd2a408}{%
+           family={Ltd},
+           familyi={L\bibinitperiod},
+           given={Redis},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e94ca5fcb94b957425e893e7edd2a408}
+      \strng{fullhash}{e94ca5fcb94b957425e893e7edd2a408}
+      \strng{bibnamehash}{e94ca5fcb94b957425e893e7edd2a408}
+      \strng{authorbibnamehash}{e94ca5fcb94b957425e893e7edd2a408}
+      \strng{authornamehash}{e94ca5fcb94b957425e893e7edd2a408}
+      \strng{authorfullhash}{e94ca5fcb94b957425e893e7edd2a408}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Redis}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://redis.io/
+      \endverb
+      \verb{url}
+      \verb https://redis.io/
+      \endverb
+    \endentry
+    \entry{nearwallet}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=056d094c53655f21d36231b9acf92098}{%
+           family={LTD},
+           familyi={L\bibinitperiod},
+           given={Roketo\bibnamedelima Labs},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{056d094c53655f21d36231b9acf92098}
+      \strng{fullhash}{056d094c53655f21d36231b9acf92098}
+      \strng{bibnamehash}{056d094c53655f21d36231b9acf92098}
+      \strng{authorbibnamehash}{056d094c53655f21d36231b9acf92098}
+      \strng{authornamehash}{056d094c53655f21d36231b9acf92098}
+      \strng{authorfullhash}{056d094c53655f21d36231b9acf92098}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NEAR Wallet}
+      \field{title}{Near wallet}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://wallet.near.org/
+      \endverb
+      \verb{url}
+      \verb https://wallet.near.org/
+      \endverb
+    \endentry
+    \entry{nearclasstransaction}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
+           family={Protocol},
+           familyi={P\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \field{extraname}{7}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{near}
+      \field{title}{Class transaction}
+      \verb{urlraw}
+      \verb https://near.github.io/near-api-js/classes/transaction.transaction-1.html
+      \endverb
+      \verb{url}
+      \verb https://near.github.io/near-api-js/classes/transaction.transaction-1.html
+      \endverb
+    \endentry
+    \entry{nearclassaction}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
+           family={Protocol},
+           familyi={P\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \field{extraname}{8}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{near}
+      \field{title}{Class action}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://near.github.io/near-api-js/classes/transaction.action.html
+      \endverb
+      \verb{url}
+      \verb https://near.github.io/near-api-js/classes/transaction.action.html
+      \endverb
+    \endentry
+    \entry{discordjsslashcommands}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1b127cd60f2ed4547c7a17bff9394ddd}{%
+           family={discord.js},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{fullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{bibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authorbibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authornamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authorfullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Slash commands | discord.js Guide}
+      \field{title}{Discord.js guide}
+      \verb{urlraw}
+      \verb https://discordjs.guide/interactions/slash-commands.html#registering-slash-commands
+      \endverb
+      \verb{url}
+      \verb https://discordjs.guide/interactions/slash-commands.html#registering-slash-commands
+      \endverb
+    \endentry
+    \entry{discordtscontextmenu}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=dac2817fc43f0fec58a4fe4eb39cd122}{%
+           family={discord.ts},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \strng{fullhash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \strng{bibnamehash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \strng{authorbibnamehash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \strng{authornamehash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \strng{authorfullhash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{discord.ts official documentation}
+      \field{title}{@ContextMenu}
+      \verb{urlraw}
+      \verb https://discord-ts.js.org/docs/decorators/gui/context-menu/
+      \endverb
+      \verb{url}
+      \verb https://discord-ts.js.org/docs/decorators/gui/context-menu/
       \endverb
     \endentry
   \enddatalist

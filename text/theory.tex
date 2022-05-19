@@ -1,4 +1,4 @@
-\anonsection{Существующие работы и решения}
+\anonsection{Обзор существующих работ и решений}
 
     На сегодняшний день NFT маркетплейсов огромное количество, на блокчейне Ethereum, как примеры: opensea\footnote{https://opensea.io/}, rarible\footnote{https://rarible.com/}, на Solana: solanart\footnote{https://solanart.io/}. На Near protocol, на данный момент самыми популярными являются: Paras\footnote{https://paras.id/}, Mintbase\footnote{https://www.mintbase.io/}.
 
@@ -13,7 +13,7 @@
     NFT хранит следующую информацию о себе: сам идентификатор токена, ID владельца и метаданные этого токена. Метаданные делятся на типа: первый класс, который хранит версию, название токена, ссылка на информацию, которая представляется в виде JSON, ссылка на sha256 хеш. Другой класс хранит: название, описание, время создания, время истечение представленное в UNIX epoch.
 
     В Smart-контракте NFT должны быть реализованы следующие функции:
-    
+
     \begin{itemize}
         \item nft\_transfer - <<change operation> функция передачи NFT от одного аккаунта другому.;
         \item nft\_transfer\_call - такая же <<change operation>> функция, что и предыдущая, за исключением того, что вызывается nft\_on\_transfer при удачной передачи NFT и nft\_resolve\_transfer при неудачной попытке;

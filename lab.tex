@@ -1,5 +1,5 @@
 %\PassOptionsToPackage{pdftex}{graphicx}
-\documentclass[a4paper,hidelinks,12pt]{extarticle}
+\documentclass[a4paper,hidelinks,14pt]{extarticle}
 
 \input{sys/packages}        % Подключаемые пакеты
 \input{sys/styles}	    % Пользовательские стили
@@ -7,8 +7,8 @@
 % Generate the glossary
 \makeglossaries%Term definitions
 
-\addbibresource{papers.bib} % источники
- 
+\addbibresource{text/papers.bib} % источники
+
 \begin{document}
 
 \input{sys/names}	   % Переопределение именований
@@ -21,16 +21,14 @@
 \newpage
 
 \pagestyle{jopa}
-\input{text/abstract}	
-\input{text/formulation}	
-\input{text/significance}             % Введение
+\input{text/abstract}
+\input{text/intro}
+% \input{text/significance}             % Введение
 \input{text/theory}          % Обзор источников
 \input{text/main}            % Основная часть
 \input{text/conclusion}    % Заключение
+\input{text/sources}
 
-\printbibliography[heading=bibintoc]
-\newpage
-
-% \input{text/appendix}     % Приложения
+\input{text/appendix}
 
 \end{document}

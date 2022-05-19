@@ -80,7 +80,7 @@
       <file>lab.bcf</file>
     </requires>
     <requires type="editable">
-      <file>papers.bib</file>
+      <file>text/papers.bib</file>
     </requires>
   </external>
 </requests>
