@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}[near\PYGZus{}bindgen]}\PYG{+w}{                                                 }\PYG{c+cm}{/* генерирует smart\PYGZhy{}контракт, совместимый с блокчейном NEAR */}
+
+\PYG{c+cp}{\PYGZsh{}[derive(BorshDeserialize, BorshSerialize)]}\PYG{+w}{                     }\PYG{c+cm}{/* запоминает состояние контракта */}
+
+\PYG{c+cp}{\PYGZsh{}[derive(PanicOnDefault)]}\PYG{+w}{                                       }\PYG{c+cm}{/* не позволяет инициализировать контракт дефолтными значениями, нужен метод new с декоратором init */}
+
+\PYG{c+cp}{\PYGZsh{}[payable]}\PYG{+w}{                                                      }\PYG{c+cm}{/* помечает метод, который может принимать депозит */}
+\end{Verbatim}

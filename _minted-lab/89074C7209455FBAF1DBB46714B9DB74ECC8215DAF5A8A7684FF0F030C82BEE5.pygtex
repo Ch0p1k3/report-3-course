@@ -1,0 +1,79 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{get\PYGZus{}supply\PYGZus{}sales}\PYG{p}{(}
+\PYG{+w}{    }\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{,}
+\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{u64} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{sales}\PYG{p}{.}\PYG{n}{len}\PYG{p}{()}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{get\PYGZus{}supply\PYGZus{}by\PYGZus{}owner\PYGZus{}id}\PYG{p}{(}
+\PYG{+w}{    }\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{account\PYGZus{}id}: \PYG{n+nc}{AccountId}\PYG{p}{,}
+\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{u64} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{owner\PYGZus{}id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{by\PYGZus{}owner\PYGZus{}id}\PYG{p}{.}\PYG{n}{get}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{account\PYGZus{}id}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{owner\PYGZus{}id}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{owner\PYGZus{}id}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{owner\PYGZus{}id}\PYG{p}{.}\PYG{n}{len}\PYG{p}{()}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{l+m+mi}{0}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{get\PYGZus{}sales\PYGZus{}by\PYGZus{}owner\PYGZus{}id}\PYG{p}{(}
+\PYG{+w}{    }\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{account\PYGZus{}id}: \PYG{n+nc}{AccountId}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{from\PYGZus{}index}: \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{u128}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{limit}: \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{u64}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{Vec}\PYG{o}{\PYGZlt{}}\PYG{n}{Sale}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{owner\PYGZus{}id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{by\PYGZus{}owner\PYGZus{}id}\PYG{p}{.}\PYG{n}{get}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{account\PYGZus{}id}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{sales}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{owner\PYGZus{}id}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{owner\PYGZus{}id}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{owner\PYGZus{}id}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nf+fm}{vec!}\PYG{p}{[];}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{    }\PYG{n}{sales}\PYG{p}{.}\PYG{n}{iter}\PYG{p}{()}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n}{skip}\PYG{p}{(}\PYG{n}{from\PYGZus{}index}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n}{take}\PYG{p}{(}\PYG{n}{limit}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n}{map}\PYG{p}{(}\PYG{o}{|}\PYG{n}{token\PYGZus{}id}\PYG{o}{|}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{sales}\PYG{p}{.}\PYG{n}{get}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{token\PYGZus{}id}\PYG{p}{).}\PYG{n}{unwrap}\PYG{p}{())}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n}{collect}\PYG{p}{()}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{get\PYGZus{}supply\PYGZus{}by\PYGZus{}nft\PYGZus{}contract\PYGZus{}id}\PYG{p}{(}
+\PYG{+w}{    }\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{nft\PYGZus{}contract\PYGZus{}id}: \PYG{n+nc}{AccountId}\PYG{p}{,}
+\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{u64} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{nft\PYGZus{}contract\PYGZus{}id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{by\PYGZus{}nft\PYGZus{}contract\PYGZus{}id}\PYG{p}{.}\PYG{n}{get}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{nft\PYGZus{}contract\PYGZus{}id}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{nft\PYGZus{}contract\PYGZus{}id}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{nft\PYGZus{}contract\PYGZus{}id}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{nft\PYGZus{}contract\PYGZus{}id}\PYG{p}{.}\PYG{n}{len}\PYG{p}{()}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{l+m+mi}{0}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{get\PYGZus{}sales\PYGZus{}by\PYGZus{}nft\PYGZus{}contract\PYGZus{}id}\PYG{p}{(}
+\PYG{+w}{    }\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{nft\PYGZus{}contract\PYGZus{}id}: \PYG{n+nc}{AccountId}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{from\PYGZus{}index}: \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{u128}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{limit}: \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{u64}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{Vec}\PYG{o}{\PYGZlt{}}\PYG{n}{Sale}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{by\PYGZus{}nft\PYGZus{}contract\PYGZus{}id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{by\PYGZus{}nft\PYGZus{}contract\PYGZus{}id}\PYG{p}{.}\PYG{n}{get}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{nft\PYGZus{}contract\PYGZus{}id}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{sales}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{by\PYGZus{}nft\PYGZus{}contract\PYGZus{}id}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{by\PYGZus{}nft\PYGZus{}contract\PYGZus{}id}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{by\PYGZus{}nft\PYGZus{}contract\PYGZus{}id}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nf+fm}{vec!}\PYG{p}{[];}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{    }\PYG{n}{sales}\PYG{p}{.}\PYG{n}{iter}\PYG{p}{()}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n}{skip}\PYG{p}{(}\PYG{n}{from\PYGZus{}index}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n}{take}\PYG{p}{(}\PYG{n}{limit}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n}{map}\PYG{p}{(}\PYG{o}{|}\PYG{n}{token\PYGZus{}id}\PYG{o}{|}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{sales}\PYG{p}{.}\PYG{n}{get}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nf+fm}{format!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{nft\PYGZus{}contract\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{token\PYGZus{}id}\PYG{p}{)).}\PYG{n}{unwrap}\PYG{p}{())}
+\PYG{+w}{        }\PYG{p}{.}\PYG{n}{collect}\PYG{p}{()}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{get\PYGZus{}sale}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{nft\PYGZus{}contract\PYGZus{}token}: \PYG{n+nc}{ContractAndTokenId}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{n}{Sale}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{sales}\PYG{p}{.}\PYG{n}{get}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{nft\PYGZus{}contract\PYGZus{}token}\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

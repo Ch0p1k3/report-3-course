@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{near\PYGZus{}sdk}::\PYG{n}{collections}::\PYG{p}{\PYGZob{}}\PYG{n}{LazyOption}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{LookupMap}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UnorderedMap}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UnorderedSet}\PYG{p}{\PYGZcb{};}
+\PYG{n}{LookupMap}\PYG{+w}{       }\PYG{c+cm}{/* Неитерируемый словарь, который хранит свои значения в боре */}
+\PYG{n}{UnorderedMap}\PYG{+w}{    }\PYG{c+cm}{/* Итерируемый словарь, который хранит свои значения в боре */}
+\PYG{n}{UnorderedSet}\PYG{+w}{    }\PYG{c+cm}{/* Итерируемое множество объектов, которые хранятся в боре */}
+\PYG{n}{LazyOption}\PYG{+w}{      }\PYG{c+cm}{/* Структура, которая лениво инициализируется */}
+\end{Verbatim}

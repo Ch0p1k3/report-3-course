@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  19 MAY 2022 11:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  19 MAY 2022 17:42
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **/mnt/d/edu/report-3-course/lab.tex
@@ -2268,7 +2268,7 @@ File: datetime2-russian-ascii.ldf 2018/12/07 v1.1
 File: datetime2-english.ldf 2019/10/21 v1.05 (NLCT)
  (/usr/share/texlive/texmf-dist/tex/latex/datetime2-english/datetime2-english-base.ldf
 File: datetime2-english-base.ldf 2019/10/21 v1.05 (NLCT)
-)))) (/usr/share/texlive/texmf-dist/tex/latex/pgfgantt/pgfgantt.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/pgfgantt/pgfgantt.sty
 Package: pgfgantt 2018/01/10 v5.0 Draw Gantt diagrams with TikZ
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -2322,13 +2322,111 @@ File: pgfcalendar.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \gtt@calendar@startofweek=\count504
 \gtt@left@slot=\count505
 \gtt@right@slot=\count506
-) (/mnt/d/edu/report-3-course/sys/styles.tex
-\c@reflisti=\count507
-\enitdp@reflist=\count508
+)) (/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+ (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count507
+\FV@InFile=\read5
+\FV@TabBox=\box119
+\c@FancyVerbLine=\count508
+\FV@StepNumber=\count509
+\FV@OutFile=\write5
+) (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count510
+\output=\toks69
+\linenoprevgraf=\count511
+\linenumbersep=\dimen328
+\linenumberwidth=\dimen329
+\c@linenumber=\count512
+\c@pagewiselinenumber=\count513
+\c@LN@truepage=\count514
+\c@internallinenumber=\count515
+\c@internallinenumbers=\count516
+\quotelinenumbersep=\dimen330
+\bframerule=\dimen331
+\bframesep=\dimen332
+\bframebox=\box120
+LaTeX Info: Redefining \\ on input line 3056.
 )
-\glswrite=\write5
-\glo@main@file=\write6
-\openout6 = `lab.glo'.
+\c@FV@TrueTabGroupLevel=\count517
+\c@FV@TrueTabCounter=\count518
+\FV@TabBox@Group=\box121
+\FV@TmpLength=\skip150
+\c@FV@HighlightLinesStart=\count519
+\c@FV@HighlightLinesStop=\count520
+\FV@LoopCount=\count521
+\FV@NCharsBox=\box122
+\FV@BreakIndent=\dimen333
+\FV@BreakIndentNChars=\count522
+\FV@BreakSymbolSepLeft=\dimen334
+\FV@BreakSymbolSepLeftNChars=\count523
+\FV@BreakSymbolSepRight=\dimen335
+\FV@BreakSymbolSepRightNChars=\count524
+\FV@BreakSymbolIndentLeft=\dimen336
+\FV@BreakSymbolIndentLeftNChars=\count525
+\FV@BreakSymbolIndentRight=\dimen337
+\FV@BreakSymbolIndentRightNChars=\count526
+\c@FancyVerbLineBreakLast=\count527
+\FV@LineBox=\box123
+\FV@LineIndentBox=\box124
+\FV@LineWidth=\dimen338
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+)
+runsystem(uname -s > "lab.w18")...executed.
+
+ (/mnt/d/edu/report-3-course/lab.w18)
+runsystem(rm -- "lab.w18")...executed.
+
+) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count528
+\decimalpart=\count529
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip151
+\fb@frw=\dimen339
+\fb@frh=\dimen340
+\FrameRule=\dimen341
+\FrameSep=\dimen342
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count530
+\float@exts=\toks70
+\float@box=\box125
+\@float@everytoks=\toks71
+\@floatcapt=\box126
+)
+\minted@appexistsfile=\read6
+\minted@bgbox=\box127
+\minted@code=\write6
+\c@minted@FancyVerbLineTemp=\count531
+\c@minted@pygmentizecounter=\count532
+\@float@every@listing=\toks72
+\c@listing=\count533
+)
+runsystem(mkdir -p _minted-lab)...executed.
+
+ (/mnt/d/edu/report-3-course/sys/styles.tex
+\c@reflisti=\count534
+\enitdp@reflist=\count535
+)
+\glswrite=\write7
+\glo@main@file=\write8
+\openout8 = `lab.glo'.
 
 Package glossaries Info: Writing glossary file lab.glo on input line 8.
 
@@ -2336,12 +2434,16 @@ Package glossaries Info: Writing glossary file lab.glo on input line 8.
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count509
-\@quotereset=\count510
+\@quotelevel=\count536
+\@quotereset=\count537
+runsystem(which pygmentize && touch lab.aex)...executed.
+
+runsystem(rm lab.aex)...executed.
+
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count511
-\l__pdf_internal_box=\box119
+\l__kernel_color_stack_int=\count538
+\l__pdf_internal_box=\box128
 ) (/mnt/d/edu/report-3-course/lab.aux)
 \openout1 = `lab.aux'.
 
@@ -2394,17 +2496,17 @@ LaTeX Font Info:    Trying to load font information for T2A+ftm on input line 12
 File: t2aftm.fd 2004/10/14 Fontinst v1.914 font definitions for T2A/ftm.
 ) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count512
-\scratchdimen=\dimen328
-\scratchbox=\box120
-\nofMPsegments=\count513
-\nofMParguments=\count514
-\everyMPshowfont=\toks69
-\MPscratchCnt=\count515
-\MPscratchDim=\dimen329
-\MPnumerator=\count516
-\makeMPintoPDFobject=\count517
-\everyMPtoPDFconversion=\toks70
+\scratchcounter=\count539
+\scratchdimen=\dimen343
+\scratchbox=\box129
+\nofMPsegments=\count540
+\nofMParguments=\count541
+\everyMPshowfont=\toks73
+\MPscratchCnt=\count542
+\MPscratchDim=\dimen344
+\MPnumerator=\count543
+\makeMPintoPDFobject=\count544
+\everyMPtoPDFconversion=\toks74
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -2445,11 +2547,12 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box121
-\c@mv@tabular=\count518
-\c@mv@boldtabular=\count519
+\AtBeginShipoutBox=\box130
+\c@mv@tabular=\count545
+\c@mv@boldtabular=\count546
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: supertabular package is loaded.
@@ -2485,22 +2588,22 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count520
+\c@section@level=\count547
 )
 LaTeX Info: Redefining \ref on input line 12.
 LaTeX Info: Redefining \pageref on input line 12.
 LaTeX Info: Redefining \nameref on input line 12.
  (/mnt/d/edu/report-3-course/lab.out) (/mnt/d/edu/report-3-course/lab.out)
-\@outlinefile=\write7
-\openout7 = `lab.out'.
+\@outlinefile=\write9
+\openout9 = `lab.out'.
 
-\c@lstlisting=\count521
+\c@lstlisting=\count548
  ABD: EveryShipout initializing macros (/mnt/d/edu/report-3-course/sys/names.tex) (/mnt/d/edu/report-3-course/text/title.tex
 LaTeX Font Info:    Font shape `T2A/ftm/b/n' in size <14.4> not available
 (Font)              Font shape `T2A/ftm/bx/n' tried instead on input line 3.
  [1
 
-\openout5 = `lab.ist'.
+\openout7 = `lab.ist'.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 LaTeX Font Info:    Font shape `T2A/ftm/b/n' in size <17.28> not available
@@ -2518,8 +2621,8 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-\tf@toc=\write8
-\openout8 = `lab.toc'.
+\tf@toc=\write10
+\openout10 = `lab.toc'.
 
  [2] (/mnt/d/edu/report-3-course/text/abstract.tex
 Underfull \hbox (badness 5711) in paragraph at lines 11--12
@@ -2527,31 +2630,195 @@ Underfull \hbox (badness 5711) in paragraph at lines 11--12
  []
 
 [3] [4]) (/mnt/d/edu/report-3-course/text/intro.tex [5]
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+LaTeX Font Info:    Trying to load font information for TS1+ftm on input line 41.
+LaTeX Font Info:    No file TS1ftm.fd. on input line 41.
+
+
+LaTeX Font Warning: Font shape `TS1/ftm/m/n' undefined
+(Font)              using `TS1/cmr/m/n' instead
+(Font)              for symbol `textbullet' on input line 41.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 []\T2A/ftm/m/n/14.4 »зучить ос-но-вы ра-бо-ты с бра-у-зе-ром че-рез
  []
 
-[6]) (/mnt/d/edu/report-3-course/text/theory.tex [7] [8]) (/mnt/d/edu/report-3-course/text/main.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-[]\T2A/ftm/m/n/14.4 ƒл€ про-ве-де-ни€ тран-зак-ций(исполнени€ Smart-контрактов) NEAR
+[6]
+Underfull \hbox (badness 1975) in paragraph at lines 60--61
+[]\T2A/ftm/m/n/14.4 ѕоддержать сер-вис c генеративно-сост€зательной се-тью в
  []
 
+) (/mnt/d/edu/report-3-course/text/theory.tex [7]) (/mnt/d/edu/report-3-course/text/main.tex [8]
+\openout5 = `lab.pyg'.
 
-Underfull \hbox (badness 1546) in paragraph at lines 5--6
-\T2A/ftm/m/n/14.4 “ак-же бы-ло при-н€-то ре-ше-ние, вз€ть об-в€з-ку над этой биб-лио-те-кой -
- []
+ (/mnt/d/edu/report-3-course/_minted-lab/default-pyg-prefix.pygstyle) (/mnt/d/edu/report-3-course/_minted-lab/default.pygstyle) (/mnt/d/edu/report-3-course/_minted-lab/1E19494E7A6F378539EB090908034005ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex
+LaTeX Font Info:    Trying to load font information for T2A+fer on input line 1.
+ (/usr/share/texmf/tex/latex/pscyr/t2afer.fd
+File: t2afer.fd 2004/09/21 Fontinst v1.914 font definitions for T2A/fer.
+))
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/72B8359877AFEF30AD2EF50D9ABE0FBAECC8215DAF5A8A7684FF0F030C82BEE5.pygtex
+LaTeX Font Info:    Font shape `T2A/fer/b/n' in size <8> not available
+(Font)              Font shape `T2A/fer/bx/n' tried instead on input line 2.
+)
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/4D31396228487DCA00D0321D1C7D19DCECC8215DAF5A8A7684FF0F030C82BEE5.pygtex)
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/F7ABEADE5B9C2201D329AA12A9CA58C3ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 16.
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 16.
+ (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 16.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 16.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 16.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 16.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 16.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 16.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 16.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 16.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 21.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 21.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 21.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 21.
+ [9]
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 33.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 33.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 33.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 33.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 33.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 33.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 33.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 33.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 49.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 49.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 49.
+Package textcomp Info: Symbol \textasciigrave not provided by
+(textcomp)             font family fer in TS1 encoding.
+(textcomp)             Default family used instead on input line 49.
+ [10])
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/D8FE1FAACCB5B5B7B0DEEA477F6864CEECC8215DAF5A8A7684FF0F030C82BEE5.pygtex) [11]
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/5658F781DEB692F676D443D6298C8EBBECC8215DAF5A8A7684FF0F030C82BEE5.pygtex)
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/3920E8FBE3FE155F2E8D01904A58BADEECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [12])
+<fig/temp.png, id=256, 543.02875pt x 292.09125pt>
+File: fig/temp.png Graphic file (type png)
+<use fig/temp.png>
+Package pdftex.def Info: fig/temp.png  used on input line 247.
+(pdftex.def)             Requested size: 370.29039pt x 199.16928pt.
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/4D9331E5E1F5AFE3801753ADD1755D32ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [13 </mnt/d/edu/report-3-course/fig/temp.png>] [14])
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/20180958E98BB6BE006E6E6B52363E7CECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [15])
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/0654DFE6299BF1B82473B21BFFDB0291ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex)
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/ABD0FE310419916D834FD4958D2C3210ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex) [16]
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/BC72F0F7B7B7C7657CA117951CB43FD6ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [17])
+<fig/marketplace.png, id=301, 442.65375pt x 382.42876pt>
+File: fig/marketplace.png Graphic file (type png)
+<use fig/marketplace.png>
+Package pdftex.def Info: fig/marketplace.png  used on input line 542.
+(pdftex.def)             Requested size: 230.53249pt x 199.16928pt.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 7.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9] [10]
-<fig/eth_near_cmp.png, id=210, 2455.1725pt x 1379.1525pt>
-File: fig/eth_near_cmp.png Graphic file (type png)
-<use fig/eth_near_cmp.png>
-Package pdftex.def Info: fig/eth_near_cmp.png  used on input line 23.
-(pdftex.def)             Requested size: 368.26pt x 206.86395pt.
-) (/mnt/d/edu/report-3-course/text/conclusion.tex [11 </mnt/d/edu/report-3-course/fig/eth_near_cmp.png>]) (/mnt/d/edu/report-3-course/text/sources.tex) (/mnt/d/edu/report-3-course/text/appendix.tex)
+\openout5 = `lab.pyg'.
+
+(/mnt/d/edu/report-3-course/_minted-lab/FF5AD40CCC05C4DDA7FE2EFC40B93C68ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [18] [19 </mnt/d/edu/report-3-course/fig/marketplace.png>])
+<fig/sell.png, id=320, 787.94376pt x 432.61626pt>
+File: fig/sell.png Graphic file (type png)
+<use fig/sell.png>
+Package pdftex.def Info: fig/sell.png  used on input line 608.
+(pdftex.def)             Requested size: 362.75911pt x 199.16928pt.
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/55A7590AF24B3902EFAA93B51DFE2183ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [20 </mnt/d/edu/report-3-course/fig/sell.png>]
+LaTeX Font Info:    Trying to load font information for TS1+fer on input line 24.
+LaTeX Font Info:    No file TS1fer.fd. on input line 24.
+
+
+LaTeX Font Warning: Font shape `TS1/fer/m/it' undefined
+(Font)              using `TS1/cmr/m/n' instead
+(Font)              for symbol `textquotesingle' on input line 24.
+
+
+LaTeX Font Warning: Font shape `TS1/fer/m/n' undefined
+(Font)              using `TS1/cmr/m/n' instead
+(Font)              for symbol `textquotesingle' on input line 28.
+
+)
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/760D590FCF25F024CF3487AB4D17AB08ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [21])
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/89074C7209455FBAF1DBB46714B9DB74ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [22])) (/mnt/d/edu/report-3-course/text/conclusion.tex [23] [24]) (/mnt/d/edu/report-3-course/text/sources.tex [25]) (/mnt/d/edu/report-3-course/text/appendix.tex)
 
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 60.
 See the caption package documentation for explanation.
@@ -2569,31 +2836,37 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[12] [13]
+[26]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
  (/mnt/d/edu/report-3-course/lab.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
 Package rerunfilecheck Info: File `lab.out' has not changed.
-(rerunfilecheck)             Checksum: 969E58E64B6E4CCC7EDC8E4C9B7FBB70;3410.
+(rerunfilecheck)             Checksum: 4093DD0A47984E370B6C162E7BC80EA7;4474.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+runsystem(rm lab.pyg)...executed.
+
 Package logreq Info: Writing requests to 'lab.run.xml'.
 \openout1 = `lab.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45202 strings out of 482584
- 825776 string characters out of 5956256
- 1603101 words of memory out of 5000000
- 59285 multiletter control sequences out of 15000+600000
- 548051 words of font info for 48 fonts, out of 8000000 for 9000
+ 48350 strings out of 482584
+ 898655 string characters out of 5956256
+ 1712148 words of memory out of 5000000
+ 62213 multiletter control sequences out of 15000+600000
+ 555124 words of font info for 67 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 67i,12n,108p,2560b,1892s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/pscyr/t2a.enc}</usr/share/texmf/fonts/type1/public/pscyr/times.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesbd.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesi.pfb>
-Output written on /mnt/d/edu/report-3-course/lab.pdf (13 pages, 211319 bytes).
+ 67i,12n,108p,2541b,1892s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk> </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcit0800.600pk>{/usr/share/texmf/fonts/enc/dvips/pscyr/t2a.enc} </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercour.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercourb.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercouri.pfb></usr/share/texmf/fonts/type1/public/pscyr/times.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesbd.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesi.pfb>
+Output written on /mnt/d/edu/report-3-course/lab.pdf (26 pages, 284726 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
- 252 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 477 PDF objects out of 1000 (max. 8388607)
+ 421 compressed objects within 5 object streams
+ 124 named destinations out of 1000 (max. 500000)
+ 228 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,26 +1,789 @@
-\anonsection{Предлагаемые подходы и методы }
+% \anonsection{Предлагаемые подходы и методы }
 
-    Для проведения транзакций(исполнения Smart-контрактов) NEAR protocol предоставляет near-cli\footnote{https://github.com/near/near-cli} и near-api-js\footnote{https://github.com/near/near-api-js}~\cite*{docsnear}. Для наших целий требуется near-api-js, а следовательно вытекает потребность использовать язык javascript(nodejs, typescript) для написания <<frontend>> части бота.
+%     Для проведения транзакций(исполнения Smart-контрактов) NEAR protocol предоставляет near-cli\footnote{https://github.com/near/near-cli} и near-api-js\footnote{https://github.com/near/near-api-js}~\cite*{docsnear}. Для наших целий требуется near-api-js, а следовательно вытекает потребность использовать язык javascript(nodejs, typescript) для написания <<frontend>> части бота.
 
-    Для реализации самого бота, как следует из названия проекта, используется Discord API. Но конечно, будет использоваться обертка над HTTP запросами. Существует множество всевозможных модулей для разнообразных языков. Для наших целей нам понадобится discord.js(javascript/nodejs)\footnote{https://discord.js.org/}. Также было принято решение, взять обвязку над этой библиотекой - discord.ts(typescript)\footnote{https://discord-ts.js.org/}
+%     Для реализации самого бота, как следует из названия проекта, используется Discord API. Но конечно, будет использоваться обертка над HTTP запросами. Существует множество всевозможных модулей для разнообразных языков. Для наших целей нам понадобится discord.js(javascript/nodejs)\footnote{https://discord.js.org/}. Также было принято решение, взять обвязку над этой библиотекой - discord.ts(typescript)\footnote{https://discord-ts.js.org/}
 
-	\anonsubsection{Аккаунт}
+% 	\anonsubsection{Аккаунт}
 
-		Аккаунты в NEAR protocol устроены так, что они имеют человеко-читаемый ID в отличие от большинства других блокчейнов, где обычно используется некоторый hash. Длина логина от 2 до 64 символов и содержит в конце суффикс обозначающий сеть блокчейна: main, test, beta. Аккаунт может создавать подаккаунты, которые по своему функционалу ничем не отличаются от обычного аккаунта. Но они нам понадобятся так как, на один аккаунт можно развернуть только один smart-контракт, а связанно это с тем, что при предложении подписания smart-аккаунта мы будем указывать название аккаунта, что сразу обозначает, который smart-контракт мы хотим инициировать для подписания. И самое главное, что нам нужно так это dev аккаунты. С помощью этих тестовых аккаунтов мы и будем тестировать наши smart-контракты. Они создаются с помощью ранее упомянутого near-cli~\cite*{docsnear}.
-		Для того, чтобы мы могли предлагать на подпись smart-контракты, нам нужно, чтобы этот пользователь авторизовался в NEAR wallet или иными словами подписать некоторую транзакцию на образование Access Key.
+% 		Аккаунты в NEAR protocol устроены так, что они имеют человеко-читаемый ID в отличие от большинства других блокчейнов, где обычно используется некоторый hash. Длина логина от 2 до 64 символов и содержит в конце суффикс обозначающий сеть блокчейна: main, test, beta. Аккаунт может создавать подаккаунты, которые по своему функционалу ничем не отличаются от обычного аккаунта. Но они нам понадобятся так как, на один аккаунт можно развернуть только один smart-контракт, а связанно это с тем, что при предложении подписания smart-аккаунта мы будем указывать название аккаунта, что сразу обозначает, который smart-контракт мы хотим инициировать для подписания. И самое главное, что нам нужно так это dev аккаунты. С помощью этих тестовых аккаунтов мы и будем тестировать наши smart-контракты. Они создаются с помощью ранее упомянутого near-cli~\cite*{docsnear}.
+% 		Для того, чтобы мы могли предлагать на подпись smart-контракты, нам нужно, чтобы этот пользователь авторизовался в NEAR wallet или иными словами подписать некоторую транзакцию на образование Access Key.
 
-	\anonsubsection{Access Key}
-		Каждый аккаунт имеет создавать множество public/private ключей, которые в Near называются Access Key. Существует два типа Access Key: FullAccess и FunctionCall. Из названия первого можно предположить, что он дает полный доступ и он нам не годится, так как пользователи попросту не будут доверять нашему приложению. FunctionalCall ключ уникален и дает разрешения только на подписание функций контрактов, которые не являются <<payable>>. Он имеет несколько атрибутов: количество Near, которые разрешается тратить на Gas, название контракта, чьи функции разрешается вызывать и названия этих функций, которые будут вызываться. Рисунок \ref{fig:eth_near_cmp}
+% 	\anonsubsection{Access Key}
+% 		Каждый аккаунт имеет создавать множество public/private ключей, которые в Near называются Access Key. Существует два типа Access Key: FullAccess и FunctionCall. Из названия первого можно предположить, что он дает полный доступ и он нам не годится, так как пользователи попросту не будут доверять нашему приложению. FunctionalCall ключ уникален и дает разрешения только на подписание функций контрактов, которые не являются <<payable>>. Он имеет несколько атрибутов: количество Near, которые разрешается тратить на Gas, название контракта, чьи функции разрешается вызывать и названия этих функций, которые будут вызываться. Рисунок \ref{fig:eth_near_cmp}
 
-	\anonsubsection{Хранение в блокчейне}
-		Важным вопросом, который не затрагивался при описании стандарта является хранение медиа объекта.В описанном стандарте хранится url на медиа объект, но никак не сам этот медиа объект, связанно это с тем, что хранение объекта невероятно дорогое. Авторы стандарта предлагают несколько подходов, один из них: пользователь изначально просто дает url и мы храним его, но в данном решении есть огромный минус - это то, что мы накладываем обязательство на пользователя об поддержании данного url валидным. Следующий подход заключается в том, что мы - сервис будем хранить данные в централизованном хранилище и тогда нашим опознавательным знаком будет какой-нибудь ключ, который будет соответствовать адресу NFT. И в этом подходе есть тоже минус в виде того, что непонятно какого размера должно быть это хранилище, какие ограничения вводить на размер медиа файла. И последнее предложение, так это хранить в специальном децентрализованном контенто-адресованном хранилище. Одним из примеров таких хранилищ является filecoin\footnote{\url{https://filecoin.io/}}. Минусом данного решения, наверное, является то, что мы начинаем использовать еще один блокчейн, который требует времени для понимания его спецификации. Наша команда приняла решение двигаться от самого простого подхода, то есть использование отданного пользователем url, к более сложному - использование filecoin.
+% 	\anonsubsection{Хранение в блокчейне}
+% 		Важным вопросом, который не затрагивался при описании стандарта является хранение медиа объекта.В описанном стандарте хранится url на медиа объект, но никак не сам этот медиа объект, связанно это с тем, что хранение объекта невероятно дорогое. Авторы стандарта предлагают несколько подходов, один из них: пользователь изначально просто дает url и мы храним его, но в данном решении есть огромный минус - это то, что мы накладываем обязательство на пользователя об поддержании данного url валидным. Следующий подход заключается в том, что мы - сервис будем хранить данные в централизованном хранилище и тогда нашим опознавательным знаком будет какой-нибудь ключ, который будет соответствовать адресу NFT. И в этом подходе есть тоже минус в виде того, что непонятно какого размера должно быть это хранилище, какие ограничения вводить на размер медиа файла. И последнее предложение, так это хранить в специальном децентрализованном контенто-адресованном хранилище. Одним из примеров таких хранилищ является filecoin\footnote{\url{https://filecoin.io/}}. Минусом данного решения, наверное, является то, что мы начинаем использовать еще один блокчейн, который требует времени для понимания его спецификации. Наша команда приняла решение двигаться от самого простого подхода, то есть использование отданного пользователем url, к более сложному - использование filecoin.
 
-	\anonsubsection{Машинное обучение в маркетплейсе}
-		За данную часть я отвечаю в меньшей степени. Но в рамках данного проекта нашей командой принято решение реализовать две идеи: рекомендательную систему или GAN. Рекомендательная система также делится на две части - это предсказание цены за конкретную NFT и более сложная идея - это рекомендовать сам NFT-токен. Идея с GAN выглядит гораздо легче, сравнивая с рекомендательной системой, например, создание аниме персонажа, пиксель арта, которое в последствии пользователь сможет использовать в своих коллекциях или для продажи.
+% 	\anonsubsection{Машинное обучение в маркетплейсе}
+% 		За данную часть я отвечаю в меньшей степени. Но в рамках данного проекта нашей командой принято решение реализовать две идеи: рекомендательную систему или GAN. Рекомендательная система также делится на две части - это предсказание цены за конкретную NFT и более сложная идея - это рекомендовать сам NFT-токен. Идея с GAN выглядит гораздо легче, сравнивая с рекомендательной системой, например, создание аниме персонажа, пиксель арта, которое в последствии пользователь сможет использовать в своих коллекциях или для продажи.
 
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[scale=0.15]{fig/eth_near_cmp.png}
-	\caption{Сравнение спецификации аккаунтов и public/private ключей в блокчейнах Ethereum и Near. Источник: \url{medium.com/@clinder}}
-		\label{fig:eth_near_cmp}
-	\end{figure}
+% 	\begin{figure}[h!]
+% 		\centering
+% 		\includegraphics[scale=0.15]{fig/eth_near_cmp.png}
+% 	\caption{Сравнение спецификации аккаунтов и public/private ключей в блокчейнах Ethereum и Near. Источник: \url{medium.com/@clinder}}
+% 		\label{fig:eth_near_cmp}
+% 	\end{figure}
+
+\section{Smart-контракты}
+
+\subsection{Структура NFT smart-контракта}
+В данной главе я опишу строение NFT smart-контракта, написанного на языке Rust. Вся логика соответствует описанному стандарту NEP-171\cite{nftstandart}.
+\paragraph{Near sdk фреймворк}
+Опишу основные функции, структуры, декараторы, которые используются при написании smart-контрактов. Для этого необходим фреймворк near-sdk\cite{nearsdkrs}.
+
+Атрибуты:
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+#[near_bindgen]                                                 /* генерирует smart-контракт, совместимый с блокчейном NEAR */
+
+#[derive(BorshDeserialize, BorshSerialize)]                     /* запоминает состояние контракта */
+
+#[derive(PanicOnDefault)]                                       /* не позволяет инициализировать контракт дефолтными значениями, нужен метод new с декоратором init */
+
+#[payable]                                                      /* помечает метод, который может принимать депозит */
+\end{minted}
+
+Структуры:
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+use near_sdk::collections::{LazyOption, LookupMap, UnorderedMap, UnorderedSet};
+LookupMap       /* Неитерируемый словарь, который хранит свои значения в боре */
+UnorderedMap    /* Итерируемый словарь, который хранит свои значения в боре */
+UnorderedSet    /* Итерируемое множество объектов, которые хранятся в боре */
+LazyOption      /* Структура, которая лениво инициализируется */
+\end{minted}
+
+Функции:
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+env::storage_byte_cost()            /* стоимость хранения одного байта */
+env::attached_deposit()             /* внесенный депозит */
+env::predecessor_account_id()       /* предыдущий аккаунт от которого прилетел cross-contract call или это мы сами, если мы первые в цепочке */
+env::log_str()                      /* написать лог */
+env::prepaid_gas()                  /* количество gas предоставленного для call другой функции */
+\end{minted}
+
+\paragraph{Core Functionality}
+
+Для начала опишем основные структуры и функции\cite{corestandard}, которые используются в NFT контрактах.
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+pub type TokenId = String;
+
+#[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize, Clone)]
+#[serde(crate = "near_sdk::serde")]
+pub struct NFTContractMetadata {
+    pub spec: String,                                           /*  REQUIRED (version like "nft-1.0.0") */
+
+    pub name: String,                                           /*  REQUIRED (like "Maxim")  */
+
+    pub symbol: String,                                         /*  REQUIRED (like like "MOCHI" or "MV3")  */
+
+    pub icon: Option<String>,                                   /*  small image associated with this contract (Data URL)  */
+
+    pub base_uri: Option<String>,                               /*  Centralized gateway known to have reliable access to
+                                                                    decentralized storage assets referenced by `reference` or `media` URLs  */
+
+    pub reference: Option<String>,                              /*  URL to a JSON file with more infoa link to a valid JSON file containing
+                                                                    various keys offering supplementary details on the token  */
+
+    pub reference_hash: Option<Base64VecU8>,                    /*  Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included.  */
+}
+
+#[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize)]
+#[serde(crate = "near_sdk::serde")]
+pub struct TokenMetadata {
+    pub title: Option<String>,                                  /*  ex. "Arch Nemesis: Mail Carrier" or "Parcel #5055"  */
+
+    pub description: Option<String>,                            /*  free-form description  */
+
+    pub media: Option<String>,                                  /*  URL to associated media, preferably to decentralized, content-addressed storage  */
+
+    pub media_hash: Option<Base64VecU8>,                        /*  Base64-encoded sha256 hash of content referenced by the `media` field. Required if `media` is included.  */
+
+    pub copies: Option<u64>,                                    /*  number of copies of this set of metadata in existence when token was minted.  */
+
+    pub issued_at: Option<u64>,                                 /*  When token was issued or minted, Unix epoch in milliseconds  */
+
+    pub expires_at: Option<u64>,                                /*  When token expires, Unix epoch in milliseconds  */
+
+    pub starts_at: Option<u64>,                                 /*  When token starts being valid, Unix epoch in milliseconds  */
+
+    pub updated_at: Option<u64>,                                /*  When token was last updated, Unix epoch in milliseconds  */
+
+    pub extra: Option<String>,                                  /*  anything extra the NFT wants to store on-chain. Can be stringified JSON.  */
+
+    pub reference: Option<String>,                              /*  URL to an off-chain JSON file with more info.  */
+
+    pub reference_hash: Option<Base64VecU8>,                    /*  Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included.  */
+}
+
+#[derive(BorshDeserialize, BorshSerialize)]
+pub struct Token {
+    pub owner_id: AccountId,
+    pub next_approval_id: u64,
+    pub approved_account_ids: HashMap<AccountId, u64>,
+    pub royalty: HashMap<AccountId, u32>
+}
+
+/* Struct that which can be requested via view call */
+#[derive(Serialize, Deserialize)]
+#[serde(crate = "near_sdk::serde")]
+pub struct JsonToken {
+    pub token_id: TokenId,
+    pub owner_id: AccountId,
+    pub metadata: TokenMetadata,
+    pub approved_account_ids: HashMap<AccountId, u64>,
+    pub royalty: HashMap<AccountId, u32>
+}
+\end{minted}
+
+Структура NFT представляет из себя 3 связанные структуры:
+\begin{enumerate}
+    \item TokenMetadata - метаданные токена, где каждое из полей является опциональным.
+    \item Token - для каждого токена образуется связь:
+    \begin{enumerate}
+        \item owner\_id - аккаунт владельца токена.
+        \item approved\_accounts\_ids - словарь из доверенных аккаунтов, где значения является счетчик версий.
+        \item next\_approval\_id - текущая версия токена.
+        \item royalty - доля других аккаунтов, на получение денег с продажи токена.
+    \end{enumerate}
+    \item JsonToken - endpoint структура, которая возвращается при работе с контрактом извне.
+\end{enumerate}
+
+Теперь опишем структуру класса контракта:
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+#[near_bindgen]
+#[derive(BorshDeserialize, BorshSerialize, PanicOnDefault)]
+pub struct Contract {
+    pub owner_id: AccountId,                                                /* Contract owner */
+    pub tokens_per_owner: LookupMap<AccountId, UnorderedSet<TokenId>>,      /* Get all tokens by account_id */
+    pub tokens_by_id: LookupMap<TokenId, Token>,                            /* Token struct by token_id */
+    pub token_metadata_by_id: UnorderedMap<TokenId, TokenMetadata>,         /* Token metadata by token_id */
+    pub metadata: LazyOption<NFTContractMetadata>,                          /* Contract metadata */
+}
+\end{minted}
+
+Структура контракта хранит:
+\begin{enumerate}
+\item owner\_id - владелец контракта, которые задается единственный раз при инициализации.
+\item metadata - метаданные контракта, которые задаются единственный раз при инициализации.
+\item tokens\_per\_owner - позволяет по аккаунту получить все токены, которыми владеет.
+\item tokens\_by\_id - позволяет по TokenId получить структуру Token описанную выше.
+\item tokens\_metadata\_by\_id - позволяет по TokenId получить структуру TokenMetadata описанную выше.
+\end{enumerate}
+
+Следующая функция из core functionality без которой нельзя осуществить никакой продажи - создание или mint NFT токена. Функция nft\_mint принимает token\_id, метаданные, владельца и royalties(про них будет рассказно во главе Royalties).
+Так как это payable функция, то пользователь должен будет внести депозит для хранения информации о добавляемом токене. Лишний депозит вернется пользвателю обратно.
+
+Псевдокод будет выглядеть следующим образом:
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+#[payable]
+pub fn nft_mint(
+    &mut self,
+    token_id: TokenId,
+    metadata: TokenMetadata,
+    receiver_id: AccountId,
+    perpetual_royalties: Option<HashMap<AccountId, u32>>
+) {
+    /* Сохранить начальный storage_usage*/
+    let initial_storage_usage = env::storage_usage();
+
+    /* Распаковать и положить perpetual_royalties */
+    royalty = AcceptRoyalties(perpetual_royalties);
+
+    /* Создать токен */
+    let token = Token {
+        owner_id: receiver_id,
+        approved_account_ids: Default::default(),
+        next_approval_id: 0,
+        royalty
+    };
+
+    /* Проверить, что такого token_id не существует */
+    assert!(self.tokens_by_id.insert(&token_id, &token).is_none());
+
+    /* Добавить токен в необходимые структуры */
+    self.token_metadata_by_id.insert(&token_id, &metadata);
+    self.add_token_to_owner(&token.owner_id, &token_id);
+
+    /* Вернуть неиспользованный депозит */
+    let required_storage_in_bytes = env::storage_usage() - initial_storage_usage;
+    refund_deposit(required_storage_in_bytes);
+}
+\end{minted}
+
+Каждый пользователь может запросить на просмотр любой NFT токен с помощью view функции nft\_token, указав в параметрах token\_id.
+В качестве результата пользователь получит JsonToken струкуту описанную выше или None, если такого токена не существует.
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+fn nft_token(&self, token_id: TokenId) -> Option<JsonToken> {
+    if let Some(token) = self.tokens_by_id.get(&token_id) {
+        let metadata = self.token_metadata_by_id.get(&token_id).unwrap();
+        Some(JsonToken {
+            token_id,
+            owner_id: token.owner_id,
+            metadata,
+            approved_account_ids: token.approved_account_ids,
+            royalty: token.royalty
+        })
+    } else {
+        None
+    }
+}
+\end{minted}
+
+Последние функции из core functionality отвечают за передачу nft токена:
+\begin{enumerate}
+\item nft\_transfer - отправить токен другому аккаунту.
+\item nft\_transfer\_call - отправить токен другому аккаунту для выполнения какой-то услуги, то есть должна будет выполниться какая-то дополнительная логика на другом smart-контракте.
+\item nft\_on\_transfer - дополнительная логика, которая должна исполниться в другом контракте после nft\_transfer\_call.
+\item nft\_resolve\_transfer - функция, которая определяет нужно ли возвращать токен обратно или нет после nft\_on\_transfer.
+\end{enumerate}
+С первой функция все ясно, она просто отправляет токен, а со второй лучше привести иллюстрацию:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[height=70mm]{fig/temp.png}
+	\caption{nft\_transfer\_call}
+\end{figure}
+
+Смоделируем пример, где мы хотим отправить из contract\_1 свой токен в другой контракт contract\_2 и выполнить в нем дополнительную сервисную логику(например contract\_2 это контракт маркетплейса, который должен будет выставить что-то на продажу).
+Тогда сервисная логика должна будет реализована в nft\_on\_transfer. Вызывать ее должен будет nft\_transfer\_call и завершать всю эту цепочку должна будет функция nft\_resolve\_transfer.
+Псевдокод функций будет выглядеть следующим образом:
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+fn nft_on_transfer(
+    &mut self,
+    sender_id: AccountId,
+    previous_owner_id: AccountId,
+    token_id: TokenId,
+    msg: String,
+) -> Promise;
+
+#[payable]
+fn nft_transfer(
+    &mut self,
+    receiver_id: AccountId,
+    token_id: TokenId,
+    approval_id: Option<u64>,
+    memo: Option<String>,
+) {
+    let calle_id = env::predecessor_account_id();
+    let prev_token = self.internal_transfer(&calle_id, &receiver_id, &token_id, approval_id, memo);
+}
+
+#[payable]
+fn nft_transfer_call(
+    &mut self,
+    receiver_id: AccountId,
+    token_id: TokenId,
+    approval_id: Option<u64>,
+    memo: Option<String>,
+    msg: String,
+) -> PromiseOrValue<bool> {
+
+    /* Сохраняем отправителя и копию токена до отправки */
+    let sender_id = env::predecessor_account_id();
+    let previous_token = self.internal_transfer(&sender_id, &receiver_id, &token_id, approval_id, memo.clone());
+
+    /* Если отправитель не владелец, значит мы ему доверили наш токен, подробнее в главе approval managements */
+    let mut authorized_id = None;
+    if sender_id != previous_token.owner_id {
+        authorized_id = Some(sender_id.to_string());
+    }
+
+    /* Вызываем nft_on_transfer на другом контракте, потом nft_resolve_transfer на своем */
+    reciever_contract::nft_on_transfer(
+        sender_id,
+        previous_token.owner_id.clone(),
+        token_id.clone(),
+        msg,
+        receiver_id.clone(),
+        NO_DEPOSIT,
+        env::prepaid_gas() - GAS_FOR_NFT_TRANSFER_CALL
+    ).then(
+        my_contract::nft_resolve_transfer(
+            authorized_id,
+            previous_token.owner_id,
+            receiver_id,
+            token_id,
+            previous_token.approved_account_ids,
+            memo,
+            env::current_account_id(),
+            NO_DEPOSIT,
+            GAS_FOR_RESOLVE_TRANSFER
+        )
+    ).into()
+}
+
+#[private]
+fn nft_resolve_transfer(
+    &mut self,
+    authorized_id: Option<String>,
+    owner_id: AccountId,
+    receiver_id: AccountId,
+    token_id: TokenId,
+    approved_account_ids: HashMap<AccountId, u64>,
+    memo: Option<String>
+) -> bool {
+
+    /* Передача произошла успешно */
+    if IsSuccesfull {
+        true
+    }
+
+    /* Иначе возвращаем токен обратно владельцу */
+    log!("Return token {} from {} to {}", token_id, receiver_id, owner_id);
+
+    self.internal_remove_token_from_owner(&receiver_id.clone(), &token_id);
+    self.internal_add_token_to_owner(&owner_id, &token_id);
+    token.owner_id = owner_id.clone();
+    refund_approved_account_ids(receiver_id.clone(), &token.approved_account_ids);
+    token.approved_account_ids = approved_account_ids;
+    self.tokens_by_id.insert(&token_id, &token);
+
+    false
+}
+\end{minted}
+
+\paragraph{Enumeration}
+Для удобного взаимодействия с контрактом, необходимо добавить больше view функций с pagination для просмотра NFT токенов\cite{enumstandard}:
+\begin{enumerate}
+\item nft\_total\_supply - получить общее количество существующих токенов.
+\item nft\_tokens - получить существующие токены, используя pagination.
+\item nft\_supply\_for\_owner - получить общее количество существующих токенов для конкретного аккаунта.
+\item nft\_token\_for\_owner - получить существующие токены для конкретного аккаунта, используя pagination.
+\end{enumerate}
+
+Псевдокод будет выглядеть следующим образом:
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+pub fn nft_total_supply(&self) -> U128 {
+    self.token_metadata_by_id.len()
+}
+
+pub fn nft_tokens(
+    &self, from_index: Option<U128>,
+    limit: Option<u64>
+) -> Vec<JsonToken> {
+    self.token_metadata_by_id.keys()
+        .skip(from_index as usize)
+        .take(limit.unwrap_or(15) as usize)
+        .map(|token_id| self.nft_token(token_id.clone()).unwrap())
+        .collect()
+}
+
+pub fn nft_supply_for_owner(
+    &self,
+    account_id: AccountId,
+) -> U128 {
+    if Exist(account_id) {
+        self.tokens_per_owner.get(&account_id).len()
+    } else {
+        0
+    }
+}
+
+pub fn nft_tokens_for_owner(
+    &self,
+    account_id: AccountId,
+    from_index: Option<U128>,
+    limit: Option<u64>,
+) -> Vec<JsonToken> {
+    if Exist(account_id) {
+        tokens.iter()
+            .skip(from_index as usize)
+            .take(limit.unwrap_or(15) as usize)
+            .map(|token_id| self.nft_token(token_id.clone()).unwrap())
+            .collect()
+    } else {
+        return vec![];
+    }
+}
+\end{minted}
+
+\paragraph{Approval Management}
+Необходимо добавить функционал передачи своего токена другим аккаунтом от своего имени\cite{approvalstandard}. Для этого будет хранить список доверенных аккаунтов(approved\_account\_ids).
+Также структура токена хранит next\_approval\_id, который изначально равен 0 и увеличивается на единицу при каждом новом добавленном доверенном аккаунте.
+
+Рассмотрим пример, где account\_1 решил создать токен, тогда у него будет следующая структура:
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+Token: {
+    owner_id: account_1
+    approved_accounts_ids: {}
+    next_approval_id: 0
+}
+\end{minted}
+
+Если он решит добавить account\_2, account\_3, как доверенные тогда структура станет следующей:
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+Token: {
+    owner_id: account_1
+    approved_accounts_ids: {
+        account_2: 0,
+        account_3: 1
+    }
+    next_approval_id: 2
+}
+\end{minted}
+
+Счетчик next\_approval\_id  необходим, чтобы не случилось случая, когда новый владелец токена решил добавить доверенный аккаунт, который был до этого. Такие случаи могу испортить всю логику на других smart-контрактах.
+Подробнее такие краивые случаи описаны в стандарте\cite{approvalstandard}.
+
+Approval Management не добавляет новых внешних view функций или payable функций, а просто вносит некоторую дополнительную логику проверки в существующие функции из секции Core Functionality.
+
+\paragraph{Royalties}
+
+Последнее чего требует стандарт - распределение прибыли от продажи NFT или от любой другой логики, которая будет возвращать NEAR среди нескольких аккаунтов в зависимости от долей\cite{royaltystandard}.
+Для этого у нас есть поле royalty в структуре Token, которая отображет пары в соответствующие доли. Сумма всех долей должна быть равна 10.000.
+
+Также добавятся две новые функции:
+\begin{enumerate}
+\item nft\_payout - получить распределение баланса в зависимости от долей для конкретного token\_id.
+\item nft\_transfer\_payout - совершить перевод токена и вернуть распределение баланса от долей.
+\end{enumerate}
+Псевдокод будет выглядеть следующим образом:
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+fn nft_payout(&self, token_id: TokenId, balance: u128, max_len_payout: u32) -> Payout {
+    /* Проверить, что токен существует */
+    assert(ExistToken(token_id))
+
+    /* Достать структу токен */
+    let token = self.tokens_by_id.get(&token_id);
+    let mut current_sum = 0;
+    let mut res = Payout {
+        payout: HashMap::new()
+    };
+
+    /* Посчитать доли других аккаунтов */
+    for (k, v) in token.royalty.iter() {
+        let key = k.clone();
+        if key == token.owner_id {
+            continue;
+        }
+        res.payout.insert(
+            key,
+            calc_payout(*v, balance)
+        );
+        current_sum += *v;
+    }
+    /* Посчитать свою долю */
+    res.payout.insert(
+        token.owner_id,
+        calc_payout(10000 - current_sum, balance)
+    );
+    res
+}
+
+#[payable]
+fn nft_transfer_payout(
+    &mut self,
+    receiver_id: AccountId,
+    token_id: TokenId,
+    approval_id: u64,
+    memo: Option<String>,
+    balance: u128,
+    max_len_payout: u32,
+) -> Payout {
+    /* Отправить токен */
+    let sender_id = env::predecessor_account_id();
+    let prev_token = self.internal_transfer(sender_id, receiver_id, token_id, approval_id, memo);
+
+    let mut current_sum = 0;
+    let mut result = Payout {
+      payout: HashMap::new()
+    };
+
+    /* Посчитать доли других аккаунтов */
+    for (k, v) in prev_token.royalty.iter() {
+        let key = k.clone();
+        if key == prev_token.owner_id {
+            continue;
+        }
+        result.payout.insert(key, calc_payout(*v, balance));
+        current_sum += *v;
+    }
+    /* Посчитать свою долю */
+    result.payout.insert(prev_token.owner_id, calc_payout(10000 - current_sum, balance));
+    result
+}
+\end{minted}
+
+% \paragraph{Хранение содержимого}
+
+% Стоит описать подход к хранению самого содержимого NFT, ведь в описанном стандарте в классе TokenMetadata у нас есть поле media,
+% которое хранит в себе ссылку url на то, что из себя представляет NFT(картинка, аудио дорожка и так далее). В стандарте для хранения содержимого советуют использовать
+% децентрализованное контентно-адресуемое хранилище. Примером такого хранилища может быть filecoin.io, который работает по протоколу Proof of Replication(PoRep)\cite{DBLP:journals/corr/abs-2002-10018}.
+% В качестве хранилища было решено использовать Web3.storage~\cite{web3storage}. Они предоставляют удобное HTTP API и библиотеки на Go, Javascript для взаимодействия с хранилищем.
+
+% Взаимодействие и логика связанная с загрузкой и выгрузкой содержимого в хранилище реализована на стороне Discord бота. За более подробным описанием можно обратиться к тексту сокомандника Ивана Луща.
+
+\subsection{Структура маркетплейс smart-контракта}
+
+В данной главе будет описано строение маркетплейс smart-контракта. Контракт маркетплейса уже не подчиняется никакому стандарту и может быть реализован разными способами.
+
+\paragraph{Core functionality}
+
+Начнем с функций, которые должны быть доступны пользователю:
+\begin{enumerate}
+    \item Выставить NFT токен на продажу.
+    \item Обновить цену своего выставленного на продажу NFT токена.
+    \item Убрать с продажи свой выставленный до этого NFT токен.
+    \item Получить список выставленных на продажу NFT токенов.
+    \item Купить выставленный на продажу NFT токен.
+\end{enumerate}
+
+Заметим, что на маркетплейс должны уметь выставлять токены нескольких NFT контрактов, потому что все они стандартизированны.
+То есть пользователи могут покупать/продавать токены абсолютно разных NFT контрактов.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[height=70mm]{fig/marketplace.png}
+	\caption{Marketplace core functionality}
+\end{figure}
+
+Опишем структуру маркетплейс контракта:
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+
+/* Так как выставить токен могут с разных контрактов, удобно будет соединить их в одной строке */
+/* ContractAndTokenId = contract ID + DELIMITER + token ID */
+pub type ContractAndTokenId = String;
+
+/* Цена токенов будет в YoctoNear */
+pub type SalePriceInYoctoNear = U128;
+
+pub type TokenId = String;
+
+/* Структура NFT токена выставленного на продажу */
+#[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize)]
+#[serde(crate = "near_sdk::serde")]
+pub struct Sale {
+    /* Владелец NFT токена */
+    pub owner_id: AccountId,
+
+    /* Значение этого поля обоснован в главе Approval Management */
+    pub approval_id: u64,
+
+    /* nft_contract_id с которого был выставлен NFT токен */
+    pub nft_contract_id: String,
+
+    /* Идендификатор выставленного токена */
+    pub token_id: String,
+
+    /* Цена */
+    pub sale_conditions: SalePriceInYoctoNear,
+}
+
+/* Структура контракта */
+#[near_bindgen]
+#[derive(BorshDeserialize, BorshSerialize, PanicOnDefault)]
+pub struct Contract {
+    /* Владелец контракта */
+    pub owner_id: AccountId,
+
+    /* Выставленные на продажу токены по ContractAndTokenId */
+    pub sales: UnorderedMap<ContractAndTokenId, Sale>,
+
+    /* Выставленные на продажу ContractAndTokenId по конкретному аккаунту */
+    pub by_owner_id: LookupMap<AccountId, UnorderedSet<ContractAndTokenId>>,
+
+    /* Выставленные на продажу токены по конкретному аккаунту */
+    pub by_nft_contract_id: LookupMap<AccountId, UnorderedSet<TokenId>>,
+
+    /* Внесенная сумма на хранение nft токена */
+    /* Смысл данной структуры будет обоснован позже */
+    pub storage_deposits: LookupMap<AccountId, Balance>,
+}
+\end{minted}
+
+Когда пользователь хочет выставить на продажу NFT токен, он должен вызвать nft\_approve у своего NFT контракта, чтобы добавить аккаунт маркетплейса в доверенные аккаунты, тогда на контракте маркетплейса вызовется метод nft\_on\_approve, который добавит токен на продажу.
+В результате, когда другой пользователь захочет купить токен, то маркетплейс сможет легко перевести его новому владельцу, потому он является доверенным аккаунтом для продаваемого токена.
+
+На иллюстрации будет приведен пример, где пользователь выставляет на продажу два токена с двух разных NFT контрактов на одном маркетплейс контракте.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=70mm]{fig/sell.png}
+	\caption{Marketplace contract sell}
+\end{figure}
+
+Псевдокод будет выглядеть следующим образом:
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+fn nft_on_approve(
+    &mut self,
+    token_id: TokenId,
+    owner_id: AccountId,
+    approval_id: u64,
+    msg: String,
+) {
+    /* NFT контракт с которого был вызвана продажа */
+    let nft_contract_id: AccountId = env::predecessor_account_id();
+
+    /* Аккаунт пользователя, который подписал контракт */
+    let signer_id: AccountId = env::signer_account_id();
+
+    assert(owner_id == signer_id)
+
+    /* Считаем сколько нужно на хранилище и сколько внесено */
+    let paid_storage: u128 = self.storage_deposits.getPaidStorage(signer_id);
+    let required_storage: u128 = CalcRequiredStorage();
+
+    /* Проверяем, что денег на хранение достаточно */
+    assert(paid_storage > required_storage);
+
+    /* Sale conditions take from msg filed, if user don't fill msg it will panic */
+    let sale_price  = GetSalePrice(msg);
+
+    /* Добавляем покупку в необходимые структуры */
+    let contract_and_token_id: String = nft_contract_id + '.' + token_id;
+    self.sales.InsertNewSale(
+        contract_and_token_id, owner_id, approval_id, nft_contract_id, token_id, sale_price
+    );
+
+    self.by_owner_id.InsertNewSale(
+        contract_and_token_id, owner_id, approval_id, nft_contract_id, token_id, sale_price
+    );
+
+    self.by_nft_contract_id.InsertNewSale(
+        owner_id, approval_id, nft_contract_id, token_id, sale_price
+    );
+}
+\end{minted}
+
+Так как мы делаем cross-contract call между двумя контрактами, тогда определить необходимые средства на хранения продаваемого NFT токена выглядит проблематичным.
+Поэтому пользователь должен будет сам покупать хранилище и сам его освобождать, когда его токены продались и место освободилось. Именно для этого необходимо поле storage\_deposits в контракте.
+Чтобы внести near под хранение используется функция storage\_deposit, а для вывода near за неиспользуемое место storage\_withdraw. Логика их кажется тривиальной, поэтому псевдокод приводиться не будет.
+
+Изменение цены и отмена продажи, тоже выглядят достаточно тривиальными, напишем короткий псевдокод:
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+#[payable]
+pub fn remove_sale(&mut self, nft_contract_id: AccountId, token_id: String) {
+    /* Проверим, что владелец токена пытается его убрать с продажи */
+    assert (self.sales.OwnerByToken(token_id) == env::precessor_account_id());
+
+    /* Удаляем продажу из структур контракта */
+    contract_and_token_id = nft_contract_id + '.' + token_id;
+    self.sales.RemoveByToken(token_id);
+    self.by_owner_id.RemoveByContractAndToken(owner_id, contract_and_token_id);
+    self.by_nft_contract_id.RemoveByContractAndToken(contract_and_token_id, token_id);
+}
+
+#[payable]
+pub fn update_price(
+    &mut self,
+    nft_contract_id: AccountId,
+    token_id: String,
+    price: U128,
+) {
+    /* Проверим, что владелец токена пытается его убрать с продажи */
+    assert (self.sales.OwnerByToken(token_id) == env::precessor_account_id());
+
+    /* Обновим цену продажы в структурах контракта */
+    contract_and_token_id = nft_contract_id + '.' + token_id;
+    self.sales.UpdateByToken(token_id, price);
+}
+\end{minted}
+
+Последний пункт это покупка NFT токена.
+
+\paragraph{Enumeration}
+
+Для того, чтобы удобно взаимодействовать с маркетплейс контрактом были добавлены несколько view функций, которые позволяют выгружать продаваемые NFT.
+\begin{enumerate}
+\item get\_supply\_sales - получить суммарное количество выставленных токенов.
+\item get\_supply\_by\_owner\_id - получить суммарное количество выставленных токенов за определенным пользователем.
+\item get\_supply\_by\_nft\_contract\_id - получить суммарное количество выставленных токенов за определенным NFT контрактом.
+\item get\_sales\_by\_nft\_contract\_id - получить выставленные на продажу токены за определенным NFT контрактом, используя pagination.
+\item get\_sales\_by\_owner\_id - получить выставленные на продажу токены за определенным пользователем, используя pagination.
+\item get\_sale - получить определенный продаваемый токен.
+\end{enumerate}
+
+Псевдокод данных функций будет выглядеть следующим образом:
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+pub fn get_supply_sales(
+    &self,
+) -> u64 {
+    self.sales.len()
+}
+
+pub fn get_supply_by_owner_id(
+    &self,
+    account_id: AccountId,
+) -> u64 {
+    let owner_id = self.by_owner_id.get(&account_id);
+
+    if let Some(owner_id) = owner_id {
+        owner_id.len()
+    } else {
+        0
+    }
+}
+
+pub fn get_sales_by_owner_id(
+    &self,
+    account_id: AccountId,
+    from_index: Option<u128>,
+    limit: Option<u64>,
+) -> Vec<Sale> {
+    let owner_id = self.by_owner_id.get(&account_id);
+
+    let sales = if let Some(owner_id) = owner_id {
+        owner_id
+    } else {
+        return vec![];
+    };
+
+    sales.iter()
+        .skip(from_index)
+        .take(limit)
+        .map(|token_id| self.sales.get(&token_id).unwrap())
+        .collect()
+}
+
+pub fn get_supply_by_nft_contract_id(
+    &self,
+    nft_contract_id: AccountId,
+) -> u64 {
+    let nft_contract_id = self.by_nft_contract_id.get(&nft_contract_id);
+
+    if let Some(nft_contract_id) = nft_contract_id {
+        nft_contract_id.len()
+    } else {
+        0
+    }
+}
+
+pub fn get_sales_by_nft_contract_id(
+    &self,
+    nft_contract_id: AccountId,
+    from_index: Option<u128>,
+    limit: Option<u64>,
+) -> Vec<Sale> {
+    let by_nft_contract_id = self.by_nft_contract_id.get(&nft_contract_id);
+
+    let sales = if let Some(by_nft_contract_id) = by_nft_contract_id {
+        by_nft_contract_id
+    } else {
+        return vec![];
+    };
+
+    sales.iter()
+        .skip(from_index)
+        .take(limit)
+        .map(|token_id| self.sales.get(&format!("{}{}{}", nft_contract_id, '.', token_id)).unwrap())
+        .collect()
+}
+
+pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
+    self.sales.get(&nft_contract_token)
+}
+\end{minted}
+
+\section{Discord-бот}
+\section{Генеративно-состязательная сеть}
+\section{Сервис с генеративно-состязательной сетью}

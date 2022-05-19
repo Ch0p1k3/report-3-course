@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Token}: \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{owner\PYGZus{}id}: \PYG{n+nc}{account\PYGZus{}1}
+\PYG{+w}{    }\PYG{n}{approved\PYGZus{}accounts\PYGZus{}ids}: \PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{account\PYGZus{}2}: \PYG{l+m+mi}{0}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{account\PYGZus{}3}: \PYG{l+m+mi}{1}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n}{next\PYGZus{}approval\PYGZus{}id}: \PYG{l+m+mi}{2}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
