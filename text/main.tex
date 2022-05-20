@@ -788,7 +788,23 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 \section{Discord-бот}
 \label{section.5}
 
-\subsection{Авторизация пользователя}
+\subsection{Взаимодействие с NEAR Wallet}
+
+В данной главе описаны
+
+\paragraph{Авторизация в NEAR Wallet}
+
+Авторизация в NEAR Wallet играет роль связывания аккаунта кошелька и пользователя, то есть фактически нам говорит, что у этого пользователя есть этот аккаунт. Наверное, стоит отметить, что, если пользователь авторизовался в NEAR Wallet в нашем сервисе, то от его лица можно вызывать методы(пока не закончатся GAS, которые были указаны при подписании транзакции), к которым не нужно вложение депозита, контракта, на котором был авторизован. Данный функционал нам не потребуется, так как у нас либо <<view operations>> в методах контракта, либо <<payable change operations>>.
+
+На маркетплейсах в виде сайта вся авторизация происходит на client-side стороне: создается пара ключей - публичный и секретный, публичный сохраняется в
+
+\begin{definition}
+    KeyStore\cite{nearclasskeystore} - это класс, который хранит ключи, для подписи транзакций. Их 4 штуки: BrowserLocalStorageKeyStore, InMemoryKeyStore, MergeKeyStore, UnencryptedFileSystemKeyStore. BrowserLocalStorageKeyStore пользуется локальным хранилищем браузера для записи, изменения, просмотра значений по ключу.InMemoryKeyStore хранит все в оперативной памяти, используется для тестирования. MergeKeyStore используется для объеденения множества KeyStore. UnencryptedFileSystemKeyStore хранит все на диске в виде JSON файла, используется в near cli\cite{nearcli}
+\end{definition}
+
+\paragraph{Вызовы методов у контрактов}
+
+\subsection{Пользовательский интерфейс}
 
 \section{Генеративно-состязательная сеть}
 \label{section.6}

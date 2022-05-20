@@ -52,16 +52,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Discord-бот}{25}{section.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Авторизация пользователя}{25}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.1}Взаимодействие с NEAR Wallet}{25}{subsection.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Генеративно-состязательная сеть}{25}{section.6}%
+\contentsline {paragraph}{\numberline {5.1.1}Авторизация в NEAR Wallet}{25}{paragraph.5.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Сервис с генеративно-состязательной сетью}{25}{section.7}%
+\contentsline {paragraph}{\numberline {5.1.2}Вызовы методов у контрактов}{26}{paragraph.5.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Выводы и результаты}{25}{section.8}%
+\contentsline {subsection}{\numberline {5.2}Пользовательский интерфейс}{26}{subsection.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Список источников}{26}{section.9}%
+\contentsline {section}{\numberline {6}Генеративно-состязательная сеть}{26}{section.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Приложения}{28}{section.10}%
+\contentsline {section}{\numberline {7}Сервис с генеративно-состязательной сетью}{26}{section.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Ссылка на репозиторий}{28}{subsection.10.1}%
+\contentsline {section}{\numberline {8}Выводы и результаты}{26}{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Список источников}{27}{section.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Приложения}{29}{section.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {10.1}Ссылка на репозиторий}{29}{subsection.10.1}%

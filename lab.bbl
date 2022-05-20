@@ -929,6 +929,34 @@
       \verb https://nomicon.io/Standards/Tokens/NonFungibleToken/Payout
       \endverb
     \endentry
+    \entry{nearcli}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
+           family={Protocol},
+           familyi={P\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \field{extraname}{10}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NEAR Documentation}
+      \field{title}{Near cli}
+      \verb{urlraw}
+      \verb https://docs.near.org/docs/tools/near-cli
+      \endverb
+      \verb{url}
+      \verb https://docs.near.org/docs/tools/near-cli
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

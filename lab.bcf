@@ -2225,6 +2225,8 @@
     <bcf:citekey order="40">approvalstandard</bcf:citekey>
     <bcf:citekey order="41">approvalstandard</bcf:citekey>
     <bcf:citekey order="42">royaltystandard</bcf:citekey>
+    <bcf:citekey order="43">nearclasskeystore</bcf:citekey>
+    <bcf:citekey order="44">nearcli</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
