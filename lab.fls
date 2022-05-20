@@ -584,7 +584,13 @@ INPUT /mnt/d/edu/report-3-course/text/abstract.tex
 INPUT /usr/share/texmf/fonts/tfm/public/pscyr/ftmr6a.tfm
 INPUT /mnt/d/edu/report-3-course/text/intro.tex
 INPUT /mnt/d/edu/report-3-course/text/intro.tex
+INPUT /mnt/d/edu/report-3-course/fig/near_1.png
+INPUT /mnt/d/edu/report-3-course/fig/near_1.png
+INPUT /mnt/d/edu/report-3-course/fig/near_1.png
 INPUT /usr/share/texmf/fonts/tfm/public/pscyr/ftmri6a.tfm
+INPUT /mnt/d/edu/report-3-course/fig/near_2.png
+INPUT /mnt/d/edu/report-3-course/fig/near_2.png
+INPUT /mnt/d/edu/report-3-course/fig/near_2.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1440.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/pscyr/ftmr6a.tfm
 INPUT /mnt/d/edu/report-3-course/text/theory.tex

@@ -19,9 +19,47 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{nearprotocol_2022}{misc}{}
+    \entry{DBLP:journals/corr/abs-1712-04649}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2bba19d63211c502202e1278eb195b4a}{%
+           family={Mourouzis},
+           familyi={M\bibinitperiod},
+           given={Theodosis},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8440809b9568b6420b85d9df6a219d2c}{%
+           family={Filipou},
+           familyi={F\bibinitperiod},
+           given={Chrysostomos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{46cbfa5727a38c9f9a71002823a9cc5c}
+      \strng{fullhash}{46cbfa5727a38c9f9a71002823a9cc5c}
+      \strng{bibnamehash}{46cbfa5727a38c9f9a71002823a9cc5c}
+      \strng{authorbibnamehash}{46cbfa5727a38c9f9a71002823a9cc5c}
+      \strng{authornamehash}{46cbfa5727a38c9f9a71002823a9cc5c}
+      \strng{authorfullhash}{46cbfa5727a38c9f9a71002823a9cc5c}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{The Blockchain Revolution: Insights from Top-Management}
+      \field{volume}{abs/1712.04649}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1712.04649
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1712.04649
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1712.04649
+      \endverb
+    \endentry
+    \entry{nearprotocol_2022}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEAR Protocol}
       \field{title}{NEAR Protocol}
@@ -46,8 +84,8 @@
       \strng{authorbibnamehash}{69cb33f291cd2fbdf7a4f25054546c0d}
       \strng{authornamehash}{69cb33f291cd2fbdf7a4f25054546c0d}
       \strng{authorfullhash}{69cb33f291cd2fbdf7a4f25054546c0d}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEAR Protocol}
@@ -75,8 +113,8 @@
       \strng{authorbibnamehash}{1977190f018b398e43ede3de043de8ea}
       \strng{authornamehash}{1977190f018b398e43ede3de043de8ea}
       \strng{authorfullhash}{1977190f018b398e43ede3de043de8ea}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Bitcoin: A peer-to-peer electronic cash system}
@@ -109,8 +147,8 @@
       \strng{authorbibnamehash}{fa81091bc80aaa40687a306be85471b6}
       \strng{authornamehash}{fa81091bc80aaa40687a306be85471b6}
       \strng{authorfullhash}{fa81091bc80aaa40687a306be85471b6}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781617296338}
@@ -131,8 +169,8 @@
       \strng{authorbibnamehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
       \strng{authornamehash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
       \strng{authorfullhash}{fcdd8b9b48156f3d0530a3bc5bd1ef12}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Solana Program Library Docs}
@@ -159,8 +197,8 @@
       \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \field{extraname}{1}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEAR Documentation}
@@ -187,8 +225,8 @@
       \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \field{extraname}{2}
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
@@ -215,8 +253,8 @@
       \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \field{extraname}{3}
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
@@ -429,8 +467,8 @@
       \strng{authorbibnamehash}{e94ca5fcb94b957425e893e7edd2a408}
       \strng{authornamehash}{e94ca5fcb94b957425e893e7edd2a408}
       \strng{authorfullhash}{e94ca5fcb94b957425e893e7edd2a408}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Redis}
@@ -456,8 +494,8 @@
       \strng{authorbibnamehash}{056d094c53655f21d36231b9acf92098}
       \strng{authornamehash}{056d094c53655f21d36231b9acf92098}
       \strng{authorfullhash}{056d094c53655f21d36231b9acf92098}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEAR Wallet}
@@ -696,8 +734,8 @@
       \strng{authornamehash}{fe2770e30af277ed5a05614fef03470a}
       \strng{authorfullhash}{fe2770e30af277ed5a05614fef03470a}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
@@ -722,8 +760,8 @@
       \strng{authornamehash}{fe2770e30af277ed5a05614fef03470a}
       \strng{authorfullhash}{fe2770e30af277ed5a05614fef03470a}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
@@ -749,8 +787,8 @@
       \strng{authorbibnamehash}{d1c49282d186e2530a347095096ecb74}
       \strng{authornamehash}{d1c49282d186e2530a347095096ecb74}
       \strng{authorfullhash}{d1c49282d186e2530a347095096ecb74}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IPFS Powers the Distributed Web}
@@ -880,8 +918,8 @@
       \endverb
     \endentry
     \entry{corestandard}{misc}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labeltitlesource}{title}
       \field{title}{core-functionality}
       \verb{urlraw}
@@ -892,8 +930,8 @@
       \endverb
     \endentry
     \entry{enumstandard}{misc}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labeltitlesource}{title}
       \field{title}{enumeration-standard}
       \verb{urlraw}
@@ -958,6 +996,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{2021}
 \endrefsection
 \endinput
 
