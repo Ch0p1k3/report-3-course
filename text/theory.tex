@@ -1,4 +1,5 @@
 \section{Обзор существующих работ и решений}
+\label{section.3}
 \subsection{Маркетплейсы}
 НВ данный момент существует большое количество NFT маркетплейсов: opensea\cite{opensea}, rarible\cite{rarible}, solanart\cite{solanart}. Если брать маркетплейсы только на базе NEAR Protocol, тогда существуют такие примеры как: Paras\cite{paras}, Mintbase\cite{mintbase}, остановимся на них поподробнее.
 
@@ -8,7 +9,26 @@ Paras является наиболее популярным и представ
 посмотреть какие NFT выставлены на продажу, посмотреть купленные NFT, купить NFT, продать NFT, создать новую коллекцию NFT.
 На площадке представлены следующие виды NFT: пиксель-арты, иллюстрации, абстрактные картины, картины разных персонажей, фотографии. Все объекты можно отсортировать по убыванию или возрастанию цены.
 
-Smart-контракты Paras лежат в открытом доступе.
+Smart-контракты Paras лежат в открытом доступе\cite{parasnftcontract, parasmarketplacecontract}.
+
+// Тут что-то про smart-контракты
+
+Paras использует сервис fleek, этот 
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{json}
+    {
+        "description":"Proof of Attendance to events hosted by NEAR Gang Couture.",
+        "collection":"Haute Gang - Collaborations",
+        "collection_id":"haute-gang-collaborations-by-neargangcouturenear",
+        "creator_id":"neargangcouture.near",
+        "attributes":[
+            {"trait_type":"Rarity","value":"No Star"},
+            {"trait_type":"Type","value":"Mask"}
+        ],
+        "blurhash":"UqFtJxPWpdyDGJ${t2V[?[ICMyenPCxVobae",
+        "mime_type":"image/jpeg"
+    }
+\end{minted}
 
 \begin{remark}
     Обычно smart-контракты DApps принято выкладывать в открытый доступ, чтобы любой пользователь мог их посмотреть и полностью доверять сервису.

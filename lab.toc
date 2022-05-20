@@ -28,11 +28,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {3.1.2}Mintbase}{8}{paragraph.3.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Генеративно-состязательные сети}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Генеративно-состязательные сети}{9}{subsection.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Smart-контракты}{8}{section.4}%
+\contentsline {section}{\numberline {4}Smart-контракты}{9}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Структура NFT smart-контракта}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Структура NFT smart-контракта}{9}{subsection.4.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {4.1.1}Near sdk фреймворк}{9}{paragraph.4.1.1}%
 \defcounter {refsection}{0}\relax 

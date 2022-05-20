@@ -2207,13 +2207,15 @@
     <bcf:citekey order="23">solanart</bcf:citekey>
     <bcf:citekey order="24">paras</bcf:citekey>
     <bcf:citekey order="25">mintbase</bcf:citekey>
-    <bcf:citekey order="26">nftstandart</bcf:citekey>
-    <bcf:citekey order="27">nearsdkrs</bcf:citekey>
-    <bcf:citekey order="28">corestandard</bcf:citekey>
-    <bcf:citekey order="29">enumstandard</bcf:citekey>
-    <bcf:citekey order="30">approvalstandard</bcf:citekey>
+    <bcf:citekey order="26">parasnftcontract</bcf:citekey>
+    <bcf:citekey order="26">parasmarketplacecontract</bcf:citekey>
+    <bcf:citekey order="27">nftstandart</bcf:citekey>
+    <bcf:citekey order="28">nearsdkrs</bcf:citekey>
+    <bcf:citekey order="29">corestandard</bcf:citekey>
+    <bcf:citekey order="30">enumstandard</bcf:citekey>
     <bcf:citekey order="31">approvalstandard</bcf:citekey>
-    <bcf:citekey order="32">royaltystandard</bcf:citekey>
+    <bcf:citekey order="32">approvalstandard</bcf:citekey>
+    <bcf:citekey order="33">royaltystandard</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -674,6 +674,58 @@
       \verb https://www.mintbase.io/
       \endverb
     \endentry
+    \entry{parasnftcontract}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fe2770e30af277ed5a05614fef03470a}{%
+           family={ParasHQ},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe2770e30af277ed5a05614fef03470a}
+      \strng{fullhash}{fe2770e30af277ed5a05614fef03470a}
+      \strng{bibnamehash}{fe2770e30af277ed5a05614fef03470a}
+      \strng{authorbibnamehash}{fe2770e30af277ed5a05614fef03470a}
+      \strng{authornamehash}{fe2770e30af277ed5a05614fef03470a}
+      \strng{authorfullhash}{fe2770e30af277ed5a05614fef03470a}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub}
+      \field{title}{paras-nft-contract}
+      \verb{urlraw}
+      \verb https://github.com/ParasHQ/paras-nft-contract
+      \endverb
+      \verb{url}
+      \verb https://github.com/ParasHQ/paras-nft-contract
+      \endverb
+    \endentry
+    \entry{parasmarketplacecontract}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fe2770e30af277ed5a05614fef03470a}{%
+           family={ParasHQ},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe2770e30af277ed5a05614fef03470a}
+      \strng{fullhash}{fe2770e30af277ed5a05614fef03470a}
+      \strng{bibnamehash}{fe2770e30af277ed5a05614fef03470a}
+      \strng{authorbibnamehash}{fe2770e30af277ed5a05614fef03470a}
+      \strng{authornamehash}{fe2770e30af277ed5a05614fef03470a}
+      \strng{authorfullhash}{fe2770e30af277ed5a05614fef03470a}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub}
+      \field{title}{paras-nft-contract}
+      \verb{urlraw}
+      \verb https://github.com/ParasHQ/paras-marketplace-contract
+      \endverb
+      \verb{url}
+      \verb https://github.com/ParasHQ/paras-marketplace-contract
+      \endverb
+    \endentry
     \entry{nftstandart}{misc}{}
       \field{sortinit}{2}
       \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
@@ -701,8 +753,8 @@
       \endverb
     \endentry
     \entry{enumstandard}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labeltitlesource}{title}
       \field{title}{enumeration-standard}
       \field{year}{2022}
