@@ -756,6 +756,34 @@
       \verb https://github.com/ParasHQ/paras-marketplace-contract
       \endverb
     \endentry
+    \entry{ipfs}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d1c49282d186e2530a347095096ecb74}{%
+           family={Labs},
+           familyi={L\bibinitperiod},
+           given={Protocol},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1c49282d186e2530a347095096ecb74}
+      \strng{fullhash}{d1c49282d186e2530a347095096ecb74}
+      \strng{bibnamehash}{d1c49282d186e2530a347095096ecb74}
+      \strng{authorbibnamehash}{d1c49282d186e2530a347095096ecb74}
+      \strng{authornamehash}{d1c49282d186e2530a347095096ecb74}
+      \strng{authorfullhash}{d1c49282d186e2530a347095096ecb74}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IPFS Powers the Distributed Web}
+      \field{title}{IPFs powers the distributed web}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://ipfs.io/
+      \endverb
+      \verb{url}
+      \verb https://ipfs.io/
+      \endverb
+    \endentry
     \entry{fleek}{misc}{}
       \name{author}{1}{}{%
         {{hash=4c28322909bf0028c666260cbd40843f}{%
@@ -768,8 +796,8 @@
       \strng{authorbibnamehash}{4c28322909bf0028c666260cbd40843f}
       \strng{authornamehash}{4c28322909bf0028c666260cbd40843f}
       \strng{authorfullhash}{4c28322909bf0028c666260cbd40843f}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{journaltitle}{Fleek}
       \field{year}{2022}
@@ -835,34 +863,6 @@
       \endverb
       \verb{url}
       \verb https://github.com/near/near-wallet/blob/22b76a96b2ac71d1b1ca4f5acb85e79643cd8ef7/packages/frontend/src/services/NonFungibleTokens.js#L101
-      \endverb
-    \endentry
-    \entry{ipfs}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=d1c49282d186e2530a347095096ecb74}{%
-           family={Labs},
-           familyi={L\bibinitperiod},
-           given={Protocol},
-           giveni={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{d1c49282d186e2530a347095096ecb74}
-      \strng{fullhash}{d1c49282d186e2530a347095096ecb74}
-      \strng{bibnamehash}{d1c49282d186e2530a347095096ecb74}
-      \strng{authorbibnamehash}{d1c49282d186e2530a347095096ecb74}
-      \strng{authornamehash}{d1c49282d186e2530a347095096ecb74}
-      \strng{authorfullhash}{d1c49282d186e2530a347095096ecb74}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IPFS Powers the Distributed Web}
-      \field{title}{IPFs powers the distributed web}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://ipfs.io/
-      \endverb
-      \verb{url}
-      \verb https://ipfs.io/
       \endverb
     \endentry
     \entry{nftstandart}{misc}{}

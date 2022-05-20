@@ -1,5 +1,5 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{static} \PYG{n+nx}{buildMediaUrl} \PYG{o}{=} \PYG{p}{(}\PYG{n+nx}{media}\PYG{p}{,} \PYG{n+nx}{base\PYGZus{}uri}\PYG{p}{)} \PYG{p}{=\PYGZgt{}} \PYG{p}{\PYGZob{}}
+\PYG{k+kd}{function} \PYG{n+nx}{buildMediaUrl}\PYG{p}{(}\PYG{n+nx}{media}\PYG{p}{,} \PYG{n+nx}{base\PYGZus{}uri}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n+nx}{media} \PYG{o}{||} \PYG{n+nx}{media}\PYG{p}{.}\PYG{n+nx}{includes}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}://\PYGZsq{}}\PYG{p}{)} \PYG{o}{||} \PYG{n+nx}{media}\PYG{p}{.}\PYG{n+nx}{startsWith}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}data:image\PYGZsq{}}\PYG{p}{))} \PYG{p}{\PYGZob{}}
         \PYG{k}{return} \PYG{n+nx}{media}\PYG{p}{;}
     \PYG{p}{\PYGZcb{}}

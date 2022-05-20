@@ -42,11 +42,15 @@ Smart-контракты Paras лежат в открытом доступе\cit
 \caption{Структура NFT}
 \end{listing}
 
-Paras, как и большинство маркетплейсов хранит медиа-файл и метаданные NFT на IPFS. IPFS предоставляется сервисом fleek\cite{fleek}. В качестве ссылки на на медиа-файл и метаданные они хранят CID, а не полный URL, это связанно с тем, что минт NFT таким образом будет гораздо дешевле, ведь хранение в NEAR, довольно дорогое\cite{nearstoragestackinghowmuch}. Но есть и минус этого, на NEAR Wallet, скорее всего это изображение не будет видно, так как NEAR Wallet, при не указании протокола соеденения, будет подставлять CID не в IPFS от fleek\hyperref[lst.pastecidnearwallet]{(Листинг 2)}.
+Paras, как и большинство маркетплейсов хранит медиа-файл и метаданные NFT на IPFS\cite{ipfs}. IPFS предоставляется сервисом fleek\cite{fleek}. В качестве ссылки на медиа-файл и метаданные они хранят CID, а не полный URL, это связанно с тем, что минт NFT таким образом будет гораздо дешевле, ведь хранение в NEAR, довольно дорогое\cite{nearstoragestackinghowmuch}. Но есть и минус этого, на NEAR Wallet, скорее всего это изображение не будет видно, так как NEAR Wallet, при не указании протокола соеденения, будет подставлять CID не в IPFS от fleek\hyperref[lst.pastecidnearwallet]{(Листинг 2)}.
+
+\begin{definition}
+    IPFS(InterPlanetary File System) - децентрализованная система хранения файлов. При добавлении файла в IPFS, он делится на маленькие куски, криптографически хэшируется и отдается уникальный фингерпринтр, который называется CID(Content identifier) \cite{ipfs}
+\end{definition}
 
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{js}
-static buildMediaUrl = (media, base_uri) => {
+function buildMediaUrl(media, base_uri) {
     if (!media || media.includes('://') || media.startsWith('data:image')) {
         return media;
     }
@@ -59,10 +63,6 @@ static buildMediaUrl = (media, base_uri) => {
 \caption{Подстановка CID в URL у NEAR Wallet\cite{pastecidnearwallet}}
 \label{lst.pastecidnearwallet}
 \end{listing}
-
-\begin{definition}
-    IPFS(InterPlanetary File System) - децентрализованная система хранения файлов. При добавлении файла в IPFS, он делится на маленькие куски, криптографически хэшируется и отдается уникальный фингерпринтр, который называется CID(Content identifier) \cite{ipfs}
-\end{definition}
 
 Давайте рассмотрим структуру метаданных NFT\hyperref[lst.parasnftmetadatastruct]{(Листинг 3)}. Paras, хоть и поддерживает по стандарту NEP-171 поле <<description>>, но хранит описание в метаданных NFT токена, это аналогично тем же причинам, что и хранение CID, а не полного url, в полях на медиа-файл и метаданные. Также они хранят название и идентификатор коллекции, создателя NFT, атрибуты и тип файла. Во многом мы будет подражать этой структуре в наших метаданных.
 

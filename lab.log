@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  20 MAY 2022 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  20 MAY 2022 14:02
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2660,9 +2660,10 @@ LaTeX Font Info:    Font shape `T2A/fer/b/n' in size <8> not available
 (Font)              Font shape `T2A/fer/bx/n' tried instead on input line 7.
 )
 Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 42.
+ [8]
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/89E144935DAF768FCCDD17F77566E37EC7F2207FF7213C394A04A5697525429B.pygtex
+ (/mnt/d/edu/report-3-course/_minted-lab/50289C8C31E5A663014DF9463D455922C7F2207FF7213C394A04A5697525429B.pygtex
 LaTeX Font Info:    Trying to load font information for TS1+fer on input line 3.
 LaTeX Font Info:    No file TS1fer.fd. on input line 3.
 
@@ -2703,7 +2704,7 @@ Package textcomp Info: Symbol \textasciigrave not provided by
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family fer in TS1 encoding.
 (textcomp)             Default family used instead on input line 9.
-) [8]
+)
 \openout5 = `lab.pyg'.
 
  (/mnt/d/edu/report-3-course/_minted-lab/47111613A49F164352D55F810B2C60F1D5DCA46D821C4527CBA7D4E0F9050C79.pygtex) [9]) (/mnt/d/edu/report-3-course/text/main.tex
@@ -2802,7 +2803,7 @@ Package textcomp Info: Symbol \textasciigrave not provided by
 \openout5 = `lab.pyg'.
 
  (/mnt/d/edu/report-3-course/_minted-lab/3920E8FBE3FE155F2E8D01904A58BADEECC8215DAF5A8A7684FF0F030C82BEE5.pygtex)
-<fig/temp.png, id=287, 543.02875pt x 292.09125pt>
+<fig/temp.png, id=288, 543.02875pt x 292.09125pt>
 File: fig/temp.png Graphic file (type png)
 <use fig/temp.png>
 Package pdftex.def Info: fig/temp.png  used on input line 248.
@@ -2827,7 +2828,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 \openout5 = `lab.pyg'.
 
  (/mnt/d/edu/report-3-course/_minted-lab/BC72F0F7B7B7C7657CA117951CB43FD6ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [19])
-<fig/marketplace.png, id=337, 442.65375pt x 382.42876pt>
+<fig/marketplace.png, id=338, 442.65375pt x 382.42876pt>
 File: fig/marketplace.png Graphic file (type png)
 <use fig/marketplace.png>
 Package pdftex.def Info: fig/marketplace.png  used on input line 543.
@@ -2835,7 +2836,7 @@ Package pdftex.def Info: fig/marketplace.png  used on input line 543.
 \openout5 = `lab.pyg'.
 
  (/mnt/d/edu/report-3-course/_minted-lab/FF5AD40CCC05C4DDA7FE2EFC40B93C68ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [20 </mnt/d/edu/report-3-course/fig/marketplace.png>])
-<fig/sell.png, id=350, 787.94376pt x 432.61626pt>
+<fig/sell.png, id=351, 787.94376pt x 432.61626pt>
 File: fig/sell.png Graphic file (type png)
 <use fig/sell.png>
 Package pdftex.def Info: fig/sell.png  used on input line 609.
@@ -2921,10 +2922,10 @@ Here is how much of TeX's memory you used:
  475 hyphenation exceptions out of 8191
  67i,11n,108p,2541b,1892s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcit0800.600pk>{/usr/share/texmf/fonts/enc/dvips/pscyr/t2a.enc} </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt0800.600pk> </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk> </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercour.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercourb.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercouri.pfb></usr/share/texmf/fonts/type1/public/pscyr/times.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesbd.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesi.pfb>
-Output written on /mnt/d/edu/report-3-course/lab.pdf (28 pages, 296448 bytes).
+Output written on /mnt/d/edu/report-3-course/lab.pdf (28 pages, 296462 bytes).
 PDF statistics:
- 530 PDF objects out of 1000 (max. 8388607)
- 469 compressed objects within 5 object streams
+ 531 PDF objects out of 1000 (max. 8388607)
+ 470 compressed objects within 5 object streams
  136 named destinations out of 1000 (max. 500000)
  228 words of extra memory for PDF output out of 10000 (max. 10000000)
 

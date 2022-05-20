@@ -2211,18 +2211,19 @@
     <bcf:citekey order="27">mintbase</bcf:citekey>
     <bcf:citekey order="28">parasnftcontract</bcf:citekey>
     <bcf:citekey order="28">parasmarketplacecontract</bcf:citekey>
-    <bcf:citekey order="29">fleek</bcf:citekey>
-    <bcf:citekey order="30">nearstoragestackinghowmuch</bcf:citekey>
-    <bcf:citekey order="31">pastecidnearwallet</bcf:citekey>
-    <bcf:citekey order="32">pastecidnearwallet</bcf:citekey>
-    <bcf:citekey order="33">ipfs</bcf:citekey>
-    <bcf:citekey order="34">nftstandart</bcf:citekey>
-    <bcf:citekey order="35">nearsdkrs</bcf:citekey>
-    <bcf:citekey order="36">corestandard</bcf:citekey>
-    <bcf:citekey order="37">enumstandard</bcf:citekey>
-    <bcf:citekey order="38">approvalstandard</bcf:citekey>
+    <bcf:citekey order="29">ipfs</bcf:citekey>
+    <bcf:citekey order="30">fleek</bcf:citekey>
+    <bcf:citekey order="31">nearstoragestackinghowmuch</bcf:citekey>
+    <bcf:citekey order="32">ipfs</bcf:citekey>
+    <bcf:citekey order="33">pastecidnearwallet</bcf:citekey>
+    <bcf:citekey order="34">pastecidnearwallet</bcf:citekey>
+    <bcf:citekey order="35">nftstandart</bcf:citekey>
+    <bcf:citekey order="36">nearsdkrs</bcf:citekey>
+    <bcf:citekey order="37">corestandard</bcf:citekey>
+    <bcf:citekey order="38">enumstandard</bcf:citekey>
     <bcf:citekey order="39">approvalstandard</bcf:citekey>
-    <bcf:citekey order="40">royaltystandard</bcf:citekey>
+    <bcf:citekey order="40">approvalstandard</bcf:citekey>
+    <bcf:citekey order="41">royaltystandard</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
