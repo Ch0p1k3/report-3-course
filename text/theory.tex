@@ -1,7 +1,7 @@
 \section{Обзор существующих работ и решений}
 \label{section.3}
 \subsection{Маркетплейсы}
-НВ данный момент существует большое количество NFT маркетплейсов: opensea\cite{opensea}, rarible\cite{rarible}, solanart\cite{solanart}. Если брать маркетплейсы только на базе NEAR Protocol, тогда существуют такие примеры как: Paras\cite{paras}, Mintbase\cite{mintbase}, остановимся на них поподробнее.
+На данный момент существует большое количество NFT маркетплейсов: opensea\cite{opensea}, rarible\cite{rarible}, solanart\cite{solanart}. Если брать маркетплейсы только на базе NEAR Protocol, тогда существуют такие примеры как: Paras\cite{paras}, Mintbase\cite{mintbase}, остановимся на них поподробнее.
 
 \paragraph{Paras}
 
@@ -42,7 +42,7 @@ Smart-контракты Paras лежат в открытом доступе\cit
 \caption{Структура NFT}
 \end{listing}
 
-Paras, как и большинство маркетплейсов хранит медиа-файл и метаданные NFT на IPFS\cite{ipfs}. IPFS предоставляется сервисом fleek\cite{fleek}. В качестве ссылки на медиа-файл и метаданные они хранят CID, а не полный URL, это связанно с тем, что минт NFT таким образом будет гораздо дешевле, ведь хранение в NEAR, довольно дорогое\cite{nearstoragestackinghowmuch}. Но есть и минус этого, на NEAR Wallet, скорее всего это изображение не будет видно, так как NEAR Wallet, при не указании протокола соеденения, будет подставлять CID не в IPFS от fleek\hyperref[lst.pastecidnearwallet]{(Листинг 2)}.
+Paras, как и большинство маркетплейсов хранит медиа-файл и метаданные NFT на IPFS\cite{ipfs}. IPFS предоставляется сервисом fleek\cite{fleek}. В качестве ссылки на медиа-файл и метаданные они хранят CID, а не полный URL, это связанно с тем, что минт NFT таким образом будет гораздо дешевле, ведь хранение в NEAR, довольно дорогое\cite{nearstoragestackinghowmuch}. Но есть и минус этой экономии, на NEAR Wallet, скорее всего это изображение не будет отображаться, так как NEAR Wallet, при не указании протокола соединения, будет подставлять CID не в URL IPFS от fleek\hyperref[lst.pastecidnearwallet]{(Листинг 2)}.
 
 \begin{definition}
     IPFS(InterPlanetary File System) - децентрализованная система хранения файлов. При добавлении файла в IPFS, он делится на маленькие куски, криптографически хэшируется и отдается уникальный фингерпринтр, который называется CID(Content identifier) \cite{ipfs}
@@ -89,5 +89,9 @@ function buildMediaUrl(media, base_uri) {
 \paragraph{Mintbase}
 
 Mintbase является менее популярным маркетплейсом, однако он предоставляем гораздо больше категорий NFT, но все ключевые функции такие же. В качестве новых категорий выступают: 3D изображение, gif, профессиональные фотографии, аудиодорожки, произведения художников.
+
+Smart-контракты Mintbase на половину открыты(некоторые в открытом доступе, некоторые нет)\cite{mintbasecontracts}.
+
+// TODO контракты
 
 \subsection{Генеративно-состязательные сети}

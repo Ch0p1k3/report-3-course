@@ -25,7 +25,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEAR Protocol}
       \field{title}{NEAR Protocol}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://near.org/
       \endverb
@@ -138,7 +137,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Solana Program Library Docs}
       \field{title}{Introduction}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://spl.solana.com/
       \endverb
@@ -167,7 +165,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEAR Documentation}
       \field{title}{Transaction}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://docs.near.org/docs/concepts/transaction
       \endverb
@@ -196,7 +193,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
       \field{title}{Near/near-sdk-rs: Rust library for writing near Smart Contracts}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://github.com/near/near-sdk-rs
       \endverb
@@ -225,7 +221,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
       \field{title}{Near/near-sdk-as: AssemblyScript library for writing near Smart Contracts}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://github.com/near/near-sdk-as
       \endverb
@@ -280,7 +275,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Buttons | discord.js Guide}
       \field{title}{discord.js guide, buttons}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://discordjs.guide/interactions/buttons.html#building-and-sending-buttons
       \endverb
@@ -306,7 +300,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{discord.ts official documentation}
       \field{title}{discord.ts official documentation, context menu}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://discord-ts.js.org/docs/decorators/gui/context-menu/
       \endverb
@@ -332,8 +325,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Select menus | discord.js Guide}
-      \field{title}{discord.js Guide}
-      \field{year}{2022}
+      \field{title}{discord.js Guide, select menus}
       \verb{urlraw}
       \verb https://discordjs.guide/interactions/select-menus.html#building-and-sending-select-menus
       \endverb
@@ -359,8 +351,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Modals | discord.js Guide}
-      \field{title}{Discord.js guide, Modals}
-      \field{year}{2022}
+      \field{title}{discord.js guide, modals}
       \verb{urlraw}
       \verb https://discordjs.guide/interactions/modals.html#building-and-responding-with-modals
       \endverb
@@ -389,7 +380,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEAR Documentation}
       \field{title}{Introduction, Thinking in gas}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://docs.near.org/docs/concepts/gas#thinking-in-gas
       \endverb
@@ -418,7 +408,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{near}
       \field{title}{Class KeyStore}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://near.github.io/near-api-js/classes/key_stores_keystore.keystore.html
       \endverb
@@ -446,7 +435,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Redis}
       \field{title}{Redis}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://redis.io/
       \endverb
@@ -474,7 +462,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEAR Wallet}
       \field{title}{Near wallet}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://wallet.near.org/
       \endverb
@@ -503,7 +490,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{near}
       \field{title}{Class transaction}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://near.github.io/near-api-js/classes/transaction.transaction-1.html
       \endverb
@@ -532,7 +518,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{near}
       \field{title}{Class action}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://near.github.io/near-api-js/classes/transaction.action.html
       \endverb
@@ -559,7 +544,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Slash commands | discord.js Guide}
       \field{title}{discord.js Guide, slash commands}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://discordjs.guide/interactions/slash-commands.html#registering-slash-commands
       \endverb
@@ -589,7 +573,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{OpenSea}
       \field{title}{OpenSea, the largest NFT Marketplace}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://opensea.io/
       \endverb
@@ -617,7 +600,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Rarible}
       \field{title}{NFT Marketplace}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://rarible.com/
       \endverb
@@ -643,7 +625,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Solanart - Discover, collect and trade NFTs}
       \field{title}{Solanart - discover, collect and trade nfts}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://www.solnaart.com/
       \endverb
@@ -669,7 +650,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Paras}
       \field{title}{NFT Marketplace for digital collectibles on near}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://paras.id/
       \endverb
@@ -689,6 +669,7 @@
       \strng{authorbibnamehash}{68c2ab8470ec9e5963a1027405c3accb}
       \strng{authornamehash}{68c2ab8470ec9e5963a1027405c3accb}
       \strng{authorfullhash}{68c2ab8470ec9e5963a1027405c3accb}
+      \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
@@ -721,7 +702,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
       \field{title}{paras-nft-contract}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://github.com/ParasHQ/paras-nft-contract
       \endverb
@@ -748,7 +728,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
       \field{title}{paras-nft-contract}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://github.com/ParasHQ/paras-marketplace-contract
       \endverb
@@ -776,7 +755,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{IPFS Powers the Distributed Web}
       \field{title}{IPFs powers the distributed web}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://ipfs.io/
       \endverb
@@ -800,7 +778,6 @@
       \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{journaltitle}{Fleek}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://fleek.co/
       \endverb
@@ -829,7 +806,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEAR Documentation}
       \field{title}{Storage staking, How much does it cost?}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://docs.near.org/docs/concepts/storage-staking#how-much-does-it-cost
       \endverb
@@ -857,12 +833,37 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
       \field{title}{Near-wallet/nonfungibletokens.js at 22b76a96b2ac71d1b1ca4f5acb85e79643cd8ef7 · near/near-wallet}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://github.com/near/near-wallet/blob/22b76a96b2ac71d1b1ca4f5acb85e79643cd8ef7/packages/frontend/src/services/NonFungibleTokens.js#L101
       \endverb
       \verb{url}
       \verb https://github.com/near/near-wallet/blob/22b76a96b2ac71d1b1ca4f5acb85e79643cd8ef7/packages/frontend/src/services/NonFungibleTokens.js#L101
+      \endverb
+    \endentry
+    \entry{mintbasecontracts}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=68c2ab8470ec9e5963a1027405c3accb}{%
+           family={Mintbase},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{68c2ab8470ec9e5963a1027405c3accb}
+      \strng{fullhash}{68c2ab8470ec9e5963a1027405c3accb}
+      \strng{bibnamehash}{68c2ab8470ec9e5963a1027405c3accb}
+      \strng{authorbibnamehash}{68c2ab8470ec9e5963a1027405c3accb}
+      \strng{authornamehash}{68c2ab8470ec9e5963a1027405c3accb}
+      \strng{authorfullhash}{68c2ab8470ec9e5963a1027405c3accb}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub}
+      \field{title}{Mintbase/mintbase-core: Mintbase core NFT store factory contracts}
+      \verb{urlraw}
+      \verb https://github.com/Mintbase/mintbase-core
+      \endverb
+      \verb{url}
+      \verb https://github.com/Mintbase/mintbase-core
       \endverb
     \endentry
     \entry{nftstandart}{misc}{}
@@ -883,7 +884,6 @@
       \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labeltitlesource}{title}
       \field{title}{core-functionality}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://nomicon.io/Standards/Tokens/NonFungibleToken/Core
       \endverb
@@ -896,7 +896,6 @@
       \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labeltitlesource}{title}
       \field{title}{enumeration-standard}
-      \field{year}{2022}
       \verb{urlraw}
       \verb https://nomicon.io/Standards/Tokens/NonFungibleToken/Enumeration
       \endverb
@@ -905,8 +904,8 @@
       \endverb
     \endentry
     \entry{approvalstandard}{misc}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labeltitlesource}{title}
       \field{title}{approval-standard}
       \field{year}{2022}

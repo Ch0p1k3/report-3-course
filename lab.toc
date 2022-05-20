@@ -48,9 +48,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {4.2.1}Core functionality}{20}{paragraph.4.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {4.2.2}Enumeration}{23}{paragraph.4.2.2}%
+\contentsline {paragraph}{\numberline {4.2.2}Enumeration}{24}{paragraph.4.2.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Discord-бот}{25}{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Авторизация пользователя}{25}{subsection.5.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Генеративно-состязательная сеть}{25}{section.6}%
 \defcounter {refsection}{0}\relax 

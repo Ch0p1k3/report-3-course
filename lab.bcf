@@ -2217,13 +2217,14 @@
     <bcf:citekey order="32">ipfs</bcf:citekey>
     <bcf:citekey order="33">pastecidnearwallet</bcf:citekey>
     <bcf:citekey order="34">pastecidnearwallet</bcf:citekey>
-    <bcf:citekey order="35">nftstandart</bcf:citekey>
-    <bcf:citekey order="36">nearsdkrs</bcf:citekey>
-    <bcf:citekey order="37">corestandard</bcf:citekey>
-    <bcf:citekey order="38">enumstandard</bcf:citekey>
-    <bcf:citekey order="39">approvalstandard</bcf:citekey>
+    <bcf:citekey order="35">mintbasecontracts</bcf:citekey>
+    <bcf:citekey order="36">nftstandart</bcf:citekey>
+    <bcf:citekey order="37">nearsdkrs</bcf:citekey>
+    <bcf:citekey order="38">corestandard</bcf:citekey>
+    <bcf:citekey order="39">enumstandard</bcf:citekey>
     <bcf:citekey order="40">approvalstandard</bcf:citekey>
-    <bcf:citekey order="41">royaltystandard</bcf:citekey>
+    <bcf:citekey order="41">approvalstandard</bcf:citekey>
+    <bcf:citekey order="42">royaltystandard</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
