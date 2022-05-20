@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}description\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}Proof of Attendance to events hosted by NEAR Gang Couture.\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}collection\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}Haute Gang \PYGZhy{} Collaborations\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}collection\PYGZus{}id\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}haute\PYGZhy{}gang\PYGZhy{}collaborations\PYGZhy{}by\PYGZhy{}neargangcouturenear\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}creator\PYGZus{}id\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}neargangcouture.near\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}attributes\PYGZdq{}}\PYG{p}{:[}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}\PYG{n+nt}{\PYGZdq{}trait\PYGZus{}type\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}Rarity\PYGZdq{}}\PYG{p}{,}\PYG{n+nt}{\PYGZdq{}value\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}No Star\PYGZdq{}}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}\PYG{n+nt}{\PYGZdq{}trait\PYGZus{}type\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}Type\PYGZdq{}}\PYG{p}{,}\PYG{n+nt}{\PYGZdq{}value\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}Mask\PYGZdq{}}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{],}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}blurhash\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}UqFtJxPWpdyDGJ\PYGZdl{}\PYGZob{}t2V[?[ICMyenPCxVobae\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nt}{\PYGZdq{}mime\PYGZus{}type\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}image/jpeg\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

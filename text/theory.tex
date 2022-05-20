@@ -11,33 +11,83 @@ Paras является наиболее популярным и представ
 
 Smart-контракты Paras лежат в открытом доступе\cite{parasnftcontract, parasmarketplacecontract}.
 
-// Тут что-то про smart-контракты
-
-Paras использует сервис fleek, этот 
-
-\begin{minted}[breaklines,fontsize=\scriptsize]{json}
-    {
-        "description":"Proof of Attendance to events hosted by NEAR Gang Couture.",
-        "collection":"Haute Gang - Collaborations",
-        "collection_id":"haute-gang-collaborations-by-neargangcouturenear",
-        "creator_id":"neargangcouture.near",
-        "attributes":[
-            {"trait_type":"Rarity","value":"No Star"},
-            {"trait_type":"Type","value":"Mask"}
-        ],
-        "blurhash":"UqFtJxPWpdyDGJ${t2V[?[ICMyenPCxVobae",
-        "mime_type":"image/jpeg"
-    }
-\end{minted}
-
 \begin{remark}
     Обычно smart-контракты DApps принято выкладывать в открытый доступ, чтобы любой пользователь мог их посмотреть и полностью доверять сервису.
 \end{remark}
 
+// Тут что-то про smart-контракты
+
+\begin{listing}
+\begin{minted}[breaklines,fontsize=\scriptsize]{js}
+{
+    token_id: "304990:24",
+    owner_id: "maxzeinly.near",
+    metadata: {
+        title: "Proof of Attendance No.1 #24",
+        description: null,
+        media: "bafybeib3c3r7vjbmyetawahj4kprei6satcrq23k2qjlx2gnmxmv5c6lza",
+        media_hash: null,
+        copies: 1111,
+        issued_at: "1652813800358071368",
+        expires_at: null,
+        starts_at: null,
+        updated_at: null,
+        extra: null,
+        reference: "bafkreiai54itp2hf267leg6754xmlst6j5m3yp3sin6n5bgva2q44wwtem",
+        reference_hash: null
+    },
+    approved_account_ids: {}
+}
+\end{minted}
+\caption{Структура NFT}
+\end{listing}
+
+Paras, как и большинство маркетплейсов хранит медиа-файл и метаданные NFT на IPFS. IPFS предоставляется сервисом fleek\cite{fleek}. В качестве ссылки на на медиа-файл и метаданные они хранят CID, а не полный URL, это связанно с тем, что минт NFT таким образом будет гораздо дешевле, ведь хранение в NEAR, довольно дорогое\cite{nearstoragestackinghowmuch}. Но есть и минус этого, на NEAR Wallet, скорее всего это изображение не будет видно, так как NEAR Wallet, при не указании протокола соеденения, будет подставлять CID не в IPFS от fleek\hyperref[lst.pastecidnearwallet]{(Листинг 2)}.
+
+\begin{listing}[H]
+\begin{minted}[breaklines,fontsize=\scriptsize]{js}
+static buildMediaUrl = (media, base_uri) => {
+    if (!media || media.includes('://') || media.startsWith('data:image')) {
+        return media;
+    }
+    if (base_uri) {
+        return `${base_uri}/${media}`;
+    }
+    return `https://cloudflare-ipfs.com/ipfs/${media}`;
+}
+\end{minted}
+\caption{Подстановка CID в URL у NEAR Wallet\cite{pastecidnearwallet}}
+\label{lst.pastecidnearwallet}
+\end{listing}
+
+\begin{definition}
+    IPFS(InterPlanetary File System) - децентрализованная система хранения файлов. При добавлении файла в IPFS, он делится на маленькие куски, криптографически хэшируется и отдается уникальный фингерпринтр, который называется CID(Content identifier) \cite{ipfs}
+\end{definition}
+
+Давайте рассмотрим структуру метаданных NFT\hyperref[lst.parasnftmetadatastruct]{(Листинг 3)}. Paras, хоть и поддерживает по стандарту NEP-171 поле <<description>>, но хранит описание в метаданных NFT токена, это аналогично тем же причинам, что и хранение CID, а не полного url, в полях на медиа-файл и метаданные. Также они хранят название и идентификатор коллекции, создателя NFT, атрибуты и тип файла. Во многом мы будет подражать этой структуре в наших метаданных.
+
+\begin{listing}[H]
+\begin{minted}[breaklines,fontsize=\scriptsize]{json}
+{
+    "description":"Proof of Attendance to events hosted by NEAR Gang Couture.",
+    "collection":"Haute Gang - Collaborations",
+    "collection_id":"haute-gang-collaborations-by-neargangcouturenear",
+    "creator_id":"neargangcouture.near",
+    "attributes":[
+        {"trait_type":"Rarity","value":"No Star"},
+        {"trait_type":"Type","value":"Mask"}
+    ],
+    "blurhash":"UqFtJxPWpdyDGJ${t2V[?[ICMyenPCxVobae",
+    "mime_type":"image/jpeg"
+}
+\end{minted}
+\caption{Структура метаданных NFT в Paras}
+\label{lst.parasnftmetadatastruct}
+\end{listing}
+
 
 \paragraph{Mintbase}
 
-Mintbase является менее популярным маркетплейсом, однако он предоставляем гораздо больше категорий NFT, но все ключевые функции такие же. В качестве
-новых категорий выступают: 3d изображение, gif, профессиональные фотографии, аудиодорожки, произведения художников.
+Mintbase является менее популярным маркетплейсом, однако он предоставляем гораздо больше категорий NFT, но все ключевые функции такие же. В качестве новых категорий выступают: 3D изображение, gif, профессиональные фотографии, аудиодорожки, произведения художников.
 
 \subsection{Генеративно-состязательные сети}

@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{static} \PYG{n+nx}{buildMediaUrl} \PYG{o}{=} \PYG{p}{(}\PYG{n+nx}{media}\PYG{p}{,} \PYG{n+nx}{base\PYGZus{}uri}\PYG{p}{)} \PYG{p}{=\PYGZgt{}} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n+nx}{media} \PYG{o}{||} \PYG{n+nx}{media}\PYG{p}{.}\PYG{n+nx}{includes}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}://\PYGZsq{}}\PYG{p}{)} \PYG{o}{||} \PYG{n+nx}{media}\PYG{p}{.}\PYG{n+nx}{startsWith}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}data:image\PYGZsq{}}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{media}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n+nx}{base\PYGZus{}uri}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{l+s+sb}{`}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{base\PYGZus{}uri}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{/}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{media}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{`}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{l+s+sb}{`https://cloudflare\PYGZhy{}ipfs.com/ipfs/}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{media}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

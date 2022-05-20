@@ -261,6 +261,113 @@
       \verb https://docs.near.org/docs/api/javascript-library
       \endverb
     \endentry
+    \entry{discordjsbuttons}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1b127cd60f2ed4547c7a17bff9394ddd}{%
+           family={discord.js},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{fullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{bibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authorbibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authornamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authorfullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Buttons | discord.js Guide}
+      \field{title}{discord.js guide, buttons}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://discordjs.guide/interactions/buttons.html#building-and-sending-buttons
+      \endverb
+      \verb{url}
+      \verb https://discordjs.guide/interactions/buttons.html#building-and-sending-buttons
+      \endverb
+    \endentry
+    \entry{discordtscontextmenu}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=dac2817fc43f0fec58a4fe4eb39cd122}{%
+           family={discord.ts},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \strng{fullhash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \strng{bibnamehash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \strng{authorbibnamehash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \strng{authornamehash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \strng{authorfullhash}{dac2817fc43f0fec58a4fe4eb39cd122}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{discord.ts official documentation}
+      \field{title}{discord.ts official documentation, context menu}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://discord-ts.js.org/docs/decorators/gui/context-menu/
+      \endverb
+      \verb{url}
+      \verb https://discord-ts.js.org/docs/decorators/gui/context-menu/
+      \endverb
+    \endentry
+    \entry{discordjsselectmenus}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1b127cd60f2ed4547c7a17bff9394ddd}{%
+           family={discord.js},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{fullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{bibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authorbibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authornamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authorfullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Select menus | discord.js Guide}
+      \field{title}{discord.js Guide}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://discordjs.guide/interactions/select-menus.html#building-and-sending-select-menus
+      \endverb
+      \verb{url}
+      \verb https://discordjs.guide/interactions/select-menus.html#building-and-sending-select-menus
+      \endverb
+    \endentry
+    \entry{discordjsmodals}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1b127cd60f2ed4547c7a17bff9394ddd}{%
+           family={discord.js},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{fullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{bibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authorbibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authornamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \strng{authorfullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Modals | discord.js Guide}
+      \field{title}{Discord.js guide, Modals}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://discordjs.guide/interactions/modals.html#building-and-responding-with-modals
+      \endverb
+      \verb{url}
+      \verb https://discordjs.guide/interactions/modals.html#building-and-responding-with-modals
+      \endverb
+    \endentry
     \entry{neargas}{misc}{}
       \name{author}{1}{}{%
         {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
@@ -282,6 +389,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{NEAR Documentation}
       \field{title}{Introduction, Thinking in gas}
+      \field{year}{2022}
       \verb{urlraw}
       \verb https://docs.near.org/docs/concepts/gas#thinking-in-gas
       \endverb
@@ -389,8 +497,8 @@
       \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \field{extraname}{7}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{near}
@@ -418,8 +526,8 @@
       \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \field{extraname}{8}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{near}
@@ -444,9 +552,9 @@
       \strng{authorbibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
       \strng{authornamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
       \strng{authorfullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraname}{4}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Slash commands | discord.js Guide}
@@ -457,86 +565,6 @@
       \endverb
       \verb{url}
       \verb https://discordjs.guide/interactions/slash-commands.html#registering-slash-commands
-      \endverb
-    \endentry
-    \entry{discordtscontextmenu}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=dac2817fc43f0fec58a4fe4eb39cd122}{%
-           family={discord.ts},
-           familyi={d\bibinitperiod}}}%
-      }
-      \strng{namehash}{dac2817fc43f0fec58a4fe4eb39cd122}
-      \strng{fullhash}{dac2817fc43f0fec58a4fe4eb39cd122}
-      \strng{bibnamehash}{dac2817fc43f0fec58a4fe4eb39cd122}
-      \strng{authorbibnamehash}{dac2817fc43f0fec58a4fe4eb39cd122}
-      \strng{authornamehash}{dac2817fc43f0fec58a4fe4eb39cd122}
-      \strng{authorfullhash}{dac2817fc43f0fec58a4fe4eb39cd122}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{discord.ts official documentation}
-      \field{title}{discord.ts official documentation, context menu}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://discord-ts.js.org/docs/decorators/gui/context-menu/
-      \endverb
-      \verb{url}
-      \verb https://discord-ts.js.org/docs/decorators/gui/context-menu/
-      \endverb
-    \endentry
-    \entry{discordjsbuttons}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=1b127cd60f2ed4547c7a17bff9394ddd}{%
-           family={discord.js},
-           familyi={d\bibinitperiod}}}%
-      }
-      \strng{namehash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \strng{fullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \strng{bibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \strng{authorbibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \strng{authornamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \strng{authorfullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Buttons | discord.js Guide}
-      \field{title}{discord.js guide, buttons}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://discordjs.guide/interactions/buttons.html#building-and-sending-buttons
-      \endverb
-      \verb{url}
-      \verb https://discordjs.guide/interactions/buttons.html#building-and-sending-buttons
-      \endverb
-    \endentry
-    \entry{discordjsselectmenus}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=1b127cd60f2ed4547c7a17bff9394ddd}{%
-           family={discord.js},
-           familyi={d\bibinitperiod}}}%
-      }
-      \strng{namehash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \strng{fullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \strng{bibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \strng{authorbibnamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \strng{authornamehash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \strng{authorfullhash}{1b127cd60f2ed4547c7a17bff9394ddd}
-      \field{extraname}{3}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Select menus | discord.js Guide}
-      \field{title}{discord.js Guide}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://discordjs.guide/interactions/select-menus.html#building-and-sending-select-menus
-      \endverb
-      \verb{url}
-      \verb https://discordjs.guide/interactions/select-menus.html#building-and-sending-select-menus
       \endverb
     \endentry
     \entry{opensea}{misc}{}
@@ -693,6 +721,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
       \field{title}{paras-nft-contract}
+      \field{year}{2022}
       \verb{urlraw}
       \verb https://github.com/ParasHQ/paras-nft-contract
       \endverb
@@ -719,6 +748,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{GitHub}
       \field{title}{paras-nft-contract}
+      \field{year}{2022}
       \verb{urlraw}
       \verb https://github.com/ParasHQ/paras-marketplace-contract
       \endverb
@@ -726,9 +756,118 @@
       \verb https://github.com/ParasHQ/paras-marketplace-contract
       \endverb
     \endentry
-    \entry{nftstandart}{misc}{}
+    \entry{fleek}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4c28322909bf0028c666260cbd40843f}{%
+           family={fleek},
+           familyi={f\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c28322909bf0028c666260cbd40843f}
+      \strng{fullhash}{4c28322909bf0028c666260cbd40843f}
+      \strng{bibnamehash}{4c28322909bf0028c666260cbd40843f}
+      \strng{authorbibnamehash}{4c28322909bf0028c666260cbd40843f}
+      \strng{authornamehash}{4c28322909bf0028c666260cbd40843f}
+      \strng{authorfullhash}{4c28322909bf0028c666260cbd40843f}
       \field{sortinit}{2}
       \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Fleek}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://fleek.co/
+      \endverb
+      \verb{url}
+      \verb https://fleek.co/
+      \endverb
+    \endentry
+    \entry{nearstoragestackinghowmuch}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
+           family={Protocol},
+           familyi={P\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \field{extraname}{9}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NEAR Documentation}
+      \field{title}{Storage staking, How much does it cost?}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://docs.near.org/docs/concepts/storage-staking#how-much-does-it-cost
+      \endverb
+      \verb{url}
+      \verb https://docs.near.org/docs/concepts/storage-staking#how-much-does-it-cost
+      \endverb
+    \endentry
+    \entry{pastecidnearwallet}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=326101b9999034e9a2e3c92b0ee7afea}{%
+           family={Wallet},
+           familyi={W\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{326101b9999034e9a2e3c92b0ee7afea}
+      \strng{fullhash}{326101b9999034e9a2e3c92b0ee7afea}
+      \strng{bibnamehash}{326101b9999034e9a2e3c92b0ee7afea}
+      \strng{authorbibnamehash}{326101b9999034e9a2e3c92b0ee7afea}
+      \strng{authornamehash}{326101b9999034e9a2e3c92b0ee7afea}
+      \strng{authorfullhash}{326101b9999034e9a2e3c92b0ee7afea}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub}
+      \field{title}{Near-wallet/nonfungibletokens.js at 22b76a96b2ac71d1b1ca4f5acb85e79643cd8ef7 · near/near-wallet}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/near/near-wallet/blob/22b76a96b2ac71d1b1ca4f5acb85e79643cd8ef7/packages/frontend/src/services/NonFungibleTokens.js#L101
+      \endverb
+      \verb{url}
+      \verb https://github.com/near/near-wallet/blob/22b76a96b2ac71d1b1ca4f5acb85e79643cd8ef7/packages/frontend/src/services/NonFungibleTokens.js#L101
+      \endverb
+    \endentry
+    \entry{ipfs}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d1c49282d186e2530a347095096ecb74}{%
+           family={Labs},
+           familyi={L\bibinitperiod},
+           given={Protocol},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1c49282d186e2530a347095096ecb74}
+      \strng{fullhash}{d1c49282d186e2530a347095096ecb74}
+      \strng{bibnamehash}{d1c49282d186e2530a347095096ecb74}
+      \strng{authorbibnamehash}{d1c49282d186e2530a347095096ecb74}
+      \strng{authornamehash}{d1c49282d186e2530a347095096ecb74}
+      \strng{authorfullhash}{d1c49282d186e2530a347095096ecb74}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IPFS Powers the Distributed Web}
+      \field{title}{IPFs powers the distributed web}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://ipfs.io/
+      \endverb
+      \verb{url}
+      \verb https://ipfs.io/
+      \endverb
+    \endentry
+    \entry{nftstandart}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labeltitlesource}{title}
       \field{title}{NEAR NFT Standarts}
       \field{year}{2022}
@@ -740,8 +879,8 @@
       \endverb
     \endentry
     \entry{corestandard}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labeltitlesource}{title}
       \field{title}{core-functionality}
       \field{year}{2022}
@@ -779,8 +918,8 @@
       \endverb
     \endentry
     \entry{royaltystandard}{misc}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labeltitlesource}{title}
       \field{title}{royalty-standard}
       \field{year}{2022}
