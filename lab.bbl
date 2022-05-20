@@ -57,6 +57,70 @@
       \verb http://arxiv.org/abs/1712.04649
       \endverb
     \endentry
+    \entry{2021}{article}{}
+      \name{author}{6}{}{%
+        {{hash=b51e947471e2039eb90d31facd4b03fc}{%
+           family={Nadini},
+           familyi={N\bibinitperiod},
+           given={Matthieu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=964f5858bfd4e6a8e105da1125743398}{%
+           family={Alessandretti},
+           familyi={A\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod}}}%
+        {{hash=9f67c416b60de63faabc81b2e35e74f6}{%
+           family={Di\bibnamedelima Giacinto},
+           familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Flavio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=8c81464e712f3219ca9b39ffceea8ae3}{%
+           family={Martino},
+           familyi={M\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod}}}%
+        {{hash=578dd0d02865626d9fe222b65cec8558}{%
+           family={Aiello},
+           familyi={A\bibinitperiod},
+           given={Luca\bibnamedelima Maria},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=8532d9be6c124f254353927432e2d846}{%
+           family={Baronchelli},
+           familyi={B\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{aa9b12bdfefd1608848b4c178949d61b}
+      \strng{fullhash}{e99ce21b6fde1a7e0f04b4e266b2349c}
+      \strng{bibnamehash}{aa9b12bdfefd1608848b4c178949d61b}
+      \strng{authorbibnamehash}{aa9b12bdfefd1608848b4c178949d61b}
+      \strng{authornamehash}{aa9b12bdfefd1608848b4c178949d61b}
+      \strng{authorfullhash}{e99ce21b6fde1a7e0f04b4e266b2349c}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2045-2322}
+      \field{journaltitle}{Scientific Reports}
+      \field{month}{10}
+      \field{number}{1}
+      \field{title}{Mapping the NFT revolution: market trends, trade networks, and visual features}
+      \field{volume}{11}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1038/s41598-021-00053-8
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1038/s41598-021-00053-8
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1038/s41598-021-00053-8
+      \endverb
+    \endentry
     \entry{nearprotocol_2022}{misc}{}
       \field{sortinit}{3}
       \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
@@ -773,6 +837,19 @@
       \verb https://github.com/ParasHQ/paras-marketplace-contract
       \endverb
     \endentry
+    \entry{nftstandart}{misc}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labeltitlesource}{title}
+      \field{title}{NEAR NFT Standarts}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://nomicon.io/Standards/Tokens/NonFungibleToken/Core
+      \endverb
+      \verb{url}
+      \verb https://nomicon.io/Standards/Tokens/NonFungibleToken/Core
+      \endverb
+    \endentry
     \entry{ipfs}{misc}{}
       \name{author}{1}{}{%
         {{hash=d1c49282d186e2530a347095096ecb74}{%
@@ -904,19 +981,6 @@
       \verb https://github.com/Mintbase/mintbase-core
       \endverb
     \endentry
-    \entry{nftstandart}{misc}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
-      \field{labeltitlesource}{title}
-      \field{title}{NEAR NFT Standarts}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://nomicon.io/Standards/Tokens/NonFungibleToken/Core
-      \endverb
-      \verb{url}
-      \verb https://nomicon.io/Standards/Tokens/NonFungibleToken/Core
-      \endverb
-    \endentry
     \entry{corestandard}{misc}{}
       \field{sortinit}{4}
       \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
@@ -996,7 +1060,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{2021}
 \endrefsection
 \endinput
 

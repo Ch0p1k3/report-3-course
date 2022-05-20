@@ -595,6 +595,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1440.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/pscyr/ftmr6a.tfm
 INPUT /mnt/d/edu/report-3-course/text/theory.tex
 INPUT /mnt/d/edu/report-3-course/text/theory.tex
+INPUT /mnt/d/edu/report-3-course/fig/parascollections.png
+INPUT /mnt/d/edu/report-3-course/fig/parascollections.png
+INPUT /mnt/d/edu/report-3-course/fig/parascollections.png
 OUTPUT /mnt/d/edu/report-3-course/lab.pyg
 INPUT /mnt/d/edu/report-3-course/_minted-lab/default-pyg-prefix.pygstyle
 INPUT /mnt/d/edu/report-3-course/_minted-lab/default-pyg-prefix.pygstyle
@@ -605,10 +608,10 @@ INPUT /mnt/d/edu/report-3-course/_minted-lab/default.pygstyle
 INPUT /mnt/d/edu/report-3-course/_minted-lab/default.pygstyle
 INPUT /mnt/d/edu/report-3-course/_minted-lab/default.pygstyle
 INPUT /mnt/d/edu/report-3-course/lab.pyg
-INPUT /mnt/d/edu/report-3-course/_minted-lab/46400095065F446CC83FB976F020AF96C7F2207FF7213C394A04A5697525429B.pygtex
-INPUT /mnt/d/edu/report-3-course/_minted-lab/46400095065F446CC83FB976F020AF96C7F2207FF7213C394A04A5697525429B.pygtex
-INPUT /mnt/d/edu/report-3-course/_minted-lab/46400095065F446CC83FB976F020AF96C7F2207FF7213C394A04A5697525429B.pygtex
-INPUT /mnt/d/edu/report-3-course/_minted-lab/46400095065F446CC83FB976F020AF96C7F2207FF7213C394A04A5697525429B.pygtex
+INPUT /mnt/d/edu/report-3-course/_minted-lab/392BA39FE4B47EAC8A7B9F40FB30A3C4C7F2207FF7213C394A04A5697525429B.pygtex
+INPUT /mnt/d/edu/report-3-course/_minted-lab/392BA39FE4B47EAC8A7B9F40FB30A3C4C7F2207FF7213C394A04A5697525429B.pygtex
+INPUT /mnt/d/edu/report-3-course/_minted-lab/392BA39FE4B47EAC8A7B9F40FB30A3C4C7F2207FF7213C394A04A5697525429B.pygtex
+INPUT /mnt/d/edu/report-3-course/_minted-lab/392BA39FE4B47EAC8A7B9F40FB30A3C4C7F2207FF7213C394A04A5697525429B.pygtex
 INPUT /usr/share/texmf/fonts/tfm/public/pscyr/ftmr6a.tfm
 INPUT /usr/share/texmf/tex/latex/pscyr/t2afer.fd
 INPUT /usr/share/texmf/tex/latex/pscyr/t2afer.fd
