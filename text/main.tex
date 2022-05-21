@@ -825,7 +825,7 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 
 Структура метаданных(Листинг \hyperref[lst.nftmetadata]{\color{blue} 4}) полностью аналогично структуре метаданных в Paras, так как эта структура оправдана своей функциональностью. Только в отличие от Paras нет полей: <<collection>>, <<collection\_id>>, <<blurhash>>, <<mime\_type>>. <<collection>>, <<collection\_id>> нет, потому что на данный момент мы не поддерживаем коллекции NFT. <<mime\_type>>, <<blurhash>> из-за ненадобности.
 
-\begin{listing}[H]
+\begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{js}
 {
     token_id: 'chopik.testnet.1652636744470',
@@ -852,7 +852,7 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 \label{lst.nftstructure}
 \end{listing}
 
-\begin{listing}[H]
+\begin{listing} 
 \begin{minted}[breaklines,fontsize=\scriptsize]{json}
 {
     "description":"Cool city",

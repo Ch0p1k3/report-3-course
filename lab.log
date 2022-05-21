@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  21 MAY 2022 19:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  21 MAY 2022 19:48
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2893,10 +2893,10 @@ Overfull \hbox (25.37001pt too wide) in paragraph at lines 804--809
 [30 </mnt/d/edu/report-3-course/fig/auth1.png> </mnt/d/edu/report-3-course/fig/auth2.png>]
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/F01D19E52A8BDCE1BE8BA0B5D72C3C8FC7F2207FF7213C394A04A5697525429B.pygtex) [31]
+ (/mnt/d/edu/report-3-course/_minted-lab/F01D19E52A8BDCE1BE8BA0B5D72C3C8FC7F2207FF7213C394A04A5697525429B.pygtex)
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/2C821F9865ADE51E33236CD8FCEC9656D5DCA46D821C4527CBA7D4E0F9050C79.pygtex)) (/mnt/d/edu/report-3-course/text/conclusion.tex [32] [33]) (/mnt/d/edu/report-3-course/text/sources.tex [34]
+ (/mnt/d/edu/report-3-course/_minted-lab/2C821F9865ADE51E33236CD8FCEC9656D5DCA46D821C4527CBA7D4E0F9050C79.pygtex) [31]) (/mnt/d/edu/report-3-course/text/conclusion.tex [32]) (/mnt/d/edu/report-3-course/text/sources.tex [33]
 
 LaTeX Font Warning: Font shape `TS1/ftm/m/it' undefined
 (Font)              using `TS1/ftm/m/n' instead
@@ -2917,7 +2917,7 @@ Underfull \hbox (badness 3439) in paragraph at lines 1--1
 \T2A/ftm/m/it/14.4 wallet\T2A/ftm/m/n/14.4 . \T2A/ftm/m/sc/14.4 url\T2A/ftm/m/n/14.4 : []$https : / / github . com / near / near -[] wallet / blob /
  []
 
-[35]
+[34]
 Underfull \hbox (badness 2269) in paragraph at lines 1--1
 []\T2A/ftm/m/n/14.4 Mintbase. \T2A/ftm/m/it/14.4 Mintbase/mintbase-core: Mintbase core NFT store factory
  []
@@ -2945,7 +2945,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[36]
+[35]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
  (/mnt/d/edu/report-3-course/lab.aux)
@@ -2964,18 +2964,18 @@ Package logreq Info: Writing requests to 'lab.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48540 strings out of 482584
- 904315 string characters out of 5956256
+ 48539 strings out of 482584
+ 904308 string characters out of 5956256
  1716618 words of memory out of 5000000
  62328 multiletter control sequences out of 15000+600000
  555731 words of font info for 69 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
  67i,12n,108p,2541b,1892s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcit0800.600pk>{/usr/share/texmf/fonts/enc/dvips/pscyr/t2a.enc} </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt0800.600pk> </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk> </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercour.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercourb.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercouri.pfb></usr/share/texmf/fonts/type1/public/pscyr/times.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesbd.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesi.pfb>
-Output written on /mnt/d/edu/report-3-course/lab.pdf (36 pages, 621180 bytes).
+Output written on /mnt/d/edu/report-3-course/lab.pdf (35 pages, 620656 bytes).
 PDF statistics:
- 655 PDF objects out of 1000 (max. 8388607)
- 573 compressed objects within 6 object streams
- 178 named destinations out of 1000 (max. 500000)
+ 651 PDF objects out of 1000 (max. 8388607)
+ 570 compressed objects within 6 object streams
+ 177 named destinations out of 1000 (max. 500000)
  274 words of extra memory for PDF output out of 10000 (max. 10000000)
 
