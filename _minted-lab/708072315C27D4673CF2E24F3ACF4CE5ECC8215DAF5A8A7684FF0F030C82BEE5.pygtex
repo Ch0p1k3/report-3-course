@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{fn} \PYG{n+nf}{nft\PYGZus{}on\PYGZus{}transfer}\PYG{p}{(}
+\PYG{+w}{    }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{sender\PYGZus{}id}: \PYG{n+nc}{AccountId}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{previous\PYGZus{}owner\PYGZus{}id}: \PYG{n+nc}{AccountId}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{token\PYGZus{}id}: \PYG{n+nc}{TokenId}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{msg}: \PYG{n+nb}{String}\PYG{p}{,}
+\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Promise}\PYG{p}{;}
+
+\PYG{c+cp}{\PYGZsh{}[payable]}
+\PYG{k}{fn} \PYG{n+nf}{nft\PYGZus{}transfer}\PYG{p}{(}
+\PYG{+w}{    }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{receiver\PYGZus{}id}: \PYG{n+nc}{AccountId}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{token\PYGZus{}id}: \PYG{n+nc}{TokenId}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{approval\PYGZus{}id}: \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{u64}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{memo}: \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{String}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{calle\PYGZus{}id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{env}::\PYG{n}{predecessor\PYGZus{}account\PYGZus{}id}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{prev\PYGZus{}token}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{internal\PYGZus{}transfer}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{calle\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{receiver\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{token\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{approval\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{memo}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+cp}{\PYGZsh{}[payable]}
+\PYG{k}{fn} \PYG{n+nf}{nft\PYGZus{}transfer\PYGZus{}call}\PYG{p}{(}
+\PYG{+w}{    }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{receiver\PYGZus{}id}: \PYG{n+nc}{AccountId}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{token\PYGZus{}id}: \PYG{n+nc}{TokenId}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{approval\PYGZus{}id}: \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{u64}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{memo}: \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{String}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{msg}: \PYG{n+nb}{String}\PYG{p}{,}
+\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{PromiseOrValue}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{bool}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+
+\PYG{+w}{    }\PYG{c+cm}{/* Сохраняем отправителя и копию токена до отправки */}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{sender\PYGZus{}id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{env}::\PYG{n}{predecessor\PYGZus{}account\PYGZus{}id}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{previous\PYGZus{}token}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{internal\PYGZus{}transfer}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{sender\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{receiver\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{token\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{approval\PYGZus{}id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{memo}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{());}
+
+\PYG{+w}{    }\PYG{c+cm}{/* Если отпра}
+\end{Verbatim}

@@ -1031,7 +1031,7 @@
       \verb https://nomicon.io/Standards/Tokens/NonFungibleToken/Payout
       \endverb
     \endentry
-    \entry{nearcli}{misc}{}
+    \entry{nearaccounts}{misc}{}
       \name{author}{1}{}{%
         {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
            family={Protocol},
@@ -1046,6 +1046,60 @@
       \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \field{extraname}{10}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NEAR Documentation}
+      \field{title}{Account}
+      \verb{urlraw}
+      \verb https://docs.near.org/docs/concepts/account
+      \endverb
+      \verb{url}
+      \verb https://docs.near.org/docs/concepts/account
+      \endverb
+    \endentry
+    \entry{webapistorage}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Интерфейсы веб API | MDN}
+      \field{title}{Storage - интерфейсы веб API: MDN}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/ru/docs/Web/API/Storage
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/ru/docs/Web/API/Storage
+      \endverb
+    \endentry
+    \entry{webapilocalstorage}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Интерфейсы веб API | MDN}
+      \field{title}{Window.localstorage - Интерфейсы веб API: MDN}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/ru/docs/Web/API/Window/localStorage
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/ru/docs/Web/API/Window/localStorage
+      \endverb
+    \endentry
+    \entry{nearcli}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
+           family={Protocol},
+           familyi={P\bibinitperiod},
+           given={NEAR},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
+      \field{extraname}{11}
       \field{sortinit}{4}
       \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
