@@ -1,0 +1,5 @@
+_minted-lab/
+lab*
+^lab.tex
+^lab.pdf
+.vscode/
