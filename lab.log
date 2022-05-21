@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  21 MAY 2022 17:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.17)  21 MAY 2022 20:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2649,23 +2649,28 @@ LaTeX Font Warning: Font shape `TS1/ftm/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
 (Font)              for symbol `textbullet' on input line 77.
 
+[8]
+Underfull \hbox (badness 1231) in paragraph at lines 94--95
+[]\T2A/ftm/m/n/14.4 Покрыть ос-нов-ную часть функ-ци-о-на-ла мар-кет-плейс smart-
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 []\T2A/ftm/m/n/14.4 Изучить ос-но-вы ра-бо-ты с бра-у-зе-ром че-рез
  []
 
-[8]
-Underfull \hbox (badness 1975) in paragraph at lines 96--97
+[9]
+Underfull \hbox (badness 1975) in paragraph at lines 110--111
 []\T2A/ftm/m/n/14.4 Поддержать сер-вис c генеративно-состязательной се-тью в
  []
 
-) (/mnt/d/edu/report-3-course/text/theory.tex [9]
-<fig/parascollections.png, id=251, 427.5975pt x 553.06625pt>
+) (/mnt/d/edu/report-3-course/text/theory.tex [10]
+<fig/parascollections.png, id=261, 427.5975pt x 553.06625pt>
 File: fig/parascollections.png Graphic file (type png)
 <use fig/parascollections.png>
 Package pdftex.def Info: fig/parascollections.png  used on input line 38.
 (pdftex.def)             Requested size: 131.9862pt x 170.71652pt.
- [10]
+ [11 </mnt/d/edu/report-3-course/fig/parascollections.png>]
 \openout5 = `lab.pyg'.
 
  (/mnt/d/edu/report-3-course/_minted-lab/default-pyg-prefix.pygstyle) (/mnt/d/edu/report-3-course/_minted-lab/default.pygstyle) (/mnt/d/edu/report-3-course/_minted-lab/50289C8C31E5A663014DF9463D455922C7F2207FF7213C394A04A5697525429B.pygtex
@@ -2719,10 +2724,10 @@ Package textcomp Info: Symbol \textasciigrave not provided by
 Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 84.
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/47111613A49F164352D55F810B2C60F1D5DCA46D821C4527CBA7D4E0F9050C79.pygtex) [11 </mnt/d/edu/report-3-course/fig/parascollections.png>]) (/mnt/d/edu/report-3-course/text/main.tex
+ (/mnt/d/edu/report-3-course/_minted-lab/47111613A49F164352D55F810B2C60F1D5DCA46D821C4527CBA7D4E0F9050C79.pygtex) [12]) (/mnt/d/edu/report-3-course/text/main.tex
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/1E19494E7A6F378539EB090908034005ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [12])
+ (/mnt/d/edu/report-3-course/_minted-lab/1E19494E7A6F378539EB090908034005ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex)
 \openout5 = `lab.pyg'.
 
  (/mnt/d/edu/report-3-course/_minted-lab/72B8359877AFEF30AD2EF50D9ABE0FBAECC8215DAF5A8A7684FF0F030C82BEE5.pygtex)
@@ -2731,7 +2736,7 @@ Package hyperref Info: bookmark level for unknown listing defaults to 0 on input
  (/mnt/d/edu/report-3-course/_minted-lab/4D31396228487DCA00D0321D1C7D19DCECC8215DAF5A8A7684FF0F030C82BEE5.pygtex)
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/F7ABEADE5B9C2201D329AA12A9CA58C3ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex
+ (/mnt/d/edu/report-3-course/_minted-lab/F7ABEADE5B9C2201D329AA12A9CA58C3ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [13]
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family fer in TS1 encoding.
 (textcomp)             Default family used instead on input line 16.
@@ -2768,7 +2773,6 @@ Package textcomp Info: Symbol \textasciigrave not provided by
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family fer in TS1 encoding.
 (textcomp)             Default family used instead on input line 21.
- [13]
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family fer in TS1 encoding.
 (textcomp)             Default family used instead on input line 33.
@@ -2805,24 +2809,25 @@ Package textcomp Info: Symbol \textasciigrave not provided by
 Package textcomp Info: Symbol \textasciigrave not provided by
 (textcomp)             font family fer in TS1 encoding.
 (textcomp)             Default family used instead on input line 49.
-) [14]
+ [14])
 \openout5 = `lab.pyg'.
 
  (/mnt/d/edu/report-3-course/_minted-lab/D8FE1FAACCB5B5B7B0DEEA477F6864CEECC8215DAF5A8A7684FF0F030C82BEE5.pygtex) [15]
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/5658F781DEB692F676D443D6298C8EBBECC8215DAF5A8A7684FF0F030C82BEE5.pygtex)
+ (/mnt/d/edu/report-3-course/_minted-lab/5658F781DEB692F676D443D6298C8EBBECC8215DAF5A8A7684FF0F030C82BEE5.pygtex) [16]
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/3920E8FBE3FE155F2E8D01904A58BADEECC8215DAF5A8A7684FF0F030C82BEE5.pygtex) [16]
+ (/mnt/d/edu/report-3-course/_minted-lab/3920E8FBE3FE155F2E8D01904A58BADEECC8215DAF5A8A7684FF0F030C82BEE5.pygtex)
 <fig/temp.png, id=343, 543.02875pt x 292.09125pt>
 File: fig/temp.png Graphic file (type png)
 <use fig/temp.png>
-Package pdftex.def Info: fig/temp.png  used on input line 241.
+Package pdftex.def Info: fig/temp.png  used on input line 228.
 (pdftex.def)             Requested size: 370.29039pt x 199.16928pt.
+ [17 </mnt/d/edu/report-3-course/fig/temp.png>]
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/4D9331E5E1F5AFE3801753ADD1755D32ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [17 </mnt/d/edu/report-3-course/fig/temp.png>] [18])
+ (/mnt/d/edu/report-3-course/_minted-lab/4D9331E5E1F5AFE3801753ADD1755D32ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [18])
 \openout5 = `lab.pyg'.
 
  (/mnt/d/edu/report-3-course/_minted-lab/20180958E98BB6BE006E6E6B52363E7CECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [19])
@@ -2831,64 +2836,67 @@ Package pdftex.def Info: fig/temp.png  used on input line 241.
  (/mnt/d/edu/report-3-course/_minted-lab/0654DFE6299BF1B82473B21BFFDB0291ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex)
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/ABD0FE310419916D834FD4958D2C3210ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex) [20]
+ (/mnt/d/edu/report-3-course/_minted-lab/ABD0FE310419916D834FD4958D2C3210ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [20])
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/BC72F0F7B7B7C7657CA117951CB43FD6ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [21])
-<fig/marketplace.png, id=387, 442.65375pt x 382.42876pt>
+ (/mnt/d/edu/report-3-course/_minted-lab/BC72F0F7B7B7C7657CA117951CB43FD6ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [21]) [22]
+<fig/marketplace.png, id=392, 442.65375pt x 382.42876pt>
 File: fig/marketplace.png Graphic file (type png)
 <use fig/marketplace.png>
-Package pdftex.def Info: fig/marketplace.png  used on input line 536.
+Package pdftex.def Info: fig/marketplace.png  used on input line 523.
 (pdftex.def)             Requested size: 230.53249pt x 199.16928pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 \openout5 = `lab.pyg'.
 
-(/mnt/d/edu/report-3-course/_minted-lab/FF5AD40CCC05C4DDA7FE2EFC40B93C68ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [22] [23 </mnt/d/edu/report-3-course/fig/marketplace.png>])
+ (/mnt/d/edu/report-3-course/_minted-lab/FF5AD40CCC05C4DDA7FE2EFC40B93C68ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [23 </mnt/d/edu/report-3-course/fig/marketplace.png>])
 <fig/sell.png, id=404, 787.94376pt x 432.61626pt>
 File: fig/sell.png Graphic file (type png)
 <use fig/sell.png>
-Package pdftex.def Info: fig/sell.png  used on input line 602.
+Package pdftex.def Info: fig/sell.png  used on input line 589.
 (pdftex.def)             Requested size: 362.75911pt x 199.16928pt.
+ [24]
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/55A7590AF24B3902EFAA93B51DFE2183ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [24 </mnt/d/edu/report-3-course/fig/sell.png>]
+ (/mnt/d/edu/report-3-course/_minted-lab/55A7590AF24B3902EFAA93B51DFE2183ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex
 
 LaTeX Font Warning: Font shape `TS1/fer/m/it' undefined
 (Font)              using `TS1/fer/m/n' instead
 (Font)              for symbol `textquotesingle' on input line 24.
 
-)
+) [25 </mnt/d/edu/report-3-course/fig/sell.png>]
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/760D590FCF25F024CF3487AB4D17AB08ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [25])
+ (/mnt/d/edu/report-3-course/_minted-lab/760D590FCF25F024CF3487AB4D17AB08ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex) [26]
 \openout5 = `lab.pyg'.
 
- (/mnt/d/edu/report-3-course/_minted-lab/89074C7209455FBAF1DBB46714B9DB74ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [26]) [27]
-<fig/eth_near_cmp.png, id=433, 2455.1725pt x 1379.1525pt>
+ (/mnt/d/edu/report-3-course/_minted-lab/89074C7209455FBAF1DBB46714B9DB74ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [27]) [28]
+<fig/eth_near_cmp.png, id=440, 2455.1725pt x 1379.1525pt>
 File: fig/eth_near_cmp.png Graphic file (type png)
 <use fig/eth_near_cmp.png>
-Package pdftex.def Info: fig/eth_near_cmp.png  used on input line 802.
+Package pdftex.def Info: fig/eth_near_cmp.png  used on input line 789.
 (pdftex.def)             Requested size: 303.89877pt x 170.71652pt.
- [28]
-<fig/auth1.png, id=443, 438.13687pt x 270.25969pt>
+ [29 </mnt/d/edu/report-3-course/fig/eth_near_cmp.png>]
+<fig/auth1.png, id=450, 438.13687pt x 270.25969pt>
 File: fig/auth1.png Graphic file (type png)
 <use fig/auth1.png>
-Package pdftex.def Info: fig/auth1.png  used on input line 817.
+Package pdftex.def Info: fig/auth1.png  used on input line 804.
 (pdftex.def)             Requested size: 276.76308pt x 170.71652pt.
-<fig/auth2.png, id=444, 372.64218pt x 394.47375pt>
+<fig/auth2.png, id=451, 372.64218pt x 394.47375pt>
 File: fig/auth2.png Graphic file (type png)
 <use fig/auth2.png>
-Package pdftex.def Info: fig/auth2.png  used on input line 821.
+Package pdftex.def Info: fig/auth2.png  used on input line 808.
 (pdftex.def)             Requested size: 215.02383pt x 227.62204pt.
 
-Overfull \hbox (25.37001pt too wide) in paragraph at lines 817--822
+Overfull \hbox (25.37001pt too wide) in paragraph at lines 804--809
  [][][][] 
  []
 
-[29 </mnt/d/edu/report-3-course/fig/eth_near_cmp.png>] [30 </mnt/d/edu/report-3-course/fig/auth1.png> </mnt/d/edu/report-3-course/fig/auth2.png>]) (/mnt/d/edu/report-3-course/text/conclusion.tex [31]) (/mnt/d/edu/report-3-course/text/sources.tex [32] [33]
+[30 </mnt/d/edu/report-3-course/fig/auth1.png> </mnt/d/edu/report-3-course/fig/auth2.png>]
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/F01D19E52A8BDCE1BE8BA0B5D72C3C8FC7F2207FF7213C394A04A5697525429B.pygtex)
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/2C821F9865ADE51E33236CD8FCEC9656D5DCA46D821C4527CBA7D4E0F9050C79.pygtex) [31]) (/mnt/d/edu/report-3-course/text/conclusion.tex [32]) (/mnt/d/edu/report-3-course/text/sources.tex [33]
 
 LaTeX Font Warning: Font shape `TS1/ftm/m/it' undefined
 (Font)              using `TS1/ftm/m/n' instead
@@ -2909,7 +2917,7 @@ Underfull \hbox (badness 3439) in paragraph at lines 1--1
 \T2A/ftm/m/it/14.4 wallet\T2A/ftm/m/n/14.4 . \T2A/ftm/m/sc/14.4 url\T2A/ftm/m/n/14.4 : []$https : / / github . com / near / near -[] wallet / blob /
  []
 
-
+[34]
 Underfull \hbox (badness 2269) in paragraph at lines 1--1
 []\T2A/ftm/m/n/14.4 Mintbase. \T2A/ftm/m/it/14.4 Mintbase/mintbase-core: Mintbase core NFT store factory
  []
@@ -2937,7 +2945,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[34]
+[35]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
  (/mnt/d/edu/report-3-course/lab.aux)
@@ -2956,18 +2964,18 @@ Package logreq Info: Writing requests to 'lab.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48524 strings out of 482584
- 903273 string characters out of 5956256
- 1713228 words of memory out of 5000000
- 62321 multiletter control sequences out of 15000+600000
+ 48539 strings out of 482584
+ 904308 string characters out of 5956256
+ 1716618 words of memory out of 5000000
+ 62328 multiletter control sequences out of 15000+600000
  555731 words of font info for 69 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
  67i,12n,108p,2541b,1892s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcit0800.600pk>{/usr/share/texmf/fonts/enc/dvips/pscyr/t2a.enc} </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt0800.600pk> </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk> </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercour.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercourb.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercouri.pfb></usr/share/texmf/fonts/type1/public/pscyr/times.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesbd.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesi.pfb>
-Output written on /mnt/d/edu/report-3-course/lab.pdf (34 pages, 617180 bytes).
+Output written on /mnt/d/edu/report-3-course/lab.pdf (35 pages, 620656 bytes).
 PDF statistics:
- 645 PDF objects out of 1000 (max. 8388607)
- 565 compressed objects within 6 object streams
- 175 named destinations out of 1000 (max. 500000)
+ 651 PDF objects out of 1000 (max. 8388607)
+ 570 compressed objects within 6 object streams
+ 177 named destinations out of 1000 (max. 500000)
  274 words of extra memory for PDF output out of 10000 (max. 10000000)
 

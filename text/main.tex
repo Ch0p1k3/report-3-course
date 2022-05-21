@@ -1,21 +1,8 @@
-% \anonsection{Предлагаемые подходы и методы }
-
-%     Для проведения транзакций(исполнения Smart-контрактов) NEAR protocol предоставляет near-cli\footnote{https://github.com/near/near-cli} и near-api-js\footnote{https://github.com/near/near-api-js}~\cite*{docsnear}. Для наших целий требуется near-api-js, а следовательно вытекает потребность использовать язык javascript(nodejs, typescript) для написания <<frontend>> части бота.
-
-%     Для реализации самого бота, как следует из названия проекта, используется Discord API. Но конечно, будет использоваться обертка над HTTP запросами. Существует множество всевозможных модулей для разнообразных языков. Для наших целей нам понадобится discord.js(javascript/nodejs)\footnote{https://discord.js.org/}. Также было принято решение, взять обвязку над этой библиотекой - discord.ts(typescript)\footnote{https://discord-ts.js.org/}
-
 % 	\anonsubsection{Хранение в блокчейне}
 % 		Важным вопросом, который не затрагивался при описании стандарта является хранение медиа объекта.В описанном стандарте хранится url на медиа объект, но никак не сам этот медиа объект, связанно это с тем, что хранение объекта невероятно дорогое. Авторы стандарта предлагают несколько подходов, один из них: пользователь изначально просто дает url и мы храним его, но в данном решении есть огромный минус - это то, что мы накладываем обязательство на пользователя об поддержании данного url валидным. Следующий подход заключается в том, что мы - сервис будем хранить данные в централизованном хранилище и тогда нашим опознавательным знаком будет какой-нибудь ключ, который будет соответствовать адресу NFT. И в этом подходе есть тоже минус в виде того, что непонятно какого размера должно быть это хранилище, какие ограничения вводить на размер медиа файла. И последнее предложение, так это хранить в специальном децентрализованном контенто-адресованном хранилище. Одним из примеров таких хранилищ является filecoin\footnote{\url{https://filecoin.io/}}. Минусом данного решения, наверное, является то, что мы начинаем использовать еще один блокчейн, который требует времени для понимания его спецификации. Наша команда приняла решение двигаться от самого простого подхода, то есть использование отданного пользователем url, к более сложному - использование filecoin.
 
 % 	\anonsubsection{Машинное обучение в маркетплейсе}
 % 		За данную часть я отвечаю в меньшей степени. Но в рамках данного проекта нашей командой принято решение реализовать две идеи: рекомендательную систему или GAN. Рекомендательная система также делится на две части - это предсказание цены за конкретную NFT и более сложная идея - это рекомендовать сам NFT-токен. Идея с GAN выглядит гораздо легче, сравнивая с рекомендательной системой, например, создание аниме персонажа, пиксель арта, которое в последствии пользователь сможет использовать в своих коллекциях или для продажи.
-
-% 	\begin{figure}[h!]
-% 		\centering
-% 		\includegraphics[scale=0.15]{fig/eth_near_cmp.png}
-% 	\caption{Сравнение спецификации аккаунтов и public/private ключей в блокчейнах Ethereum и Near. Источник: \url{medium.com/@clinder}}
-% 		\label{fig:eth_near_cmp}
-% 	\end{figure}
 
 \section{Smart-контракты}
 \label{section.4}
@@ -268,7 +255,7 @@ fn nft_token(&self, token_id: TokenId) -> Option<JsonToken> {
 \end{enumerate}
 С первой функция все ясно, она просто отправляет токен, а со второй лучше привести иллюстрацию:
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[height=70mm]{fig/temp.png}
 	\caption{nft\_transfer\_call}
@@ -864,10 +851,56 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 
 \paragraph{Вызовы методов у контрактов}
 
-\paragraph{Структура метаданных у NFT}
+\paragraph{Структура получаемого NFT и его метаданных}
+\label{section.5.1.4}
+На данный момент, при создании NFT в структуре(Листинг \hyperref[lst.nftstructure]{\color{blue} 3}) используются следующие поля: <<token\_id>>, <<owner\_id>>, <<royalty>>, <<metadata.title>>, <<metadata.media>>, <<metadata.reference>>. <<metadata.description>> не используется, все описание NFT хранится в метаданных в децентрализованном хранилище в целях экономии оплаты за хранение . В <<metadata.media>>, <<metadata.reference>> хранятся полные URL до медиа-файла и метаданных. В ближайшее время, планируется хранить только CID и только в поле media, так как медиа-файл и метаданные хранятся в одной директории, то для их определения достаточно одного CID(см. \hyperref[section.5.1.5]{\color{blue} 5.1.5}).
+
+Структура метаданных(Листинг \hyperref[lst.nftmetadata]{\color{blue} 4}) полностью аналогично структуре метаданных в Paras, так как эта структура оправдана своей функциональностью. Только в отличие от Paras нет полей: <<collection>>, <<collection\_id>>, <<blurhash>>, <<mime\_type>>. <<collection>>, <<collection\_id>> нет, потому что на данный момент мы не поддерживаем коллекции NFT. <<mime\_type>>, <<blurhash>> из-за ненадобности.
+
+\begin{listing}
+\begin{minted}[breaklines,fontsize=\scriptsize]{js}
+{
+    token_id: 'chopik.testnet.1652636744470',
+    owner_id: 'chopik.testnet',
+    approved_account_ids: { 'papamsmarket.pojaleesh.testnet': 2 },
+    royalty: { 'chopik.testnet': 10000 },
+    metadata: {
+        title: 'City',
+        description: null,
+        media: 'https://bafybeiahhurffoxjubs42l7bl3jjc5zk5vrafiijcxkhex2ukjm3zsbbti.ipfs.dweb.link/f',
+        media_hash: null,
+        copies: null,
+        issued_at: null,
+        expires_at: null,
+        starts_at: null,
+        updated_at: null,
+        extra: null,
+        reference: 'https://bafybeiahhurffoxjubs42l7bl3jjc5zk5vrafiijcxkhex2ukjm3zsbbti.ipfs.dweb.link/m',
+        reference_hash: null
+    }
+}
+\end{minted}
+\caption{Структура получаемого NFT}
+\label{lst.nftstructure}
+\end{listing}
+
+\begin{listing} 
+\begin{minted}[breaklines,fontsize=\scriptsize]{json}
+{
+    "description":"Cool city",
+    "creator_id":"chopik.testnet",
+    "attributes":[
+        {"trait_type":"Time","value":"Night"},
+        {"trait_type":"Color","value":"Blue"}
+    ]
+}
+\end{minted}
+\caption{Структура метаданных NFT в децентрализованном хранилище}
+\label{lst.nftmetadata}
+\end{listing}
 
 \paragraph{Децентрализованное хранилище данных}
-\label{section.5.1.3}
+\label{section.5.1.5}
 
 \begin{definition}
     IPFS(InterPlanetary File System) - это протокол распределенной системы обмена файлов. При добавлении файла в IPFS, он делится на маленькие куски, криптографически хэшируется и отдается уникальный фингерпринтр, который называется CID(Content identifier) \cite{ipfs}.
