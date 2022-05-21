@@ -66,11 +66,7 @@ Smart-контракт маркетплейса paras предоставляет
 \caption{Структура NFT}
 \end{listing}
 
-Paras, как и большинство маркетплейсов хранит медиа-файл и метаданные NFT на IPFS\cite{ipfs}. IPFS предоставляется сервисом fleek\cite{fleek}. В качестве ссылки на медиа-файл и метаданные они хранят CID, а не полный URL, это связанно с тем, что минт NFT таким образом будет гораздо дешевле, ведь хранение в NEAR, довольно дорогое\cite{nearstoragestackinghowmuch}. Но есть и минус этой экономии, на NEAR Wallet, скорее всего это изображение не будет отображаться, так как NEAR Wallet, при не указании протокола соединения, будет подставлять CID не в URL IPFS от fleek (Листинг \hyperref[lst.pastecidnearwallet]{\color{blue} 2}).
-
-\begin{definition}
-    IPFS(InterPlanetary File System) - децентрализованная система хранения файлов. При добавлении файла в IPFS, он делится на маленькие куски, криптографически хэшируется и отдается уникальный фингерпринтр, который называется CID(Content identifier) \cite{ipfs}
-\end{definition}
+Paras, как и большинство маркетплейсов хранит медиа-файл и метаданные NFT на IPFS\cite{ipfs}(см. \hyperref[section.5.1.3]{\color{blue} 5.1.3}). IPFS предоставляется сервисом fleek\cite{fleek}. В качестве ссылки на медиа-файл и метаданные они хранят CID, а не полный URL, это связанно с тем, что минт NFT таким образом будет гораздо дешевле, ведь хранение в NEAR, довольно дорогое\cite{nearstoragestackinghowmuch}. Но есть и минус этой экономии, на NEAR Wallet, скорее всего это изображение не будет отображаться, так как NEAR Wallet, при не указании протокола соединения, будет подставлять CID не в шлюз IPFS от fleek (Листинг \hyperref[lst.pastecidnearwallet]{\color{blue} 2}), а доступность и скорость получения контента зависят от шлюза.
 
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{js}

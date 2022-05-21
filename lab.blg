@@ -1,20 +1,20 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'lab.blg'
-[89] biber:322> INFO - === Сб мая 21, 2022, 02:00:35
-[105] Biber.pm:415> INFO - Reading 'lab.bcf'
-[184] Biber.pm:943> INFO - Found 40 citekeys in bib section 0
-[199] Biber.pm:4256> INFO - Processing section 0
-[199] Utils.pm:75> INFO - Globbing data source 'text/papers.bib'
-[200] Utils.pm:91> INFO - Globbed data source 'text/papers.bib' to text/papers.bib
-[211] Biber.pm:4455> INFO - Looking for bibtex format file 'text/papers.bib' for section 0
-[213] bibtex.pm:1653> INFO - LaTeX decoding ...
-[246] bibtex.pm:1471> INFO - Found BibTeX data source 'text/papers.bib'
-[284] Utils.pm:293> WARN - month field 'Oct' in entry '2021' is not an integer - this will probably not sort properly.
-[288] Utils.pm:293> WARN - month field 'Apr' in entry 'nearprotocolpos' is not an integer - this will probably not sort properly.
-[439] UCollate.pm:68> INFO - Overriding locale 'ru-RU' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[439] UCollate.pm:68> INFO - Overriding locale 'ru-RU' defaults 'variable = shifted' with 'variable = non-ignorable'
-[439] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'ru-RU'
-[439] Biber.pm:4090> INFO - No sort tailoring available for locale 'ru-RU'
-[465] bbl.pm:652> INFO - Writing 'lab.bbl' with encoding 'UTF-8'
-[484] bbl.pm:755> INFO - Output to lab.bbl
-[485] Biber.pm:128> INFO - WARNINGS: 2
+[52] biber:322> INFO - === Сб мая 21, 2022, 14:06:02
+[63] Biber.pm:415> INFO - Reading 'lab.bcf'
+[110] Biber.pm:943> INFO - Found 40 citekeys in bib section 0
+[120] Biber.pm:4256> INFO - Processing section 0
+[120] Utils.pm:75> INFO - Globbing data source 'text/papers.bib'
+[120] Utils.pm:91> INFO - Globbed data source 'text/papers.bib' to text/papers.bib
+[127] Biber.pm:4455> INFO - Looking for bibtex format file 'text/papers.bib' for section 0
+[129] bibtex.pm:1653> INFO - LaTeX decoding ...
+[149] bibtex.pm:1471> INFO - Found BibTeX data source 'text/papers.bib'
+[173] Utils.pm:293> WARN - month field 'Oct' in entry '2021' is not an integer - this will probably not sort properly.
+[176] Utils.pm:293> WARN - month field 'Apr' in entry 'nearprotocolpos' is not an integer - this will probably not sort properly.
+[272] UCollate.pm:68> INFO - Overriding locale 'ru-RU' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[272] UCollate.pm:68> INFO - Overriding locale 'ru-RU' defaults 'variable = shifted' with 'variable = non-ignorable'
+[272] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'ru-RU'
+[272] Biber.pm:4090> INFO - No sort tailoring available for locale 'ru-RU'
+[289] bbl.pm:652> INFO - Writing 'lab.bbl' with encoding 'UTF-8'
+[301] bbl.pm:755> INFO - Output to lab.bbl
+[302] Biber.pm:128> INFO - WARNINGS: 2
