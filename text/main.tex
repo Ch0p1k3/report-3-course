@@ -20,11 +20,13 @@
 \section{Smart-контракты}
 \label{section.4}
 
+В данной главе будет описываться строение и реализация смарт-контрактов.
+
 \subsection{Структура NFT smart-контракта}
 \label{section.4.1}
-В данной главе я опишу строение NFT smart-контракта, написанного на языке Rust. Вся логика соответствует описанному стандарту NEP-171\cite{nftstandart}.
+В данной подглаве будет описываться строение NFT smart-контракта, написанного на языке Rust. Вся логика соответствует описанному стандарту NEP-171\cite{nftstandart}.
 \paragraph{Near sdk фреймворк}
-Опишу основные функции, структуры, декараторы, которые используются при написании smart-контрактов. Для этого необходим фреймворк near-sdk\cite{nearsdkrs}.
+Введем основные функции, структуры, декараторы, которые используются при написании smart-контрактов. Для этого необходим фреймворк near-sdk\cite{nearsdkrs}.
 
 Атрибуты:
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
@@ -58,7 +60,7 @@ env::prepaid_gas()                  /* количество gas предоста
 
 \paragraph{Core Functionality}
 
-Для начала опишем основные структуры и функции\cite{corestandard}, которые используются в NFT контрактах.
+Опишем основные структуры и функции\cite{corestandard}, которые используются в NFT контрактах.
 
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 pub type TokenId = String;
@@ -66,51 +68,81 @@ pub type TokenId = String;
 #[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize, Clone)]
 #[serde(crate = "near_sdk::serde")]
 pub struct NFTContractMetadata {
-    pub spec: String,                                           /*  REQUIRED (version like "nft-1.0.0") */
+    pub spec: String,
 
-    pub name: String,                                           /*  REQUIRED (like "Maxim")  */
+    pub name: String,
 
-    pub symbol: String,                                         /*  REQUIRED (like like "MOCHI" or "MV3")  */
+    pub symbol: String,
 
-    pub icon: Option<String>,                                   /*  small image associated with this contract (Data URL)  */
+    pub icon: Option<String>,
 
-    pub base_uri: Option<String>,                               /*  Centralized gateway known to have reliable access to
-                                                                    decentralized storage assets referenced by `reference` or `media` URLs  */
+    pub base_uri: Option<String>,
 
-    pub reference: Option<String>,                              /*  URL to a JSON file with more infoa link to a valid JSON file containing
-                                                                    various keys offering supplementary details on the token  */
+    pub reference: Option<String>,
 
-    pub reference_hash: Option<Base64VecU8>,                    /*  Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included.  */
+    pub reference_hash: Option<Base64VecU8>,
 }
+\end{minted}
 
+Структура контракта представляет из себя следующие поля:
+\begin{enumerate}
+\item spec - версия, является обязательным полем.
+\item name - название контракта, является обязательным полем.
+\item symbol - краткое название, является обязательным полем.
+\item icon - иконка, которая будет отображаться вместе с контрактом(url).
+\item base\_uri - url, который ведет на надежное централизованное хранилище данных в reference. 
+\item reference - url на json с дополнительными данными(json должен располагаться в децентрализованном хранилище).
+\item reference\_hash - sha256 хэш от json на который ведет url в поле reference.
+\end{enumerate}
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize)]
 #[serde(crate = "near_sdk::serde")]
 pub struct TokenMetadata {
-    pub title: Option<String>,                                  /*  ex. "Arch Nemesis: Mail Carrier" or "Parcel #5055"  */
+    pub title: Option<String>,
 
-    pub description: Option<String>,                            /*  free-form description  */
+    pub description: Option<String>,
 
-    pub media: Option<String>,                                  /*  URL to associated media, preferably to decentralized, content-addressed storage  */
+    pub media: Option<String>,
 
-    pub media_hash: Option<Base64VecU8>,                        /*  Base64-encoded sha256 hash of content referenced by the `media` field. Required if `media` is included.  */
+    pub media_hash: Option<Base64VecU8>,
 
-    pub copies: Option<u64>,                                    /*  number of copies of this set of metadata in existence when token was minted.  */
+    pub copies: Option<u64>,
 
-    pub issued_at: Option<u64>,                                 /*  When token was issued or minted, Unix epoch in milliseconds  */
+    pub issued_at: Option<u64>,
 
-    pub expires_at: Option<u64>,                                /*  When token expires, Unix epoch in milliseconds  */
+    pub expires_at: Option<u64>, 
 
-    pub starts_at: Option<u64>,                                 /*  When token starts being valid, Unix epoch in milliseconds  */
+    pub starts_at: Option<u64>,
 
-    pub updated_at: Option<u64>,                                /*  When token was last updated, Unix epoch in milliseconds  */
+    pub updated_at: Option<u64>,
 
-    pub extra: Option<String>,                                  /*  anything extra the NFT wants to store on-chain. Can be stringified JSON.  */
+    pub extra: Option<String>,
 
-    pub reference: Option<String>,                              /*  URL to an off-chain JSON file with more info.  */
+    pub reference: Option<String>,
 
-    pub reference_hash: Option<Base64VecU8>,                    /*  Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included.  */
+    pub reference_hash: Option<Base64VecU8>,
 }
+\end{minted}
 
+Структура метаданных токена состоит из следующих полей:
+\begin{enumerate}
+
+\item title - название NFT токена.
+\item description - описание NFT токена.
+\item media - ссылка на содержимое NFT токена, желательно, чтобы эта ссылка вела на децентрализованное хранилище.
+\item media\_hash - хэш от содержимого NFT токена, на которое ведет поле media.
+\item copies - количество копий NFT токена.
+\item issued\_at - время, когда NFT токен был создан.
+\item expires\_at - время, когда время жизни NFT токена истекает.
+\item starts\_at - время, когда токен начал быть валидным.
+\item extra - любые дополнительные данные.
+\item reference - ссылка на json с дополнительной информацией о JSON.
+\item reference\_hash - sha256 хэш от содержимого на которое ведет ссылка в поле reference. 
+
+\end{enumerate}
+
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[derive(BorshDeserialize, BorshSerialize)]
 pub struct Token {
     pub owner_id: AccountId,
