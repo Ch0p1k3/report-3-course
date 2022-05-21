@@ -821,9 +821,9 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 
 \paragraph{Структура получаемого NFT и его метаданных}
 \label{section.5.1.4}
-На данный момент, при создании NFT в структуре(Листинг \hyperref[lst.nftstructure]{\color{blue} 3}) используются следующие поля: <<token\_id>>, <<owner\_id>>, <<royalty>>, <<metadata.title>>, <<metadata.media>>, <<metadata.reference>>. <<metadata.description>> не используется, все описание NFT хранится в метаданных в децентрализованном хранилище в целях экономии оплаты за хранение . В <<metadata.media>>, <<metadata.reference>> хранятся полные URL до медиа-файла и метаданных. В ближайшее время, планируется хранить только CID и только в поле media, так как медиа-файл и метаданные хранятся в одной директории, то для их определения достаточно одного CID(см. \hyperref[section.5.1.5]{\color{blue} 5.1.5}).
+На данный момент, при создании NFT в структуре(Листинг {\color{blue}\ref{lst.nftstructure}}) используются следующие поля: <<token\_id>>, <<owner\_id>>, <<royalty>>, <<metadata.title>>, <<metadata.media>>, <<metadata.reference>>. <<metadata.description>> не используется, все описание NFT хранится в метаданных в децентрализованном хранилище в целях экономии оплаты за хранение . В <<metadata.media>>, <<metadata.reference>> хранятся полные URL до медиа-файла и метаданных. В ближайшее время, планируется хранить только CID и только в поле media, так как медиа-файл и метаданные хранятся в одной директории, то для их определения достаточно одного CID(см. \hyperref[section.5.1.5]{\color{blue} 5.1.5}).
 
-Структура метаданных(Листинг \hyperref[lst.nftmetadata]{\color{blue} 4}) полностью аналогично структуре метаданных в Paras, так как эта структура оправдана своей функциональностью. Только в отличие от Paras нет полей: <<collection>>, <<collection\_id>>, <<blurhash>>, <<mime\_type>>. <<collection>>, <<collection\_id>> нет, потому что на данный момент мы не поддерживаем коллекции NFT. <<mime\_type>>, <<blurhash>> из-за ненадобности.
+Структура метаданных(Листинг {\color{blue}\ref{lst.nftmetadata}}) полностью аналогично структуре метаданных в Paras, так как эта структура оправдана своей функциональностью. Только в отличие от Paras нет полей: <<collection>>, <<collection\_id>>, <<blurhash>>, <<mime\_type>>. <<collection>>, <<collection\_id>> нет, потому что на данный момент мы не поддерживаем коллекции NFT. <<mime\_type>>, <<blurhash>> из-за ненадобности.
 
 \begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{js}
@@ -852,7 +852,7 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 \label{lst.nftstructure}
 \end{listing}
 
-\begin{listing} 
+\begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{json}
 {
     "description":"Cool city",
@@ -870,12 +870,18 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 \paragraph{Децентрализованное хранилище данных}
 \label{section.5.1.5}
 
+Обычно для хранения метаданных и медиа-объекта используется другой блокчейн специализированный под хранение. Был выбран NFT.Storage\cite{nftstorage} --- бесплатное децентрализованное хранилище NFT на IPFS и Filecoin.
+
 \begin{definition}
     IPFS(InterPlanetary File System) - это протокол распределенной системы обмена файлов. При добавлении файла в IPFS, он делится на маленькие куски, криптографически хэшируется и отдается уникальный фингерпринтр, который называется CID(Content identifier) \cite{ipfs}.
 \end{definition}
 
 \begin{remark}
     Для того, чтобы построить стимулирующий слой для сохранения данных в IPFS существует Filecoin. Filecoin - это децентрализованное сетевое хранилище. Filecoin и IPFS - это два разных протокола, взаимодополняющие друг друга. Когда как IPFS позволяет пользователям хранить, запрашивать и передавать друг другу данные, в то время, как Filecoin предназначен для обеспечения системы постоянного хранения.
+\end{remark}
+
+\begin{remark}
+    Изначально использовался сервис web3storage\cite{web3storage} для хранения, но он отличился медленной загрузкой, получением файлов, из-за чего появилась необходимость в смене на NFT.Storage.
 \end{remark}
 
 \subsection{Пользовательский интерфейс}
