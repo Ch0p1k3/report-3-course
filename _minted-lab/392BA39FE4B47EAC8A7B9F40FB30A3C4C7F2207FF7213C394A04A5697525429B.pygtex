@@ -1,6 +1,6 @@
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{p}{\PYGZob{}}
-    \PYG{n+nx}{token\PYGZus{}id}\PYG{o}{:} \PYG{l+s+s2}{\PYGZdq{}304990:24\PYGZdq{}}\PYG{p}{,}
+    \PYG{n+nx}{token\PYGZus{}id}\PYG{o}{:} \PYG{l+s+s2}{\PYGZdq{}304990:24\PYGZdq{}}\PYG{p}{,}\PYG{n+nx}{TokenSeriesJson}
     \PYG{n+nx}{owner\PYGZus{}id}\PYG{o}{:} \PYG{l+s+s2}{\PYGZdq{}maxzeinly.near\PYGZdq{}}\PYG{p}{,}
     \PYG{n+nx}{metadata}\PYG{o}{:} \PYG{p}{\PYGZob{}}
         \PYG{n+nx}{title}\PYG{o}{:} \PYG{l+s+s2}{\PYGZdq{}Proof of Attendance No.1 \PYGZsh{}24\PYGZdq{}}\PYG{p}{,}
