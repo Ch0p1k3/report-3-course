@@ -823,11 +823,11 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 \end{figure}
 
 \begin{definition}
-    Storage - интерфейс веб API, который позволяет добавлять, изменять, удалять элементы данных, которые представляются в виде ключа и значения\cite{webapistorage}. В веб API есть два объекта, которые используют интерфейс storage: session storage, local storage\cite{webapilocalstorage}. Session storage хранит данные до закрытия браузера, когда как данные в local storage не имеют ограничения по времени и могу быть удалены только намерено.
+    Storage --- интерфейс веб API, который позволяет добавлять, изменять, удалять элементы данных, которые представляются в виде ключа и значения\cite{webapistorage}. В веб API есть два объекта, которые используют интерфейс storage: session storage, local storage\cite{webapilocalstorage}. Session storage хранит данные до закрытия браузера, когда как данные в local storage не имеют ограничения по времени и могу быть удалены только намерено.
 \end{definition}
 
 \begin{definition}
-    KeyStore\cite{nearclasskeystore} - это класс, который хранит ключи, для подписей транзакций. Их 4 вида: BrowserLocalStorageKeyStore, InMemoryKeyStore, MergeKeyStore, UnencryptedFileSystemKeyStore. BrowserLocalStorageKeyStore пользуется локальным хранилищем браузера для записи, изменения, просмотра значений по ключу. InMemoryKeyStore хранит все в оперативной памяти, используется для тестирования. MergeKeyStore используется для объединения множества KeyStore. UnencryptedFileSystemKeyStore хранит все на диске в виде JSON файла, используется в near cli\cite{nearcli}.
+    KeyStore\cite{nearclasskeystore} --- это класс, который хранит ключи, для подписей транзакций. Их 4 вида: BrowserLocalStorageKeyStore, InMemoryKeyStore, MergeKeyStore, UnencryptedFileSystemKeyStore. BrowserLocalStorageKeyStore пользуется локальным хранилищем браузера для записи, изменения, просмотра значений по ключу. InMemoryKeyStore хранит все в оперативной памяти, используется для тестирования. MergeKeyStore используется для объединения множества KeyStore. UnencryptedFileSystemKeyStore хранит все на диске в виде JSON файла, используется в near cli\cite{nearcli}.
 \end{definition}
 
 \paragraph{Вызовы методов у контрактов}
