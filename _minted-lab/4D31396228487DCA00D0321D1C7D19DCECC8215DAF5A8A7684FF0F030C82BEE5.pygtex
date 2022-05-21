@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{env}::\PYG{n}{storage\PYGZus{}byte\PYGZus{}cost}\PYG{p}{()}\PYG{+w}{            }\PYG{c+cm}{/* стоимость хранения одного байта */}
-\PYG{n}{env}::\PYG{n}{attached\PYGZus{}deposit}\PYG{p}{()}\PYG{+w}{             }\PYG{c+cm}{/* внесенный депозит */}
-\PYG{n}{env}::\PYG{n}{predecessor\PYGZus{}account\PYGZus{}id}\PYG{p}{()}\PYG{+w}{       }\PYG{c+cm}{/* предыдущий аккаунт от которого прилетел cross\PYGZhy{}contract call или это мы сами, если мы первые в цепочке */}
-\PYG{n}{env}::\PYG{n}{log\PYGZus{}str}\PYG{p}{()}\PYG{+w}{                      }\PYG{c+cm}{/* написать лог */}
-\PYG{n}{env}::\PYG{n}{prepaid\PYGZus{}gas}\PYG{p}{()}\PYG{+w}{                  }\PYG{c+cm}{/* количество gas предоставленного для call другой функции */}
-\end{Verbatim}
