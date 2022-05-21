@@ -2844,4 +2844,134 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
  (/mnt/d/edu/report-3-course/_minted-lab/BC72F0F7B7B7C7657CA117951CB43FD6ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [21]) [22]
 <fig/marketplace.png, id=392, 442.65375pt x 382.42876pt>
 File: fig/marketplace.png Graphic file (type png)
-<use fig/marke
+<use fig/marketplace.png>
+Package pdftex.def Info: fig/marketplace.png  used on input line 536.
+(pdftex.def)             Requested size: 230.53249pt x 199.16928pt.
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/FF5AD40CCC05C4DDA7FE2EFC40B93C68ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [23 </mnt/d/edu/report-3-course/fig/marketplace.png>])
+<fig/sell.png, id=404, 787.94376pt x 432.61626pt>
+File: fig/sell.png Graphic file (type png)
+<use fig/sell.png>
+Package pdftex.def Info: fig/sell.png  used on input line 602.
+(pdftex.def)             Requested size: 362.75911pt x 199.16928pt.
+ [24]
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/55A7590AF24B3902EFAA93B51DFE2183ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex
+
+LaTeX Font Warning: Font shape `TS1/fer/m/it' undefined
+(Font)              using `TS1/fer/m/n' instead
+(Font)              for symbol `textquotesingle' on input line 24.
+
+) [25 </mnt/d/edu/report-3-course/fig/sell.png>]
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/760D590FCF25F024CF3487AB4D17AB08ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex) [26]
+\openout5 = `lab.pyg'.
+
+ (/mnt/d/edu/report-3-course/_minted-lab/89074C7209455FBAF1DBB46714B9DB74ECC8215DAF5A8A7684FF0F030C82BEE5.pygtex [27]) [28]
+<fig/eth_near_cmp.png, id=440, 2455.1725pt x 1379.1525pt>
+File: fig/eth_near_cmp.png Graphic file (type png)
+<use fig/eth_near_cmp.png>
+Package pdftex.def Info: fig/eth_near_cmp.png  used on input line 798.
+(pdftex.def)             Requested size: 303.89877pt x 170.71652pt.
+ [29 </mnt/d/edu/report-3-course/fig/eth_near_cmp.png>]
+<fig/auth1.png, id=451, 438.13687pt x 270.25969pt>
+File: fig/auth1.png Graphic file (type png)
+<use fig/auth1.png>
+Package pdftex.def Info: fig/auth1.png  used on input line 813.
+(pdftex.def)             Requested size: 276.76308pt x 170.71652pt.
+<fig/auth2.png, id=452, 372.64218pt x 394.47375pt>
+File: fig/auth2.png Graphic file (type png)
+<use fig/auth2.png>
+Package pdftex.def Info: fig/auth2.png  used on input line 817.
+(pdftex.def)             Requested size: 215.02383pt x 227.62204pt.
+
+Overfull \hbox (25.37001pt too wide) in paragraph at lines 813--818
+ [][][][] 
+ []
+
+[30 </mnt/d/edu/report-3-course/fig/auth1.png> </mnt/d/edu/report-3-course/fig/auth2.png>]) (/mnt/d/edu/report-3-course/text/conclusion.tex [31]) (/mnt/d/edu/report-3-course/text/sources.tex [32] [33]
+
+LaTeX Font Warning: Font shape `TS1/ftm/m/it' undefined
+(Font)              using `TS1/ftm/m/n' instead
+(Font)              for symbol `textperiodcentered' on input line 1.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+[]\T2A/ftm/m/n/14.4 NEAR Wallet. \T2A/ftm/m/it/14.4 Near-wallet/nonfungibletokens.js at
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+\T2A/ftm/m/it/14.4 22b76a96b2ac71d1b1ca4f5acb85e79643cd8ef7 \TS1/ftm/m/n/14.4 · \T2A/ftm/m/it/14.4 near/near-
+ []
+
+
+Underfull \hbox (badness 3439) in paragraph at lines 1--1
+\T2A/ftm/m/it/14.4 wallet\T2A/ftm/m/n/14.4 . \T2A/ftm/m/sc/14.4 url\T2A/ftm/m/n/14.4 : []$https : / / github . com / near / near -[] wallet / blob /
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 1--1
+[]\T2A/ftm/m/n/14.4 Mintbase. \T2A/ftm/m/it/14.4 Mintbase/mintbase-core: Mintbase core NFT store factory
+ []
+
+
+Underfull \hbox (badness 2134) in paragraph at lines 1--1
+[]\T2A/ftm/m/it/14.4 core-functionality\T2A/ftm/m/n/14.4 . \T2A/ftm/m/sc/14.4 url\T2A/ftm/m/n/14.4 : []$https : / / nomicon . io / Standards / Tokens /
+ []
+
+) (/mnt/d/edu/report-3-course/text/appendix.tex)
+
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 60.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[table] on input line 218.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[longtable] on input line 226.
+See the caption package documentation for explanation.
+
+
+Package glossaries Warning: No \printglossary or \printglossaries found. 
+(Remove \makeglossaries if you don't want any glossaries.) 
+This document will not have a glossary.
+
+[34]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
+ (/mnt/d/edu/report-3-course/lab.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
+Package rerunfilecheck Info: File `lab.out' has not changed.
+(rerunfilecheck)             Checksum: 98F14E23B6722F8D4424E62AB7E766DE;5022.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+runsystem(rm lab.pyg)...executed.
+
+Package logreq Info: Writing requests to 'lab.run.xml'.
+\openout1 = `lab.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 48529 strings out of 482584
+ 903787 string characters out of 5956256
+ 1716222 words of memory out of 5000000
+ 62323 multiletter control sequences out of 15000+600000
+ 555731 words of font info for 69 fonts, out of 8000000 for 9000
+ 475 hyphenation exceptions out of 8191
+ 67i,12n,108p,2541b,1892s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcit0800.600pk>{/usr/share/texmf/fonts/enc/dvips/pscyr/t2a.enc} </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tctt0800.600pk> </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk> </home/chop/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercour.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercourb.pfb></usr/share/texmf/fonts/type1/public/pscyr/ercouri.pfb></usr/share/texmf/fonts/type1/public/pscyr/times.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesbd.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesi.pfb>
+Output written on /mnt/d/edu/report-3-course/lab.pdf (34 pages, 618728 bytes).
+PDF statistics:
+ 644 PDF objects out of 1000 (max. 8388607)
+ 564 compressed objects within 6 object streams
+ 175 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
+
