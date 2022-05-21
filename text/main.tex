@@ -223,7 +223,7 @@ fn nft_token(&self, token_id: TokenId) -> Option<JsonToken> {
 \end{enumerate}
 С первой функция все ясно, она просто отправляет токен, а со второй лучше привести иллюстрацию:
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[height=70mm]{fig/temp.png}
 	\caption{nft\_transfer\_call}
@@ -819,11 +819,13 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 
 \paragraph{Вызовы методов у контрактов}
 
-\paragraph{Структура метаданных у NFT}
+\paragraph{Структура получаемого NFT и его метаданных}
 \label{section.5.1.4}
-На данный момент, при создании NFT в структуре(Листинг \hyperref[lst.nftstructure]{\color{blue} 3}) используются следующие поля: <<token\_id>>, <<owner\_id>>, <<royalty>>, <<metadata.title>>, <<metadata.media>>, <<metadata.reference>>. <<metadata.description>> не используется, все описание NFT хранится в метаданных в децентрализованном хранилище в целях экономии оплаты за хранение . В <<metadata.media>>, <<metadata.reference>> хранятся полные URL до медиа-файла и метаданных. В ближайшее время, планируется хранить только CID и только в поле media, так как медиа-файл и метаданные хранятся в одной директории
+На данный момент, при создании NFT в структуре(Листинг \hyperref[lst.nftstructure]{\color{blue} 3}) используются следующие поля: <<token\_id>>, <<owner\_id>>, <<royalty>>, <<metadata.title>>, <<metadata.media>>, <<metadata.reference>>. <<metadata.description>> не используется, все описание NFT хранится в метаданных в децентрализованном хранилище в целях экономии оплаты за хранение . В <<metadata.media>>, <<metadata.reference>> хранятся полные URL до медиа-файла и метаданных. В ближайшее время, планируется хранить только CID и только в поле media, так как медиа-файл и метаданные хранятся в одной директории, то для их определения достаточно одного CID(см. \hyperref[section.5.1.5]{\color{blue} 5.1.5}).
 
-\begin{listing}
+Структура метаданных(Листинг \hyperref[lst.nftmetadata]{\color{blue} 4}) полностью аналогично структуре метаданных в Paras, так как эта структура оправдана своей функциональностью. Только в отличие от Paras нет полей: <<collection>>, <<collection\_id>>, <<blurhash>>, <<mime\_type>>. <<collection>>, <<collection\_id>> нет, потому что на данный момент мы не поддерживаем коллекции NFT. <<mime\_type>>, <<blurhash>> из-за ненадобности.
+
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{js}
 {
     token_id: 'chopik.testnet.1652636744470',
@@ -846,11 +848,11 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
     }
 }
 \end{minted}
-\caption{Структура NFT}
+\caption{Структура получаемого NFT}
 \label{lst.nftstructure}
 \end{listing}
 
-\begin{listing}
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{json}
 {
     "description":"Cool city",
@@ -862,6 +864,7 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 }
 \end{minted}
 \caption{Структура метаданных NFT в децентрализованном хранилище}
+\label{lst.nftmetadata}
 \end{listing}
 
 \paragraph{Децентрализованное хранилище данных}

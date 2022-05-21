@@ -18,23 +18,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Этапы проекта}{8}{subsection.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Структура работы}{9}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Структура работы}{10}{subsection.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Обзор существующих работ и решений}{9}{section.3}%
+\contentsline {section}{\numberline {3}Обзор существующих работ и решений}{10}{section.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Маркетплейсы}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Маркетплейсы}{10}{subsection.3.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {3.1.1}Paras}{10}{paragraph.3.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {3.1.2}Mintbase}{12}{paragraph.3.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Генеративно-состязательные сети}{12}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Генеративно-состязательные сети}{13}{subsection.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Smart-контракты}{12}{section.4}%
+\contentsline {section}{\numberline {4}Smart-контракты}{13}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Структура NFT smart-контракта}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Структура NFT smart-контракта}{13}{subsection.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {4.1.1}Near sdk фреймворк}{12}{paragraph.4.1.1}%
+\contentsline {paragraph}{\numberline {4.1.1}Near sdk фреймворк}{13}{paragraph.4.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {4.1.2}Core Functionality}{13}{paragraph.4.1.2}%
 \defcounter {refsection}{0}\relax 
@@ -58,22 +58,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {5.1.2}Авторизация в NEAR Wallet}{29}{paragraph.5.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {5.1.3}Вызовы методов у контрактов}{30}{paragraph.5.1.3}%
+\contentsline {paragraph}{\numberline {5.1.3}Вызовы методов у контрактов}{31}{paragraph.5.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {5.1.4}Структура метаданных у NFT}{30}{paragraph.5.1.4}%
+\contentsline {paragraph}{\numberline {5.1.4}Структура получаемого NFT и его метаданных}{31}{paragraph.5.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {5.1.5}Децентрализованное хранилище данных}{31}{paragraph.5.1.5}%
+\contentsline {paragraph}{\numberline {5.1.5}Децентрализованное хранилище данных}{32}{paragraph.5.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Пользовательский интерфейс}{32}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.2}Пользовательский интерфейс}{33}{subsection.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Генеративно-состязательная сеть}{32}{section.6}%
+\contentsline {section}{\numberline {6}Генеративно-состязательная сеть}{33}{section.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Сервис с генеративно-состязательной сетью}{32}{section.7}%
+\contentsline {section}{\numberline {7}Сервис с генеративно-состязательной сетью}{33}{section.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Выводы и результаты}{32}{section.8}%
+\contentsline {section}{\numberline {8}Выводы и результаты}{33}{section.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Список источников}{33}{section.9}%
+\contentsline {section}{\numberline {9}Список источников}{34}{section.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Приложения}{35}{section.10}%
+\contentsline {section}{\numberline {10}Приложения}{36}{section.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Ссылка на репозиторий}{35}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.1}Ссылка на репозиторий}{36}{subsection.10.1}%
