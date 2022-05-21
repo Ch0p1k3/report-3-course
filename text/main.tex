@@ -16,6 +16,7 @@
 Введем основные функции, структуры, декараторы, которые используются при написании smart-контрактов. Для этого необходим фреймворк near-sdk\cite{nearsdkrs}.
 
 Атрибуты:
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[near_bindgen]                                                 /* генерирует smart-контракт, совместимый с блокчейном NEAR */
 
@@ -25,9 +26,13 @@
 
 #[payable]                                                      /* помечает метод, который может принимать депозит */
 \end{minted}
+\caption{Near sdk framework attributes}
+\label{near.attributes}
+\end{listing}
 
 Структуры:
 
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 use near_sdk::collections::{LazyOption, LookupMap, UnorderedMap, UnorderedSet};
 LookupMap       /* Неитерируемый словарь, который хранит свои значения в боре */
@@ -35,8 +40,12 @@ UnorderedMap    /* Итерируемый словарь, который хра�
 UnorderedSet    /* Итерируемое множество объектов, которые хранятся в боре */
 LazyOption      /* Структура, которая лениво инициализируется */
 \end{minted}
+\caption{Near sdk framework structures}
+\label{near.structures}
+\end{listing}
 
 Функции:
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 env::storage_byte_cost()            /* стоимость хранения одного байта */
 env::attached_deposit()             /* внесенный депозит */
@@ -44,11 +53,15 @@ env::predecessor_account_id()       /* предыдущий аккаунт от 
 env::log_str()                      /* написать лог */
 env::prepaid_gas()                  /* количество gas предоставленного для call другой функции */
 \end{minted}
+\caption{Near sdk framework functions}
+\label{near.functions}
+\end{listing}
 
 \paragraph{Core Functionality}
 
 Опишем основные структуры и функции\cite{corestandard}, которые используются в NFT контрактах.
 
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 pub type TokenId = String;
 
@@ -70,8 +83,11 @@ pub struct NFTContractMetadata {
     pub reference_hash: Option<Base64VecU8>,
 }
 \end{minted}
+\caption{NFT contract metadata}
+\label{nftcontract.metadata}
+\end{listing}
 
-Структура контракта представляет из себя следующие поля:
+Структура метаданных контракта представляет из себя следующие поля:
 \begin{enumerate}
 \item spec - версия, является обязательным полем.
 \item name - название контракта, является обязательным полем.
@@ -82,6 +98,7 @@ pub struct NFTContractMetadata {
 \item reference\_hash - sha256 хэш от json на который ведет url в поле reference.
 \end{enumerate}
 
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize)]
 #[serde(crate = "near_sdk::serde")]
@@ -111,6 +128,9 @@ pub struct TokenMetadata {
     pub reference_hash: Option<Base64VecU8>,
 }
 \end{minted}
+\caption{NFT contract token metadata}
+\label{nftcontract.tokenmetadata}
+\end{listing}
 
 Структура метаданных токена состоит из следующих полей:
 \begin{enumerate}
@@ -129,6 +149,7 @@ pub struct TokenMetadata {
 
 \end{enumerate}
 
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[derive(BorshDeserialize, BorshSerialize)]
 pub struct Token {
@@ -138,7 +159,6 @@ pub struct Token {
     pub royalty: HashMap<AccountId, u32>
 }
 
-/* Struct that which can be requested via view call */
 #[derive(Serialize, Deserialize)]
 #[serde(crate = "near_sdk::serde")]
 pub struct JsonToken {
@@ -149,8 +169,11 @@ pub struct JsonToken {
     pub royalty: HashMap<AccountId, u32>
 }
 \end{minted}
+\caption{NFT contract token structs}
+\label{nftcontract.tokenstructs}
+\end{listing}
 
-Структура NFT представляет из себя 3 связанные структуры:
+Структура NFT токена представляет из себя 3 связанные структуры:
 \begin{enumerate}
     \item TokenMetadata - метаданные токена, где каждое из полей является опциональным.
     \item Token - для каждого токена образуется связь:
@@ -163,20 +186,23 @@ pub struct JsonToken {
     \item JsonToken - endpoint структура, которая возвращается при работе с контрактом извне.
 \end{enumerate}
 
-Теперь опишем структуру класса контракта:
+Теперь опишем структуру класса контракта, в котором хранятся созданные токены:
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[near_bindgen]
 #[derive(BorshDeserialize, BorshSerialize, PanicOnDefault)]
 pub struct Contract {
-    pub owner_id: AccountId,                                                /* Contract owner */
-    pub tokens_per_owner: LookupMap<AccountId, UnorderedSet<TokenId>>,      /* Get all tokens by account_id */
-    pub tokens_by_id: LookupMap<TokenId, Token>,                            /* Token struct by token_id */
-    pub token_metadata_by_id: UnorderedMap<TokenId, TokenMetadata>,         /* Token metadata by token_id */
-    pub metadata: LazyOption<NFTContractMetadata>,                          /* Contract metadata */
+    pub owner_id: AccountId,
+    pub tokens_per_owner: LookupMap<AccountId, UnorderedSet<TokenId>>,
+    pub tokens_by_id: LookupMap<TokenId, Token>,
+    pub token_metadata_by_id: UnorderedMap<TokenId, TokenMetadata>,
+    pub metadata: LazyOption<NFTContractMetadata>,
 }
 \end{minted}
+\caption{NFT contract struct}
+\label{nftcontract.struct}
+\end{listing}
 
-Структура контракта хранит:
 \begin{enumerate}
 \item owner\_id - владелец контракта, которые задается единственный раз при инициализации.
 \item metadata - метаданные контракта, которые задаются единственный раз при инициализации.
