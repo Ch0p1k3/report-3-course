@@ -64,16 +64,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\numberline {5.1.5}Децентрализованное хранилище данных}{31}{paragraph.5.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Пользовательский интерфейс}{31}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.2}Пользовательский интерфейс}{32}{subsection.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Генеративно-состязательная сеть}{31}{section.6}%
+\contentsline {section}{\numberline {6}Генеративно-состязательная сеть}{32}{section.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Сервис с генеративно-состязательной сетью}{31}{section.7}%
+\contentsline {section}{\numberline {7}Сервис с генеративно-состязательной сетью}{32}{section.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Выводы и результаты}{31}{section.8}%
+\contentsline {section}{\numberline {8}Выводы и результаты}{32}{section.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Список источников}{32}{section.9}%
+\contentsline {section}{\numberline {9}Список источников}{33}{section.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Приложения}{34}{section.10}%
+\contentsline {section}{\numberline {10}Приложения}{35}{section.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Ссылка на репозиторий}{34}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.1}Ссылка на репозиторий}{35}{subsection.10.1}%

@@ -57,7 +57,7 @@
       \verb http://arxiv.org/abs/1712.04649
       \endverb
     \endentry
-    \entry{2021}{article}{}
+    \entry{nftrevolution}{article}{}
       \name{author}{6}{}{%
         {{hash=b51e947471e2039eb90d31facd4b03fc}{%
            family={Nadini},
@@ -900,34 +900,6 @@
       \verb https://fleek.co/
       \endverb
     \endentry
-    \entry{nearstoragestackinghowmuch}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
-           family={Protocol},
-           familyi={P\bibinitperiod},
-           given={NEAR},
-           giveni={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{d68bd047734ac7ea6206497dd3ab8a0c}
-      \strng{fullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
-      \strng{bibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
-      \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
-      \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
-      \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
-      \field{extraname}{9}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{NEAR Documentation}
-      \field{title}{Storage staking, How much does it cost?}
-      \verb{urlraw}
-      \verb https://docs.near.org/docs/concepts/storage-staking#how-much-does-it-cost
-      \endverb
-      \verb{url}
-      \verb https://docs.near.org/docs/concepts/storage-staking#how-much-does-it-cost
-      \endverb
-    \endentry
     \entry{pastecidnearwallet}{misc}{}
       \name{author}{1}{}{%
         {{hash=326101b9999034e9a2e3c92b0ee7afea}{%
@@ -982,8 +954,8 @@
       \endverb
     \endentry
     \entry{corestandard}{misc}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labeltitlesource}{title}
       \field{title}{core-functionality}
       \verb{urlraw}
@@ -1045,7 +1017,7 @@
       \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
-      \field{extraname}{10}
+      \field{extraname}{9}
       \field{sortinit}{4}
       \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
@@ -1099,7 +1071,7 @@
       \strng{authorbibnamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authornamehash}{d68bd047734ac7ea6206497dd3ab8a0c}
       \strng{authorfullhash}{d68bd047734ac7ea6206497dd3ab8a0c}
-      \field{extraname}{11}
+      \field{extraname}{10}
       \field{sortinit}{4}
       \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}

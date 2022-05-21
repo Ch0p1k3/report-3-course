@@ -2183,7 +2183,7 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">DBLP:journals/corr/abs-1712-04649</bcf:citekey>
-    <bcf:citekey order="2">2021</bcf:citekey>
+    <bcf:citekey order="2">nftrevolution</bcf:citekey>
     <bcf:citekey order="3">nearprotocol_2022</bcf:citekey>
     <bcf:citekey order="4">nearprotocolpos</bcf:citekey>
     <bcf:citekey order="5">nakamoto2012bitcoin</bcf:citekey>
@@ -2216,23 +2216,22 @@
     <bcf:citekey order="31">nftstandart</bcf:citekey>
     <bcf:citekey order="32">ipfs</bcf:citekey>
     <bcf:citekey order="33">fleek</bcf:citekey>
-    <bcf:citekey order="34">nearstoragestackinghowmuch</bcf:citekey>
+    <bcf:citekey order="34">pastecidnearwallet</bcf:citekey>
     <bcf:citekey order="35">pastecidnearwallet</bcf:citekey>
-    <bcf:citekey order="36">pastecidnearwallet</bcf:citekey>
-    <bcf:citekey order="37">mintbasecontracts</bcf:citekey>
-    <bcf:citekey order="38">nftstandart</bcf:citekey>
-    <bcf:citekey order="39">nearsdkrs</bcf:citekey>
-    <bcf:citekey order="40">corestandard</bcf:citekey>
-    <bcf:citekey order="41">enumstandard</bcf:citekey>
+    <bcf:citekey order="36">mintbasecontracts</bcf:citekey>
+    <bcf:citekey order="37">nftstandart</bcf:citekey>
+    <bcf:citekey order="38">nearsdkrs</bcf:citekey>
+    <bcf:citekey order="39">corestandard</bcf:citekey>
+    <bcf:citekey order="40">enumstandard</bcf:citekey>
+    <bcf:citekey order="41">approvalstandard</bcf:citekey>
     <bcf:citekey order="42">approvalstandard</bcf:citekey>
-    <bcf:citekey order="43">approvalstandard</bcf:citekey>
-    <bcf:citekey order="44">royaltystandard</bcf:citekey>
-    <bcf:citekey order="45">nearaccounts</bcf:citekey>
-    <bcf:citekey order="46">webapistorage</bcf:citekey>
-    <bcf:citekey order="47">webapilocalstorage</bcf:citekey>
-    <bcf:citekey order="48">nearclasskeystore</bcf:citekey>
-    <bcf:citekey order="49">nearcli</bcf:citekey>
-    <bcf:citekey order="50">ipfs</bcf:citekey>
+    <bcf:citekey order="43">royaltystandard</bcf:citekey>
+    <bcf:citekey order="44">nearaccounts</bcf:citekey>
+    <bcf:citekey order="45">webapistorage</bcf:citekey>
+    <bcf:citekey order="46">webapilocalstorage</bcf:citekey>
+    <bcf:citekey order="47">nearclasskeystore</bcf:citekey>
+    <bcf:citekey order="48">nearcli</bcf:citekey>
+    <bcf:citekey order="49">ipfs</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
