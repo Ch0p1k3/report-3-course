@@ -214,63 +214,53 @@ pub struct Contract {
 Следующая функция из core functionality без которой нельзя осуществить никакой продажи - создание или mint NFT токена. Функция nft\_mint принимает token\_id, метаданные, владельца и royalties(про них будет рассказно во главе Royalties).
 Так как это payable функция, то пользователь должен будет внести депозит для хранения информации о добавляемом токене. Лишний депозит вернется пользвателю обратно.
 
-Псевдокод будет выглядеть следующим образом:
+Псевдокод будет выглядеть следующим образом (Листинг {\color{blue}\ref{nftcontract.mint}}):
 
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[payable]
-pub fn nft_mint(
-    &mut self,
-    token_id: TokenId,
-    metadata: TokenMetadata,
-    receiver_id: AccountId,
-    perpetual_royalties: Option<HashMap<AccountId, u32>>
-) {
+func nft_mint(token_id, metadata, receiver_id, royalties) {
     /* Сохранить начальный storage_usage*/
-    let initial_storage_usage = env::storage_usage();
+    start_storage_usage = env::storage_usage();
 
-    /* Распаковать и положить perpetual_royalties */
-    royalty = AcceptRoyalties(perpetual_royalties);
+    /* Распаковать и положить royalties */
+    royalty = AcceptRoyalties(royalties);
 
     /* Создать токен */
-    let token = Token {
-        owner_id: receiver_id,
-        approved_account_ids: Default::default(),
-        next_approval_id: 0,
-        royalty
-    };
+    token = CreateToken(metadata, royalties);
 
     /* Проверить, что такого token_id не существует */
-    assert!(self.tokens_by_id.insert(&token_id, &token).is_none());
+    assert(!Exist(token_id));
 
     /* Добавить токен в необходимые структуры */
-    self.token_metadata_by_id.insert(&token_id, &metadata);
-    self.add_token_to_owner(&token.owner_id, &token_id);
+    contract.tokens_by_id.Insert(token_id, token);
+    contract.token_metadata_by_id.Insert(token_id, metadata);
+    add_token_to_owner(token.owner_id, token_id);
 
     /* Вернуть неиспользованный депозит */
-    let required_storage_in_bytes = env::storage_usage() - initial_storage_usage;
-    refund_deposit(required_storage_in_bytes);
+    refund(env::storage_usage() - start_storage_usage);
 }
 \end{minted}
+\caption{NFT token mint}
+\label{nftcontract.mint}
+\end{listing}
 
 Каждый пользователь может запросить на просмотр любой NFT токен с помощью view функции nft\_token, указав в параметрах token\_id.
-В качестве результата пользователь получит JsonToken струкуту описанную выше или None, если такого токена не существует.
+В качестве результата пользователь получит JsonToken струкуту описанную выше или None, если такого токена не существует (Листинг {\color{blue}\ref{nftcontract.entoken}}).
 
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
-fn nft_token(&self, token_id: TokenId) -> Option<JsonToken> {
-    if let Some(token) = self.tokens_by_id.get(&token_id) {
-        let metadata = self.token_metadata_by_id.get(&token_id).unwrap();
-        Some(JsonToken {
-            token_id,
-            owner_id: token.owner_id,
-            metadata,
-            approved_account_ids: token.approved_account_ids,
-            royalty: token.royalty
-        })
+func nft_token(token_id) -> Option<JsonToken> {
+    if !Exist(token_id) {
+        return None;
     } else {
-        None
+        return ConstructJsonToken(token_id);
     }
 }
 \end{minted}
+\caption{NFT nft\_token}
+\label{nftcontract.entoken}
+\end{listing}
 
 Последние функции из core functionality отвечают за передачу nft токена:
 \begin{enumerate}
