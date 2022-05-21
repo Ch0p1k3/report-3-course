@@ -2227,9 +2227,11 @@
     <bcf:citekey order="42">approvalstandard</bcf:citekey>
     <bcf:citekey order="43">approvalstandard</bcf:citekey>
     <bcf:citekey order="44">royaltystandard</bcf:citekey>
-    <bcf:citekey order="45">nearclasskeystore</bcf:citekey>
-    <bcf:citekey order="46">nearcli</bcf:citekey>
-    <bcf:citekey order="47">ipfs</bcf:citekey>
+    <bcf:citekey order="45">webapistorage</bcf:citekey>
+    <bcf:citekey order="46">webapilocalstorage</bcf:citekey>
+    <bcf:citekey order="47">nearclasskeystore</bcf:citekey>
+    <bcf:citekey order="48">nearcli</bcf:citekey>
+    <bcf:citekey order="49">ipfs</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

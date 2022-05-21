@@ -1031,6 +1031,32 @@
       \verb https://nomicon.io/Standards/Tokens/NonFungibleToken/Payout
       \endverb
     \endentry
+    \entry{webapistorage}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Интерфейсы веб API | MDN}
+      \field{title}{Storage - интерфейсы веб API: MDN}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/ru/docs/Web/API/Storage
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/ru/docs/Web/API/Storage
+      \endverb
+    \endentry
+    \entry{webapilocalstorage}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Интерфейсы веб API | MDN}
+      \field{title}{Window.localstorage - Интерфейсы веб API: MDN}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/ru/docs/Web/API/Window/localStorage
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/ru/docs/Web/API/Window/localStorage
+      \endverb
+    \endentry
     \entry{nearcli}{misc}{}
       \name{author}{1}{}{%
         {{hash=d68bd047734ac7ea6206497dd3ab8a0c}{%
