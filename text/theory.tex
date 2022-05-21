@@ -42,30 +42,30 @@ Smart-контракты Paras лежат в открытом доступе\cit
 
 Smart-контракт маркетплейса paras предоставляет дополнительную функцию, как выставление оффера(предложения о покупке) на любой NFT токен. Эту функцию мы планируем позаимствовать в ближайшем будущем.
 
-\begin{listing}
-\begin{minted}[breaklines,fontsize=\scriptsize]{js}
-{
-    token_id: "304990:24",TokenSeriesJson
-    owner_id: "maxzeinly.near",
-    metadata: {
-        title: "Proof of Attendance No.1 #24",
-        description: null,
-        media: "bafybeib3c3r7vjbmyetawahj4kprei6satcrq23k2qjlx2gnmxmv5c6lza",
-        media_hash: null,
-        copies: 1111,
-        issued_at: "1652813800358071368",
-        expires_at: null,
-        starts_at: null,
-        updated_at: null,
-        extra: null,
-        reference: "bafkreiai54itp2hf267leg6754xmlst6j5m3yp3sin6n5bgva2q44wwtem",
-        reference_hash: null
-    },
-    approved_account_ids: {}
-}
-\end{minted}
-\caption{Структура NFT}
-\end{listing}
+% \begin{listing}
+% \begin{minted}[breaklines,fontsize=\scriptsize]{js}
+% {
+%     token_id: "304990:24",TokenSeriesJson
+%     owner_id: "maxzeinly.near",
+%     metadata: {
+%         title: "Proof of Attendance No.1 #24",
+%         description: null,
+%         media: "bafybeib3c3r7vjbmyetawahj4kprei6satcrq23k2qjlx2gnmxmv5c6lza",
+%         media_hash: null,
+%         copies: 1111,
+%         issued_at: "1652813800358071368",
+%         expires_at: null,
+%         starts_at: null,
+%         updated_at: null,
+%         extra: null,
+%         reference: "bafkreiai54itp2hf267leg6754xmlst6j5m3yp3sin6n5bgva2q44wwtem",
+%         reference_hash: null
+%     },
+%     approved_account_ids: {}
+% }
+% \end{minted}
+% \caption{Структура NFT}
+% \end{listing}
 
 Paras, как и большинство маркетплейсов хранит медиа-файл и метаданные NFT на IPFS\cite{ipfs}(см. \hyperref[section.5.1.3]{\color{blue} 5.1.3}). IPFS предоставляется сервисом fleek\cite{fleek}. В качестве ссылки на медиа-файл и метаданные они хранят CID, а не полный URL, это связанно с тем, что минт NFT таким образом будет гораздо дешевле, ведь хранение в NEAR, довольно дорогое\cite{nearstoragestackinghowmuch}. Но есть и минус этой экономии, на NEAR Wallet, скорее всего это изображение не будет отображаться, так как NEAR Wallet, при не указании протокола соединения, будет подставлять CID не в шлюз IPFS от fleek (Листинг \hyperref[lst.pastecidnearwallet]{\color{blue} 2}), а доступность и скорость получения контента зависят от шлюза.
 
