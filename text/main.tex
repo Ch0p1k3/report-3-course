@@ -976,9 +976,20 @@ Cо своего профиля(Рисунок {\color{blue} \ref{fig.profile}})
 
 \begin{remark}
     Визуальный вид списка NFT(Рисунок {\color{blue} \ref{fig.cancelsalenftforsale}}, Рисунок {\color{blue} \ref{fig.mynftlistonsale}}) меняется от их количества: если NFT меньше 7, то не будет кнопок <<+7>>, <<-7>>, которые будут подгружать следующие/предыдущие 7 NFT. Это сделано для того, чтобы в один момент не подгружать все NFT с блокчейна.
+    
 \end{remark}
 
 // Лущ Иван. Здесь еще будет про смену цены
+
+
+\subsection{Деплой бота}
+	Чтобы развернуть наш проект в интернете используется Alibaba cloud ecs(Elastic Compute Service). Для деплоя используется прокирование с помощью nginx. 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=30mm]{fig/nginxganservice.png}
+		\caption{Схема деплоя бота}
+			\label{fig.nginxganservice}
+	\end{figure}
 
 \section{Генеративно-состязательная сеть}
 \label{section.6}
