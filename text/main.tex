@@ -795,6 +795,8 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 
 \paragraph{Вызовы методов у контрактов}
 
+Вызовы методов у smart-контрактов --- это то, чем бот занимается большую часть времени.
+
 \paragraph{Структура получаемого NFT и его метаданных}
 \label{section.main.bot.struct}
 На данный момент, при создании NFT в структуре(Листинг {\color{blue}\ref{lst.nftstructure}}) используются следующие поля: <<token\_id>>, <<owner\_id>>, <<royalty>>, <<metadata.title>>, <<metadata.media>>, <<metadata.reference>>. <<metadata.description>> не используется, все описание NFT хранится в метаданных в децентрализованном хранилище в целях экономии оплаты за хранение . В <<metadata.media>>, <<metadata.reference>> хранятся полные URL до медиа-файла и метаданных. В ближайшее время, планируется хранить только CID и только в поле media, так как медиа-файл и метаданные хранятся в одной директории, то для их определения достаточно одного CID(см. {\color{blue} \ref{section.main.bot.storage}}).
@@ -865,6 +867,21 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 \end{remark}
 
 \subsection{Пользовательский интерфейс}
+
+\paragraph{Точки входа}
+
+\begin{figure}[H]
+    \centering
+    \subfloat[Slash-команды бота]{
+        \label{fig.slashcommands}
+        \includegraphics[height=60mm]{fig/slash_commands.png}
+    }\\
+    \subfloat[Контекстные меню бота]{
+        \label{fig.contextmenu}
+        \includegraphics[height=60mm]{fig/context_menu.png}
+    }
+    \caption{}
+\end{figure}
 
 \section{Генеративно-состязательная сеть}
 \label{section.6}
