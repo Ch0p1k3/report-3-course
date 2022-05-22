@@ -657,85 +657,49 @@ pub func update_price(nft_contract_id, token_id, price) {
 
 Псевдокод данных функций будет выглядеть следующим образом:
 
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
-pub fn get_supply_sales(
-    &self,
-) -> u64 {
-    self.sales.len()
+pub func get_supply_sales() -> u64 {
+    return length(own_contract.sales);
 }
 
-pub fn get_supply_by_owner_id(
-    &self,
-    account_id: AccountId,
-) -> u64 {
-    let owner_id = self.by_owner_id.get(&account_id);
-
-    if let Some(owner_id) = owner_id {
-        owner_id.len()
-    } else {
-        0
-    }
+pub func get_supply_by_owner_id(account_id) -> u64 {
+    owner_id = own_contract.by_owner_id.get(account_id);
+    return length(owner_id);
 }
 
-pub fn get_sales_by_owner_id(
-    &self,
-    account_id: AccountId,
-    from_index: Option<u128>,
-    limit: Option<u64>,
-) -> Vec<Sale> {
-    let owner_id = self.by_owner_id.get(&account_id);
+pub func get_sales_by_owner_id(account_id, from_index, limit) -> Vec<Sale> {
+    sales = owner_contract.by_owner_id.get(account_id);
+    
+    sales.iter()
+        .skip(from_index)
+        .take(limit)
+        .map(|token_id| owner_contract.sales.get(token_id))
+        .collect()
+}
 
-    let sales = if let Some(owner_id) = owner_id {
-        owner_id
-    } else {
-        return vec![];
-    };
+pub func get_supply_by_nft_contract_id(nft_contract_id) -> u64 {
+    nft_contract_id = own_contract.by_nft_contract_id.get(nft_contract_id);
+    return length(nft_contract_id);
+}
+
+pub func get_sales_by_nft_contract_id(nft_contract_id, from_index, limit) -> Vec<Sale> {
+    let sales = own_contract.by_nft_contract_id.get(nft_contract_id);
 
     sales.iter()
         .skip(from_index)
         .take(limit)
-        .map(|token_id| self.sales.get(&token_id).unwrap())
+        .map(|token_id| own_contract.sales.get(nft_contract_id, '.', token_id))
         .collect()
 }
 
-pub fn get_supply_by_nft_contract_id(
-    &self,
-    nft_contract_id: AccountId,
-) -> u64 {
-    let nft_contract_id = self.by_nft_contract_id.get(&nft_contract_id);
-
-    if let Some(nft_contract_id) = nft_contract_id {
-        nft_contract_id.len()
-    } else {
-        0
-    }
-}
-
-pub fn get_sales_by_nft_contract_id(
-    &self,
-    nft_contract_id: AccountId,
-    from_index: Option<u128>,
-    limit: Option<u64>,
-) -> Vec<Sale> {
-    let by_nft_contract_id = self.by_nft_contract_id.get(&nft_contract_id);
-
-    let sales = if let Some(by_nft_contract_id) = by_nft_contract_id {
-        by_nft_contract_id
-    } else {
-        return vec![];
-    };
-
-    sales.iter()
-        .skip(from_index)
-        .take(limit)
-        .map(|token_id| self.sales.get(&format!("{}{}{}", nft_contract_id, '.', token_id)).unwrap())
-        .collect()
-}
-
-pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
-    self.sales.get(&nft_contract_token)
+pub fn get_sale(nft_contract_token) -> Option<Sale> {
+    own_contract.sales.get(nft_contract_token)
 }
 \end{minted}
+\caption{Marketplace contract enumaration}
+\label{marketplacecontract.enumeration}
+\end{listing}
 
 \section{Discord-бот}
 \label{section.main.bot}
