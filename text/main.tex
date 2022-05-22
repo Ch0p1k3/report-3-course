@@ -194,7 +194,7 @@ pub struct Contract {
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[payable]
-func nft_mint(token_id, metadata, receiver_id, royalties) {
+fn nft_mint(token_id, metadata, receiver_id, royalties) {
     /* Сохранить начальный storage_usage*/
     start_storage_usage = env::storage_usage();
 
@@ -225,7 +225,7 @@ func nft_mint(token_id, metadata, receiver_id, royalties) {
 
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
-func nft_token(token_id) -> Option<JsonToken> {
+fn nft_token(token_id) -> Option<JsonToken> {
     if !Exist(token_id) {
         return None;
     } else {
@@ -258,7 +258,7 @@ func nft_token(token_id) -> Option<JsonToken> {
 
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
-func nft_on_transfer(sender_id, previous_owner_id, token_id, msg) -> Promise;
+fn nft_on_transfer(sender_id, previous_owner_id, token_id, msg) -> Promise;
 
 #[payable]
 fn nft_transfer_call(receiver_id, token_id, approval_id, msg) -> PromiseOrValue<bool> {
@@ -331,11 +331,11 @@ fn nft_resolve_transfer(
 
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
-pub func nft_total_supply() -> U128 {
+pub fn nft_total_supply() -> U128 {
     return length(own_contract.token_metadata_by_id)
 }
 
-pub func nft_tokens(from_index, limit) -> Vec<JsonToken> {
+pub fn nft_tokens(from_index, limit) -> Vec<JsonToken> {
     return own_contract.token_metadata_by_id.keys()
         .skip(from_index)
         .take(limit)
@@ -343,7 +343,7 @@ pub func nft_tokens(from_index, limit) -> Vec<JsonToken> {
         .collect()
 }
 
-pub func nft_supply_for_owner(account_id) -> U128 {
+pub fn nft_supply_for_owner(account_id) -> U128 {
     if Exist(account_id) {
         return length(own_contract.tokens_per_owner.get(account_id))
     } else {
@@ -351,7 +351,7 @@ pub func nft_supply_for_owner(account_id) -> U128 {
     }
 }
 
-pub func nft_tokens_for_owner(
+pub fn nft_tokens_for_owner(
     account_id,
     from_index,
     limit
@@ -422,7 +422,7 @@ Approval Management не добавляет новых внешних view фу�
 Псевдокод будет выглядеть следующим образом:
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
-func nft_payout(token_id, balance) -> Payout {
+fn nft_payout(token_id, balance) -> Payout {
     /* Проверить, что токен существует */
     assert(ExistToken(token_id))
 
@@ -447,7 +447,7 @@ func nft_payout(token_id, balance) -> Payout {
 }
 
 #[payable]
-func nft_transfer_payout(
+fn nft_transfer_payout(
     receiver_id, token_id,
     approval_id, memo,
     balance,
@@ -574,7 +574,7 @@ pub struct Contract {
 
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
-func nft_on_approve(token_id, owner_id, approval_id, sale_price) {
+fn nft_on_approve(token_id, owner_id, approval_id, sale_price) {
     /* NFT контракт с которого был вызвана продажа */
     nft_contract_id = env::predecessor_account_id();
 
@@ -616,7 +616,7 @@ func nft_on_approve(token_id, owner_id, approval_id, sale_price) {
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[payable]
-pub func remove_sale(nft_contract_id, token_id) {
+pub fn remove_sale(nft_contract_id, token_id) {
     /* Проверим, что владелец токена пытается его убрать с продажи */
     assert (own_contract.sales.OwnerByToken(token_id) == env::precessor_account_id());
 
@@ -628,7 +628,7 @@ pub func remove_sale(nft_contract_id, token_id) {
 }
 
 #[payable]
-pub func update_price(nft_contract_id, token_id, price) {
+pub fn update_price(nft_contract_id, token_id, price) {
     /* Проверим, что владелец токена пытается его убрать с продажи */
     assert (self.sales.OwnerByToken(token_id) == env::precessor_account_id());
 
@@ -659,16 +659,16 @@ pub func update_price(nft_contract_id, token_id, price) {
 
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
-pub func get_supply_sales() -> u64 {
+pub fn get_supply_sales() -> u64 {
     return length(own_contract.sales);
 }
 
-pub func get_supply_by_owner_id(account_id) -> u64 {
+pub fn get_supply_by_owner_id(account_id) -> u64 {
     owner_id = own_contract.by_owner_id.get(account_id);
     return length(owner_id);
 }
 
-pub func get_sales_by_owner_id(account_id, from_index, limit) -> Vec<Sale> {
+pub fn get_sales_by_owner_id(account_id, from_index, limit) -> Vec<Sale> {
     sales = owner_contract.by_owner_id.get(account_id);
     
     sales.iter()
@@ -678,12 +678,12 @@ pub func get_sales_by_owner_id(account_id, from_index, limit) -> Vec<Sale> {
         .collect()
 }
 
-pub func get_supply_by_nft_contract_id(nft_contract_id) -> u64 {
+pub fn get_supply_by_nft_contract_id(nft_contract_id) -> u64 {
     nft_contract_id = own_contract.by_nft_contract_id.get(nft_contract_id);
     return length(nft_contract_id);
 }
 
-pub func get_sales_by_nft_contract_id(nft_contract_id, from_index, limit) -> Vec<Sale> {
+pub fn get_sales_by_nft_contract_id(nft_contract_id, from_index, limit) -> Vec<Sale> {
     let sales = own_contract.by_nft_contract_id.get(nft_contract_id);
 
     sales.iter()
