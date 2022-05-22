@@ -868,7 +868,7 @@ near-api-js не предоставляет хороших оберток для
 
 Авторизация пользователя происходит через соответствующую slash-команду(Рисунок {\color{blue} \ref{fig.authbtn1}}) или при взаимодействии бота в отношении своего профиля, если пользователь не авторизован(Рисунок {\color{blue} \ref{fig.authbtn2}}).
 
-\begin{figure}[H]
+\begin{figure}
     \centering
     \subfloat[Намереная авторизация]{
         \label{fig.authbtn1}
@@ -880,6 +880,14 @@ near-api-js не предоставляет хороших оберток для
     }
     \caption{Авторизация пользователя}
 \end{figure}
+
+С помощью контекстных меню(Рисунок {\color{blue} \ref{fig.contextmenu}}), можно взаимодействовать с другими пользователями: мы можем получить профиль пользователя(Рисунок {\color{blue} \ref{fig.anotherprofile}}), его список NFT, список продаваемых NFT(Рисунок {\color{blue} \ref{fig.nftonsaleuser}}).
+
+\begin{remark}
+    Если в контекстном меню взаимодействовать с собой, то эффект будет такой-же как от slash-комманд, то есть фактически мы можем не использовать slash-команды вообще и взаимодействовать только через GUI.
+\end{remark}
+
+При взаимодействии с пользователем мы можем купить у него NFT, если таковые имеются()
 
 \begin{figure}[H]
     \centering
@@ -934,11 +942,11 @@ near-api-js не предоставляет хороших оберток для
 
 \begin{figure}[H]
     \centering
-    \subfloat[Сообщение о переходе в личные сообщения]{
+    \subfloat[Список пользователя со всеми NFT]{
         \label{fig.mynftlistcansale}
         \includegraphics[height=60mm]{fig/mynftlistcansale.png}
     }
-    \subfloat[Конструктор NFT]{
+    \subfloat[Подтверждение продажи]{
         \label{fig.saleconfirm}
         \includegraphics[height=60mm]{fig/saleconfirm.png}
     }
@@ -961,6 +969,10 @@ near-api-js не предоставляет хороших оберток для
     }
     \caption{Отмена продажи}
 \end{figure}
+
+\begin{remark}
+    Визуальный вид списка NFT(Рисунок {\color{blue} \ref{fig.mynftlistonsale}}, Рисунок {\color{blue} \ref{fig.cancelsalenftforsale}}) меняется от их количества: если NFT меньше 7, то не будет кнопок <<+7>>, <<-7>>, которые будут подгружать следующие/предыдущие 7 NFT. Это сделано для того, чтобы в один момент не подгружать все NFT с блокчейна.
+\end{remark}
 
 // Лущ Иван. Здесь еще будет про смену цены
 
