@@ -5,18 +5,17 @@
 % 		За данную часть я отвечаю в меньшей степени. Но в рамках данного проекта нашей командой принято решение реализовать две идеи: рекомендательную систему или GAN. Рекомендательная система также делится на две части - это предсказание цены за конкретную NFT и более сложная идея - это рекомендовать сам NFT-токен. Идея с GAN выглядит гораздо легче, сравнивая с рекомендательной системой, например, создание аниме персонажа, пиксель арта, которое в последствии пользователь сможет использовать в своих коллекциях или для продажи.
 
 \section{Smart-контракты}
-\label{section.4}
+\label{section.main.smart}
 
 В данной главе будет описываться строение и реализация смарт-контрактов.
 
 \subsection{Структура NFT smart-контракта}
-\label{section.4.1}
+\label{section.main.smart.struct}
 В данной подглаве будет описываться строение NFT smart-контракта, написанного на языке Rust. Вся логика соответствует описанному стандарту NEP-171\cite{nftstandart}.
 \paragraph{Near sdk фреймворк}
 Введем основные функции, структуры, декараторы, которые используются при написании smart-контрактов. Для этого необходим фреймворк near-sdk\cite{nearsdkrs}.
 
 Атрибуты:
-\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[near_bindgen]                                                 /* генерирует smart-контракт, совместимый с блокчейном NEAR */
 
@@ -26,13 +25,9 @@
 
 #[payable]                                                      /* помечает метод, который может принимать депозит */
 \end{minted}
-\caption{Near sdk framework attributes}
-\label{near.attributes}
-\end{listing}
 
 Структуры:
 
-\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 use near_sdk::collections::{LazyOption, LookupMap, UnorderedMap, UnorderedSet};
 LookupMap       /* Неитерируемый словарь, который хранит свои значения в боре */
@@ -40,12 +35,8 @@ UnorderedMap    /* Итерируемый словарь, который хра�
 UnorderedSet    /* Итерируемое множество объектов, которые хранятся в боре */
 LazyOption      /* Структура, которая лениво инициализируется */
 \end{minted}
-\caption{Near sdk framework structures}
-\label{near.structures}
-\end{listing}
 
 Функции:
-\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 env::storage_byte_cost()            /* стоимость хранения одного байта */
 env::attached_deposit()             /* внесенный депозит */
@@ -53,15 +44,11 @@ env::predecessor_account_id()       /* предыдущий аккаунт от 
 env::log_str()                      /* написать лог */
 env::prepaid_gas()                  /* количество gas предоставленного для call другой функции */
 \end{minted}
-\caption{Near sdk framework functions}
-\label{near.functions}
-\end{listing}
 
 \paragraph{Core Functionality}
 
 Опишем основные структуры и функции\cite{corestandard}, которые используются в NFT контрактах.
 
-\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 pub type TokenId = String;
 
@@ -69,25 +56,16 @@ pub type TokenId = String;
 #[serde(crate = "near_sdk::serde")]
 pub struct NFTContractMetadata {
     pub spec: String,
-
     pub name: String,
-
     pub symbol: String,
-
     pub icon: Option<String>,
-
     pub base_uri: Option<String>,
-
     pub reference: Option<String>,
-
     pub reference_hash: Option<Base64VecU8>,
 }
 \end{minted}
-\caption{NFT contract metadata}
-\label{nftcontract.metadata}
-\end{listing}
 
-Структура метаданных контракта представляет из себя следующие поля:
+Структура контракта представляет из себя следующие поля:
 \begin{enumerate}
 \item spec - версия, является обязательным полем.
 \item name - название контракта, является обязательным полем.
@@ -98,7 +76,6 @@ pub struct NFTContractMetadata {
 \item reference\_hash - sha256 хэш от json на который ведет url в поле reference.
 \end{enumerate}
 
-\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize)]
 #[serde(crate = "near_sdk::serde")]
@@ -128,9 +105,6 @@ pub struct TokenMetadata {
     pub reference_hash: Option<Base64VecU8>,
 }
 \end{minted}
-\caption{NFT contract token metadata}
-\label{nftcontract.tokenmetadata}
-\end{listing}
 
 Структура метаданных токена состоит из следующих полей:
 \begin{enumerate}
@@ -149,7 +123,6 @@ pub struct TokenMetadata {
 
 \end{enumerate}
 
-\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[derive(BorshDeserialize, BorshSerialize)]
 pub struct Token {
@@ -159,6 +132,7 @@ pub struct Token {
     pub royalty: HashMap<AccountId, u32>
 }
 
+/* Struct that which can be requested via view call */
 #[derive(Serialize, Deserialize)]
 #[serde(crate = "near_sdk::serde")]
 pub struct JsonToken {
@@ -169,11 +143,8 @@ pub struct JsonToken {
     pub royalty: HashMap<AccountId, u32>
 }
 \end{minted}
-\caption{NFT contract token structs}
-\label{nftcontract.tokenstructs}
-\end{listing}
 
-Структура NFT токена представляет из себя 3 связанные структуры:
+Структура NFT представляет из себя 3 связанные структуры:
 \begin{enumerate}
     \item TokenMetadata - метаданные токена, где каждое из полей является опциональным.
     \item Token - для каждого токена образуется связь:
@@ -186,23 +157,20 @@ pub struct JsonToken {
     \item JsonToken - endpoint структура, которая возвращается при работе с контрактом извне.
 \end{enumerate}
 
-Теперь опишем структуру класса контракта, в котором хранятся созданные токены:
-\begin{listing}[H]
+Теперь опишем структуру класса контракта:
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[near_bindgen]
 #[derive(BorshDeserialize, BorshSerialize, PanicOnDefault)]
 pub struct Contract {
-    pub owner_id: AccountId,
-    pub tokens_per_owner: LookupMap<AccountId, UnorderedSet<TokenId>>,
-    pub tokens_by_id: LookupMap<TokenId, Token>,
-    pub token_metadata_by_id: UnorderedMap<TokenId, TokenMetadata>,
-    pub metadata: LazyOption<NFTContractMetadata>,
+    pub owner_id: AccountId,                                                /* Contract owner */
+    pub tokens_per_owner: LookupMap<AccountId, UnorderedSet<TokenId>>,      /* Get all tokens by account_id */
+    pub tokens_by_id: LookupMap<TokenId, Token>,                            /* Token struct by token_id */
+    pub token_metadata_by_id: UnorderedMap<TokenId, TokenMetadata>,         /* Token metadata by token_id */
+    pub metadata: LazyOption<NFTContractMetadata>,                          /* Contract metadata */
 }
 \end{minted}
-\caption{NFT contract struct}
-\label{nftcontract.struct}
-\end{listing}
 
+Структура контракта хранит:
 \begin{enumerate}
 \item owner\_id - владелец контракта, которые задается единственный раз при инициализации.
 \item metadata - метаданные контракта, которые задаются единственный раз при инициализации.
@@ -214,53 +182,63 @@ pub struct Contract {
 Следующая функция из core functionality без которой нельзя осуществить никакой продажи - создание или mint NFT токена. Функция nft\_mint принимает token\_id, метаданные, владельца и royalties(про них будет рассказно во главе Royalties).
 Так как это payable функция, то пользователь должен будет внести депозит для хранения информации о добавляемом токене. Лишний депозит вернется пользвателю обратно.
 
-Псевдокод будет выглядеть следующим образом (Листинг {\color{blue}\ref{nftcontract.mint}}):
+Псевдокод будет выглядеть следующим образом:
 
-\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[payable]
-func nft_mint(token_id, metadata, receiver_id, royalties) {
+pub fn nft_mint(
+    &mut self,
+    token_id: TokenId,
+    metadata: TokenMetadata,
+    receiver_id: AccountId,
+    perpetual_royalties: Option<HashMap<AccountId, u32>>
+) {
     /* Сохранить начальный storage_usage*/
-    start_storage_usage = env::storage_usage();
+    let initial_storage_usage = env::storage_usage();
 
-    /* Распаковать и положить royalties */
-    royalty = AcceptRoyalties(royalties);
+    /* Распаковать и положить perpetual_royalties */
+    royalty = AcceptRoyalties(perpetual_royalties);
 
     /* Создать токен */
-    token = CreateToken(metadata, royalties);
+    let token = Token {
+        owner_id: receiver_id,
+        approved_account_ids: Default::default(),
+        next_approval_id: 0,
+        royalty
+    };
 
     /* Проверить, что такого token_id не существует */
-    assert(!Exist(token_id));
+    assert!(self.tokens_by_id.insert(&token_id, &token).is_none());
 
     /* Добавить токен в необходимые структуры */
-    contract.tokens_by_id.Insert(token_id, token);
-    contract.token_metadata_by_id.Insert(token_id, metadata);
-    add_token_to_owner(token.owner_id, token_id);
+    self.token_metadata_by_id.insert(&token_id, &metadata);
+    self.add_token_to_owner(&token.owner_id, &token_id);
 
     /* Вернуть неиспользованный депозит */
-    refund(env::storage_usage() - start_storage_usage);
+    let required_storage_in_bytes = env::storage_usage() - initial_storage_usage;
+    refund_deposit(required_storage_in_bytes);
 }
 \end{minted}
-\caption{NFT token mint}
-\label{nftcontract.mint}
-\end{listing}
 
 Каждый пользователь может запросить на просмотр любой NFT токен с помощью view функции nft\_token, указав в параметрах token\_id.
-В качестве результата пользователь получит JsonToken струкуту описанную выше или None, если такого токена не существует (Листинг {\color{blue}\ref{nftcontract.entoken}}).
+В качестве результата пользователь получит JsonToken струкуту описанную выше или None, если такого токена не существует.
 
-\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
-func nft_token(token_id) -> Option<JsonToken> {
-    if !Exist(token_id) {
-        return None;
+fn nft_token(&self, token_id: TokenId) -> Option<JsonToken> {
+    if let Some(token) = self.tokens_by_id.get(&token_id) {
+        let metadata = self.token_metadata_by_id.get(&token_id).unwrap();
+        Some(JsonToken {
+            token_id,
+            owner_id: token.owner_id,
+            metadata,
+            approved_account_ids: token.approved_account_ids,
+            royalty: token.royalty
+        })
     } else {
-        return ConstructJsonToken(token_id);
+        None
     }
 }
 \end{minted}
-\caption{NFT nft\_token}
-\label{nftcontract.entoken}
-\end{listing}
 
 Последние функции из core functionality отвечают за передачу nft токена:
 \begin{enumerate}
@@ -814,7 +792,7 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 \end{minted}
 
 \section{Discord-бот}
-\label{section.5}
+\label{section.main.bot}
 
 \subsection{Взаимодействие с блокчейнами}
 
@@ -868,8 +846,8 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 \paragraph{Вызовы методов у контрактов}
 
 \paragraph{Структура получаемого NFT и его метаданных}
-\label{section.5.1.4}
-На данный момент, при создании NFT в структуре(Листинг {\color{blue}\ref{lst.nftstructure}}) используются следующие поля: <<token\_id>>, <<owner\_id>>, <<royalty>>, <<metadata.title>>, <<metadata.media>>, <<metadata.reference>>. <<metadata.description>> не используется, все описание NFT хранится в метаданных в децентрализованном хранилище в целях экономии оплаты за хранение . В <<metadata.media>>, <<metadata.reference>> хранятся полные URL до медиа-файла и метаданных. В ближайшее время, планируется хранить только CID и только в поле media, так как медиа-файл и метаданные хранятся в одной директории, то для их определения достаточно одного CID(см. \hyperref[section.5.1.5]{\color{blue} 5.1.5}).
+\label{section.main.bot.struct}
+На данный момент, при создании NFT в структуре(Листинг {\color{blue}\ref{lst.nftstructure}}) используются следующие поля: <<token\_id>>, <<owner\_id>>, <<royalty>>, <<metadata.title>>, <<metadata.media>>, <<metadata.reference>>. <<metadata.description>> не используется, все описание NFT хранится в метаданных в децентрализованном хранилище в целях экономии оплаты за хранение . В <<metadata.media>>, <<metadata.reference>> хранятся полные URL до медиа-файла и метаданных. В ближайшее время, планируется хранить только CID и только в поле media, так как медиа-файл и метаданные хранятся в одной директории, то для их определения достаточно одного CID(см. {\color{blue} \ref{section.main.bot.storage}}).
 
 Структура метаданных(Листинг {\color{blue}\ref{lst.nftmetadata}}) полностью аналогично структуре метаданных в Paras, так как эта структура оправдана своей функциональностью. Только в отличие от Paras нет полей: <<collection>>, <<collection\_id>>, <<blurhash>>, <<mime\_type>>. <<collection>>, <<collection\_id>> нет, потому что на данный момент мы не поддерживаем коллекции NFT. <<mime\_type>>, <<blurhash>> из-за ненадобности.
 
@@ -916,9 +894,9 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 \end{listing}
 
 \paragraph{Децентрализованное хранилище данных}
-\label{section.5.1.5}
+\label{section.main.bot.storage}
 
-Обычно для хранения метаданных и медиа-объекта используется другой блокчейн специализированный под хранение. Был выбран NFT.Storage\cite{nftstorage} --- бесплатное децентрализованное хранилище NFT на IPFS и Filecoin.
+Обычно для хранения метаданных и медиа-объекта используется другой блокчейн специализированный под хранение. Был выбран NFT.Storage\cite{nftstorage} --- бесплатное децентрализованное хранилище NFT на IPFS\cite{ipfs} и Filecoin\cite{filecoin}. NFT.Storage предоставляет HTTP API для взаимодействия с хранилищем и обертку на Javascript.
 
 \begin{definition}
     IPFS(InterPlanetary File System) - это протокол распределенной системы обмена файлов. При добавлении файла в IPFS, он делится на маленькие куски, криптографически хэшируется и отдается уникальный фингерпринтр, который называется CID(Content identifier) \cite{ipfs}.
