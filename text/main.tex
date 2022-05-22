@@ -670,7 +670,7 @@ pub func get_supply_by_owner_id(account_id) -> u64 {
 
 pub func get_sales_by_owner_id(account_id, from_index, limit) -> Vec<Sale> {
     sales = owner_contract.by_owner_id.get(account_id);
-    
+
     sales.iter()
         .skip(from_index)
         .take(limit)
@@ -881,6 +881,5 @@ pub fn get_sale(nft_contract_token) -> Option<Sale> {
 \label{section.6}
 // Текст будет написан Токкожиным Арсеном
 \section{Сервис с генеративно-состязательной сетью}
-// Текст будет написан Кусиденовым Адильханом
-
 \label{section.7}
+// Текст будет написан Кусиденовым Адильханом
