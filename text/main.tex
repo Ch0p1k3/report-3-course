@@ -502,6 +502,7 @@ func nft_transfer_payout(
 
 Опишем структуру маркетплейс контракта:
 
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 
 /* Так как выставить токен могут с разных контрактов, удобно будет соединить их в одной строке */
@@ -554,6 +555,9 @@ pub struct Contract {
     pub storage_deposits: LookupMap<AccountId, Balance>,
 }
 \end{minted}
+\caption{Marketplace contract struct}
+\label{marketplacecontract.struct}
+\end{listing}
 
 Когда пользователь хочет выставить на продажу NFT токен, он должен вызвать nft\_approve у своего NFT контракта, чтобы добавить аккаунт маркетплейса в доверенные аккаунты, тогда на контракте маркетплейса вызовется метод nft\_on\_approve, который добавит токен на продажу.
 В результате, когда другой пользователь захочет купить токен, то маркетплейс сможет легко перевести его новому владельцу, потому он является доверенным аккаунтом для продаваемого токена.
@@ -568,47 +572,40 @@ pub struct Contract {
 
 Псевдокод будет выглядеть следующим образом:
 
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
-fn nft_on_approve(
-    &mut self,
-    token_id: TokenId,
-    owner_id: AccountId,
-    approval_id: u64,
-    msg: String,
-) {
+func nft_on_approve(token_id, owner_id, approval_id, sale_price) {
     /* NFT контракт с которого был вызвана продажа */
-    let nft_contract_id: AccountId = env::predecessor_account_id();
+    nft_contract_id = env::predecessor_account_id();
 
     /* Аккаунт пользователя, который подписал контракт */
-    let signer_id: AccountId = env::signer_account_id();
+    signer_id = env::signer_account_id();
 
     assert(owner_id == signer_id)
 
     /* Считаем сколько нужно на хранилище и сколько внесено */
-    let paid_storage: u128 = self.storage_deposits.getPaidStorage(signer_id);
-    let required_storage: u128 = CalcRequiredStorage();
-
-    /* Проверяем, что денег на хранение достаточно */
+    paid_storage = own_contract.storage_deposits.getPaidStorage(signer_id);
+    required_storage = CalcRequiredStorage();
     assert(paid_storage > required_storage);
 
-    /* Sale conditions take from msg filed, if user don't fill msg it will panic */
-    let sale_price  = GetSalePrice(msg);
-
     /* Добавляем покупку в необходимые структуры */
-    let contract_and_token_id: String = nft_contract_id + '.' + token_id;
-    self.sales.InsertNewSale(
+    contract_and_token_id = nft_contract_id + '.' + token_id;
+    own_contract.sales.InsertNewSale(
         contract_and_token_id, owner_id, approval_id, nft_contract_id, token_id, sale_price
     );
 
-    self.by_owner_id.InsertNewSale(
+    own_contract.by_owner_id.InsertNewSale(
         contract_and_token_id, owner_id, approval_id, nft_contract_id, token_id, sale_price
     );
 
-    self.by_nft_contract_id.InsertNewSale(
+    own_contract.by_nft_contract_id.InsertNewSale(
         owner_id, approval_id, nft_contract_id, token_id, sale_price
     );
 }
 \end{minted}
+\caption{Marketplace contract nft\_on\_approve}
+\label{marketplacecontract.onapprove}
+\end{listing}
 
 Так как мы делаем cross-contract call между двумя контрактами, тогда определить необходимые средства на хранения продаваемого NFT токена выглядит проблематичным.
 Поэтому пользователь должен будет сам покупать хранилище и сам его освобождать, когда его токены продались и место освободилось. Именно для этого необходимо поле storage\_deposits в контракте.
@@ -616,34 +613,33 @@ fn nft_on_approve(
 
 Изменение цены и отмена продажи, тоже выглядят достаточно тривиальными, напишем короткий псевдокод:
 
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[payable]
-pub fn remove_sale(&mut self, nft_contract_id: AccountId, token_id: String) {
+pub func remove_sale(nft_contract_id, token_id) {
     /* Проверим, что владелец токена пытается его убрать с продажи */
-    assert (self.sales.OwnerByToken(token_id) == env::precessor_account_id());
+    assert (own_contract.sales.OwnerByToken(token_id) == env::precessor_account_id());
 
     /* Удаляем продажу из структур контракта */
     contract_and_token_id = nft_contract_id + '.' + token_id;
-    self.sales.RemoveByToken(token_id);
-    self.by_owner_id.RemoveByContractAndToken(owner_id, contract_and_token_id);
-    self.by_nft_contract_id.RemoveByContractAndToken(contract_and_token_id, token_id);
+    own_contract.sales.RemoveByToken(token_id);
+    own_contract.by_owner_id.RemoveByContractAndToken(owner_id, contract_and_token_id);
+    own_contract.by_nft_contract_id.RemoveByContractAndToken(contract_and_token_id, token_id);
 }
 
 #[payable]
-pub fn update_price(
-    &mut self,
-    nft_contract_id: AccountId,
-    token_id: String,
-    price: U128,
-) {
+pub func update_price(nft_contract_id, token_id, price) {
     /* Проверим, что владелец токена пытается его убрать с продажи */
     assert (self.sales.OwnerByToken(token_id) == env::precessor_account_id());
 
     /* Обновим цену продажы в структурах контракта */
     contract_and_token_id = nft_contract_id + '.' + token_id;
-    self.sales.UpdateByToken(token_id, price);
+    own_contract.sales.UpdateByToken(token_id, price);
 }
 \end{minted}
+\caption{Marketplace contract update price/remove sale}
+\label{marketplacecontract.update}
+\end{listing}
 
 Последний пункт это покупка NFT токена.
 
