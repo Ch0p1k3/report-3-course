@@ -256,100 +256,67 @@ func nft_token(token_id) -> Option<JsonToken> {
 Тогда сервисная логика должна будет реализована в nft\_on\_transfer. Вызывать ее должен будет nft\_transfer\_call и завершать всю эту цепочку должна будет функция nft\_resolve\_transfer.
 Псевдокод функций будет выглядеть следующим образом:
 
+\begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
-fn nft_on_transfer(
-    &mut self,
-    sender_id: AccountId,
-    previous_owner_id: AccountId,
-    token_id: TokenId,
-    msg: String,
-) -> Promise;
+func nft_on_transfer(sender_id, previous_owner_id, token_id, msg) -> Promise;
 
 #[payable]
-fn nft_transfer(
-    &mut self,
-    receiver_id: AccountId,
-    token_id: TokenId,
-    approval_id: Option<u64>,
-    memo: Option<String>,
-) {
-    let calle_id = env::predecessor_account_id();
-    let prev_token = self.internal_transfer(&calle_id, &receiver_id, &token_id, approval_id, memo);
-}
-
-#[payable]
-fn nft_transfer_call(
-    &mut self,
-    receiver_id: AccountId,
-    token_id: TokenId,
-    approval_id: Option<u64>,
-    memo: Option<String>,
-    msg: String,
-) -> PromiseOrValue<bool> {
+fn nft_transfer_call(receiver_id, token_id, approval_id, msg) -> PromiseOrValue<bool> {
 
     /* Сохраняем отправителя и копию токена до отправки */
-    let sender_id = env::predecessor_account_id();
-    let previous_token = self.internal_transfer(&sender_id, &receiver_id, &token_id, approval_id, memo.clone());
+    sender_id = env::predecessor_account_id();
+    previous_token = own_contract.internal_transfer(sender_id, receiver_id, token_id, approval_id);
 
     /* Если отправитель не владелец, значит мы ему доверили наш токен, подробнее в главе approval managements */
-    let mut authorized_id = None;
+    authorized_id = None;
     if sender_id != previous_token.owner_id {
-        authorized_id = Some(sender_id.to_string());
+        authorized_id = sender_id;
     }
 
     /* Вызываем nft_on_transfer на другом контракте, потом nft_resolve_transfer на своем */
     reciever_contract::nft_on_transfer(
         sender_id,
-        previous_token.owner_id.clone(),
-        token_id.clone(),
+        previous_token.owner_id,
+        token_id,
         msg,
-        receiver_id.clone(),
-        NO_DEPOSIT,
-        env::prepaid_gas() - GAS_FOR_NFT_TRANSFER_CALL
+        receiver_id,
     ).then(
-        my_contract::nft_resolve_transfer(
+        own_contract::nft_resolve_transfer(
             authorized_id,
             previous_token.owner_id,
             receiver_id,
             token_id,
             previous_token.approved_account_ids,
-            memo,
-            env::current_account_id(),
-            NO_DEPOSIT,
-            GAS_FOR_RESOLVE_TRANSFER
         )
-    ).into()
+    )
 }
 
 #[private]
 fn nft_resolve_transfer(
-    &mut self,
-    authorized_id: Option<String>,
-    owner_id: AccountId,
-    receiver_id: AccountId,
-    token_id: TokenId,
-    approved_account_ids: HashMap<AccountId, u64>,
-    memo: Option<String>
+    authorized_id, 
+    owner_id, receiver_id,
+    token_id, approved_account_ids,
 ) -> bool {
 
     /* Передача произошла успешно */
-    if IsSuccesfull {
+    if IsSuccesfull() {
         true
     }
 
     /* Иначе возвращаем токен обратно владельцу */
-    log!("Return token {} from {} to {}", token_id, receiver_id, owner_id);
-
-    self.internal_remove_token_from_owner(&receiver_id.clone(), &token_id);
-    self.internal_add_token_to_owner(&owner_id, &token_id);
-    token.owner_id = owner_id.clone();
-    refund_approved_account_ids(receiver_id.clone(), &token.approved_account_ids);
+    own_contract.internal_remove_token_from_owner(receiver_id, token_id);
+    own_contract.internal_add_token_to_owner(owner_id, token_id);
+    token.owner_id = owner_id;
+    refund_approved_account_ids(receiver_id, token.approved_account_ids);
     token.approved_account_ids = approved_account_ids;
-    self.tokens_by_id.insert(&token_id, &token);
+    own_contract.tokens_by_id.insert(token_id, token);
 
     false
 }
 \end{minted}
+\caption{NFT nft\_token}
+\label{nftcontract.transfer}
+\end{listing}
 
 \paragraph{Enumeration}
 Для удобного взаимодействия с контрактом, необходимо добавить больше view функций с pagination для просмотра NFT токенов\cite{enumstandard}:
