@@ -3,3 +3,4 @@ lab*
 ^lab.tex
 ^lab.pdf
 .vscode/
+.DS_Store
