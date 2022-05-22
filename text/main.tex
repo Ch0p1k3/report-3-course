@@ -778,7 +778,7 @@ near-api-js не предоставляет хороших оберток для
 
 \paragraph{Структура получаемого NFT и его метаданных}
 \label{section.main.bot.struct}
-На данный момент, при создании NFT в структуре(Листинг {\color{blue}\ref{lst.nftstructure}}) используются следующие поля: <<token\_id>>, <<owner\_id>>, <<royalty>>, <<metadata.title>>, <<metadata.media>>, <<metadata.reference>>. <<metadata.description>> не используется, все описание NFT хранится в метаданных в децентрализованном хранилище в целях экономии оплаты за хранение . В <<metadata.media>>, <<metadata.reference>> хранятся полные URL до медиа-файла и метаданных. В ближайшее время, планируется хранить только CID и только в поле media, так как медиа-файл и метаданные хранятся в одной директории, то для их определения достаточно одного CID(см. {\color{blue} \ref{section.main.bot.storage}}). ID токена при создании формируется следующим образом: ID NEAR аккаунта, который минтит NFT и текущее время. Такая структура формирования ID токена позволяет искоренить все коллизии.
+На данный момент, при создании NFT в структуре(Листинг {\color{blue}\ref{lst.nftstructure}}) используются следующие поля: <<token\_id>>, <<owner\_id>>, <<royalty>>, <<metadata.title>>, <<metadata.media>>, <<metadata.reference>>. <<metadata.description>> не используется, все описание NFT хранится в метаданных в децентрализованном хранилище в целях экономии оплаты за хранение . В <<metadata.media>>, <<metadata.reference>> хранятся полные URL до медиа-файла и метаданных. В ближайшее время, планируется хранить только CID и только в поле media, так как медиа-файл и метаданные хранятся в одной директории, то для их определения достаточно одного CID(см. {\color{blue} \ref{section.main.bot.storage}}). ID токена при создании формируется следующим образом: ID NEAR аккаунта, который минтит NFT, и текущее время. Такая структура формирования ID токена позволяет искоренить все коллизии.
 
 Структура метаданных(Листинг {\color{blue}\ref{lst.nftmetadata}}) полностью аналогично структуре метаданных в Paras, так как эта структура оправдана своей функциональностью. Только в отличие от Paras нет полей: <<collection>>, <<collection\_id>>, <<blurhash>>, <<mime\_type>>. <<collection>>, <<collection\_id>> нет, потому что на данный момент мы не поддерживаем коллекции NFT. <<mime\_type>>, <<blurhash>> из-за ненадобности.
 
@@ -847,7 +847,7 @@ near-api-js не предоставляет хороших оберток для
 
 \subsection{Пользовательский интерфейс}
 
-У пользователя, есть несколько мест откуда он может запускать команды бота: slash-команды, контекстные меню по пользователю,
+У пользователя, есть несколько мест откуда он может запускать команды бота: slash-команды(Рисунок {\color{blue} \ref{fig.slashcommands}}), контекстные меню по пользователю(Рисунок {\color{blue} \ref{fig.contextmenu}}) и сами профиля пользователей(Рисунок {\color{blue} \ref{fig.profile}}, Рисунок {\color{blue} \ref{fig.anotherprofile}}). Со своего профиля и с помощью slash-команд, все взаимодействия идут в отношении себя, когда как, при выборе профиля и использовании на нем функционала из контекстного меню операции совершаются в отношении этого пользователя.
 
 \begin{figure}
     \centering
@@ -859,27 +859,16 @@ near-api-js не предоставляет хороших оберток для
         \label{fig.contextmenu}
         \includegraphics[height=60mm]{fig/context_menu.png}
     }
-    \subfloat[Профиль пользователя]{
+    \subfloat[Свой профиль пользователя]{
         \label{fig.profile}
         \includegraphics[height=60mm]{fig/profile.png}
     }
     \caption{Точки входа пользователя}
 \end{figure}
 
-\begin{figure}
-    \centering
-    \subfloat[Намереная авторизация]{
-        \label{fig.authbtn1}
-        \includegraphics[height=20mm]{fig/authbtn1.png}
-    }\\
-    \subfloat[Предложение об авторизации]{
-        \label{fig.authbtn2}
-        \includegraphics[height=20mm]{fig/authbtn2.png}
-    }
-    \caption{Авторизация пользователя}
-\end{figure}
+Авторизация пользователя происходит через соответствующую slash-команду(Рисунок {\color{blue} \ref{fig.authbtn1}}) или при взаимодействии бота в отношении своего профиля, если пользователь не авторизован(Рисунок {\color{blue} \ref{fig.authbtn2}}).
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \subfloat[Намереная авторизация]{
         \label{fig.authbtn1}
@@ -892,7 +881,20 @@ near-api-js не предоставляет хороших оберток для
     \caption{Авторизация пользователя}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
+    \centering
+    \subfloat[Чужой профиль пользователя]{
+        \label{fig.anotherprofile}
+        \includegraphics[height=50mm]{fig/anotherprofile.png}
+    }
+    \subfloat[Взаимодействие с пользователем, если он не авторизован]{
+        \label{fig.anotherprofileerror}
+        \includegraphics[height=25mm]{fig/anotherprofileerror.png}
+    }
+    \caption{Взаимодействия с другими пользователями}
+\end{figure}
+
+\begin{figure}[H]
     \centering
     \subfloat[Список NFT на маркеплейсе]{
         \label{fig.buynftmarket}
@@ -901,15 +903,15 @@ near-api-js не предоставляет хороших оберток для
     \subfloat[Список продаваемых NFT у пользователя]{
         \label{fig.nftonsaleuser}
         \includegraphics[height=60mm]{fig/nftonsaleuser.png}
-    }\\
+    }
     \subfloat[Подтверждение покупки]{
         \label{fig.buyconfirm}
-        \includegraphics[height=70mm]{fig/buyconfirm.png}
+        \includegraphics[height=60mm]{fig/buyconfirm.png}
     }
     \caption{Покупка NFT}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \subfloat[Сообщение о переходе в личные сообщения]{
         \label{fig.createnftdm}
@@ -918,7 +920,7 @@ near-api-js не предоставляет хороших оберток для
     \subfloat[Конструктор NFT]{
         \label{fig.createnftconstructor}
         \includegraphics[height=60mm]{fig/createnftconstructor.png}
-    }\\
+    }
     \subfloat[Законченное NFT]{
         \label{fig.createnftconstructordone}
         \includegraphics[height=60mm]{fig/createnftconstructordone.png}
@@ -930,7 +932,7 @@ near-api-js не предоставляет хороших оберток для
     \caption{Минт NFT}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \subfloat[Сообщение о переходе в личные сообщения]{
         \label{fig.mynftlistcansale}
@@ -943,7 +945,7 @@ near-api-js не предоставляет хороших оберток для
     \caption{Выставление NFT на продажу // Тут еще будет скрин с модалом, когда я переделаю установку цены на модалы}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \subfloat[Список продаваемых пользователем NFT]{
         \label{fig.cancelsalenftforsale}
@@ -952,13 +954,15 @@ near-api-js не предоставляет хороших оберток для
     \subfloat[Общий список NFT пользователя]{
         \label{fig.mynftlistonsale}
         \includegraphics[height=60mm]{fig/mynftlistonsale.png}
-    }\\
+    }
     \subfloat[Подтверждение отмены продажи]{
         \label{fig.cancelsaleconfirm}
         \includegraphics[height=60mm]{fig/cancelsaleconfirm.png}
     }
     \caption{Отмена продажи}
 \end{figure}
+
+// Лущ Иван. Здесь еще будет про смену цены
 
 \section{Генеративно-состязательная сеть}
 \label{section.6}
