@@ -293,7 +293,7 @@ fn nft_transfer_call(receiver_id, token_id, approval_id, msg) -> PromiseOrValue<
 
 #[private]
 fn nft_resolve_transfer(
-    authorized_id, 
+    authorized_id,
     owner_id, receiver_id,
     token_id, approved_account_ids,
 ) -> bool {
@@ -884,7 +884,7 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
 
 \paragraph{Точки входа}
 
-\begin{figure}[H]
+\begin{figure}
     \centering
     \subfloat[Slash-команды бота]{
         \label{fig.slashcommands}
@@ -892,12 +892,49 @@ pub fn get_sale(&self, nft_contract_token: ContractAndTokenId) -> Option<Sale> {
     }\\
     \subfloat[Контекстные меню бота]{
         \label{fig.contextmenu}
-        \includegraphics[height=60mm]{fig/context_menu.png}
+        \includegraphics[height=70mm]{fig/context_menu.png}
     }
-    \caption{}
+    \subfloat[Профиль пользователя]{
+        \label{fig.profile}
+        \includegraphics[height=70mm]{fig/profile.png}
+    }
+    \caption{Точки входа пользователя}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \subfloat[Намереная авторизация]{
+        \label{fig.authbtn1}
+        \includegraphics[height=30mm]{fig/authbtn1.png}
+    }\\
+    \subfloat[Предложение об авторизации]{
+        \label{fig.authbtn2}
+        \includegraphics[height=30mm]{fig/authbtn2.png}
+    }
+    \caption{Авторизация пользователя}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \subfloat[Slash-команды бота]{
+        \label{fig.mynftlistonsale}
+        \includegraphics[height=70mm]{fig/mynftlistonsale.png}
+    }
+    \subfloat[Контекстные меню бота]{
+        \label{fig.contextmenu}
+        \includegraphics[height=70mm]{fig/mynftlistcansale.png}
+    }\\
+    \subfloat[Профиль пользователя]{
+        \label{fig.profile}
+        \includegraphics[height=80mm]{fig/mynftwidth.png}
+    }
+    \caption{Точки входа пользователя}
 \end{figure}
 
 \section{Генеративно-состязательная сеть}
 \label{section.6}
+// Текст будет написан Токкожиным Арсеном
 \section{Сервис с генеративно-состязательной сетью}
+// Текст будет написан Кусиденовым Адильханом
+
 \label{section.7}
