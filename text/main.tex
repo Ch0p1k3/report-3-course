@@ -646,6 +646,18 @@ pub fn update_price(nft_contract_id, token_id, price) {
 \label{marketplacecontract.update}
 \end{listing}
 
+Покупка осуществляется следующим образом: пользователь дергает nft\_offer команду у маркетплейс контракта, тот в свою очередь вызывает nft\_transfer\_payout на NFT контракте, а потом завершает или отменяет покупку используя resolve\_purchase.
+Функция resolve\_purchase при удачной покупке разделит сумму продажи относительно долей royalties. Данные величины нам возвращает функция nft\_transfer\_payout.
+
+Схема покупки выглядит следующим образом(рис. {\color{blue}\ref{marketplacecontract.buypng}}):
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=70mm]{fig/buy.png}
+	\caption{Marketplace contract buy}
+    \label{marketplacecontract.buypng}
+\end{figure}
+
 \paragraph{Enumeration}
 
 Для того чтобы удобно взаимодействовать с маркетплейс контрактом были добавлены несколько view функций, которые позволяют выгружать продаваемые NFT.
