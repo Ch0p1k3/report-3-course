@@ -456,12 +456,11 @@ fn nft_payout(token_id, balance) -> Payout {
 #[payable]
 fn nft_transfer_payout(
     receiver_id, token_id,
-    approval_id, memo,
-    balance,
+    approval_id, balance,
 ) -> Payout {
     /* Отправить токен */
     sender_id = env::predecessor_account_id();
-    prev_token = own_contract.internal_transfer(sender_id, receiver_id, token_id, approval_id, memo);
+    prev_token = own_contract.internal_transfer(sender_id, receiver_id, token_id, approval_id);
 
     result = PayoutConstruct();
 
@@ -649,7 +648,68 @@ pub fn update_price(nft_contract_id, token_id, price) {
 Покупка осуществляется следующим образом: пользователь дергает nft\_offer команду у маркетплейс контракта, тот в свою очередь вызывает nft\_transfer\_payout на NFT контракте, а потом завершает или отменяет покупку используя resolve\_purchase.
 Функция resolve\_purchase при удачной покупке разделит сумму продажи относительно долей royalties. Данные величины нам возвращает функция nft\_transfer\_payout.
 
-Схема покупки выглядит следующим образом(рис. {\color{blue}\ref{marketplacecontract.buypng}}):
+Схема покупки выглядит следующим образом(рис. {\color{blue}\ref{marketplacecontract.buypng}}), а с псевдокодом функций покупки можно ознакомиться в Листинге {\color{blue}\ref{marketplacecontract.buy}}:
+
+\begin{listing}
+\begin{minted}[breaklines,fontsize=\scriptsize]{rust}
+#[payable]
+pub fn offer(nft_contract_id, token_id) {
+    /* Смотрим сколько пользователь внес депозита */
+    deposit = env::attached_deposit();
+
+    contract_token_id: String = contract_id + '.' + token_id;
+    
+    /* Получаем структуру продажи для token_id из нужного NFT контракта */
+    offer_sale = own_contract.sales.get(contract_token_id);
+    buyer_id = env::predecessor_account_id();
+   
+    /* Проверяем, что внесенный депозит больше цены и что покупатель не является владельцем */
+    assert(offer_sale.owner_id != buyer_id);
+    assert(deposit >= offer_sale.sale_conditions);
+
+    own_contract.process_purchase(contract_id, token_id, deposit,buyer_id);
+}
+
+#[private]
+pub fn process_purchase(nft_contract_id, token_id, price, buyer_id) -> Promise {
+    /* Удаляем структуру продажи из соответствующих структур */    
+    purchased_sale = own_contract.internal_remove_sale(nft_contract_id, token_id);
+
+    /* Вызываем nft_transfer_payout на NFT smart-контракте и завершаем покупку в resolve_purchase */
+    nft_contract::nft_transfer_payout(
+        buyer_id,
+        token_id,
+        purchased_sale.approval_id,
+        price
+    ).then(own_contract::resolve_purchase(
+        buyer_id,
+        price
+    ))
+}
+
+#[private]
+pub fn resolve_purchase(
+    buyer_id,
+    price,
+) -> U128 {
+    /* Если операция nft_transfer_payout на контракте NFT была выполнена успешно */    
+    if IsSuccess() {
+        /* Получаем payout структуру из nft_transfer_payout */
+        payout = PromisResult();
+
+        /* Отправляем каждому royalti аккаунту соответствующую долю */ 
+        for (receiver_id, amount) in payout {
+            Transfer(receiver_id, amount);
+        }
+        return price;
+    } else {
+        return None;
+    }
+}
+\end{minted}
+\caption{Marketplace contract buy}
+\label{marketplacecontract.buy}
+\end{listing}
 
 \begin{figure}[h]
 	\centering
