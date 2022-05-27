@@ -120,7 +120,7 @@ pub struct TokenMetadata {
 \item starts\_at - время, когда токен начал быть валидным.
 \item extra - любые дополнительные данные.
 \item reference - ссылка на json с дополнительной информацией о JSON.
-\item reference\_hash - sha256 хэш от содержимого на которое ведет ссылка в поле reference.
+\item reference\_hash - SHA256 хэш от содержимого на которое ведет ссылка в поле reference.
 
 \end{enumerate}
 
@@ -186,7 +186,7 @@ pub struct Contract {
 \item tokens\_metadata\_by\_id - позволяет по TokenId получить структуру TokenMetadata описанную выше.
 \end{enumerate}
 
-Следующая функция из core functionality без которой нельзя осуществить никакой продажи - создание или mint NFT токена. Функция nft\_mint принимает token\_id, метаданные, владельца и royalties(про них будет рассказано во главе Royalties).
+Следующая функция из core functionality без которой нельзя осуществить никакой продажи - создание или mint NFT токена. Функция nft\_mint принимает token\_id, метаданные, владельца и royalties (см. {\color{blue}\ref{section.main.smart.struct.royalties}}).
 Так как это payable функция, то пользователь должен будет внести депозит для хранения информации о добавляемом токене. Лишний депозит вернется пользователю обратно.
 Также в отличие от Paras мы не обязуем пользователя привязывать токен к конкретной коллекции чем с одной стороны дали больше свободы пользавотелю, а с другой стороны упростили реализацию.
 
@@ -411,6 +411,7 @@ Token: {
 Approval Management не добавляет новых внешних view функций или payable функций, а просто вносит некоторую дополнительную логику проверки в существующие функции из секции Core Functionality.
 
 \paragraph{Royalties}
+\label{section.main.smart.struct.royalties}
 
 Последнее чего требует стандарт - распределение прибыли от продажи NFT или от любой другой логики, которая будет возвращать NEAR среди нескольких аккаунтов в зависимости от долей\cite{royaltystandard}.
 Для этого у нас есть поле royalty в структуре Token, которая отображает пары в соответствующие доли. Сумма всех долей должна быть равна 10.000.
@@ -1058,7 +1059,7 @@ Cо своего профиля(Рисунок {\color{blue} \ref{fig.profile}})
 
 
 \subsection{Развертывание бота}
-	Чтобы развернуть наш проект в интернете используется Alibaba cloud ecs (Elastic Compute Service). Для этого используется проксирование с помощью nginx(Рисунок {\color{blue} \ref{fig.nginxganservice}}).
+	Чтобы развернуть наш проект в интернете используется Alibaba cloud ecs (Elastic Compute Service). Для этого используется проксирование с помощью nginx (Рисунок {\color{blue} \ref{fig.nginxganservice}}).
 	\begin{figure}[H]
 		\centering
 		\includegraphics[height=40mm]{fig/nginxganservice.png}
