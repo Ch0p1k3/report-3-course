@@ -950,7 +950,7 @@ near-api-js не предоставляет хороших оберток для
     \subfloat[Намереная авторизация]{
         \label{fig.authbtn1}
         \includegraphics[height=30mm]{fig/authbtn1.png}
-    }\\
+    }
     \subfloat[Предложение об авторизации]{
         \label{fig.authbtn2}
         \includegraphics[height=30mm]{fig/authbtn2.png}
@@ -964,7 +964,7 @@ near-api-js не предоставляет хороших оберток для
     Если в контекстном меню взаимодействовать с собой, то эффект будет такой-же как от slash-команд, то есть фактически мы можем не использовать slash-команды вообще и взаимодействовать только через GUI(Graphical User Interface, Графический Пользовательский Интерфейс).
 \end{remark}
 
-\begin{figure}[H]
+\begin{figure}
     \centering
     \subfloat[Чужой профиль пользователя]{
         \label{fig.anotherprofile}
@@ -977,9 +977,9 @@ near-api-js не предоставляет хороших оберток для
     \caption{Взаимодействия с другими пользователями}
 \end{figure}
 
-При взаимодействии с пользователем мы можем купить у него NFT, если таковые имеются (Рисунок {\color{blue} \ref{fig.nftonsaleuser}}). В своем общем списке NFT (Рисунок {\color{blue} \ref{fig.mynftlistonsale}})  или в своем списке продаваемых NFT (Рисунок {\color{blue} \ref{fig.cancelsalenftforsale}}) можно отменить продажу.
+При взаимодействии с пользователем мы можем купить у него NFT, если таковые имеются (Рисунок {\color{blue} \ref{fig.nftonsaleuser}}). В своем общем списке NFT, в своем списке продаваемых NFT или в общем списке продаваемых NFT (Рисунок {\color{blue} \ref{fig.cancelsalenftforsale}}) можно отменить продажу или сменить цену.
 
-\begin{figure}[H]
+\begin{figure}
     \centering
     \subfloat[Список NFT на маркеплейсе]{
         \label{fig.buynftmarket}
@@ -996,11 +996,45 @@ near-api-js не предоставляет хороших оберток для
     \caption{Покупка NFT}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
+    \centering
+    \subfloat[Свой общий список NFT]{
+        \label{fig.mynftlistcansale}
+        \includegraphics[height=60mm]{fig/mynftlistcansale.png}
+    }
+    \subfloat[Указание цены, при продаже]{
+        \label{fig.salemodal}
+        \includegraphics[height=45mm]{fig/salemodal.png}
+    }
+    \subfloat[Подтверждение продажи]{
+        \label{fig.saleconfirm}
+        \includegraphics[height=60mm]{fig/saleconfirm.png}
+    }
+    \caption{Выставление NFT на продажу}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \subfloat[Интерфейс продажи: свой список продаваемых NFT, общий список продаваемых NFT, свой общий список NFT]{
+        \label{fig.cancelsalenftforsale}
+        \includegraphics[height=60mm]{fig/mynftonsale.png}
+    }
+    \subfloat[Указание цены, при ее смене]{
+        \label{fig.modalsale}
+        \includegraphics[height=45mm]{fig/modalsale.png}
+    }
+    \subfloat[Подтверждение отмены продажи]{
+        \label{fig.cancelsaleconfirm}
+        \includegraphics[height=60mm]{fig/cancelsaleconfirm.png}
+    }
+    \caption{Отмена продажи}
+\end{figure}
+
+\begin{figure}
     \centering
     \subfloat[Сообщение о переходе в личные сообщения]{
         \label{fig.createnftdm}
-        \includegraphics[height=30mm]{fig/createnftdm.png}
+        \includegraphics[height=20mm]{fig/createnftdm.png}
     }\\
     \subfloat[Конструктор NFT]{
         \label{fig.createnftconstructor}
@@ -1018,45 +1052,12 @@ near-api-js не предоставляет хороших оберток для
     \label{fig.mintnft}
 \end{figure}
 
-Cо своего профиля (Рисунок {\color{blue} \ref{fig.profile}}) или с помощью slash-команды <</create\_nft>> можно запустить процесс создания NFT (Рисунок {\color{blue} \ref{fig.mintnft}}), он переводит пользователя в личные сообщение, так как от пользователя нужен будет медиа-объект, для загрузки которого, пока что нет функционала не через сообщения. NFT собирается в виде конструктора: NFT строится при добавлении нового элемента.
-
-\begin{figure}
-    \centering
-    \subfloat[Список пользователя со всеми NFT]{
-        \label{fig.mynftlistcansale}
-        \includegraphics[height=60mm]{fig/mynftlistcansale.png}
-    }
-    \subfloat[Подтверждение продажи]{
-        \label{fig.saleconfirm}
-        \includegraphics[height=60mm]{fig/saleconfirm.png}
-    }
-    \caption{Выставление NFT на продажу // Тут еще будет скрин с модалом, когда я переделаю установку цены на модалы}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \subfloat[Список продаваемых пользователем NFT]{
-        \label{fig.cancelsalenftforsale}
-        \includegraphics[height=60mm]{fig/mynftonsale.png}
-    }
-    \subfloat[Общий список NFT пользователя]{
-        \label{fig.mynftlistonsale}
-        \includegraphics[height=60mm]{fig/mynftlistonsale.png}
-    }
-    \subfloat[Подтверждение отмены продажи]{
-        \label{fig.cancelsaleconfirm}
-        \includegraphics[height=60mm]{fig/cancelsaleconfirm.png}
-    }
-    \caption{Отмена продажи}
-\end{figure}
+Cо своего профиля (Рисунок {\color{blue} \ref{fig.profile}}) или с помощью slash-команды <</create\_nft>> можно запустить процесс создания NFT (Рисунок {\color{blue} \ref{fig.mintnft}}), он переводит пользователя в личные сообщение, так как от пользователя нужен будет медиа-объект, для загрузки которого, пока что нет функционала не через сообщения. NFT собирается в виде конструктора - NFT строится при добавлении нового элемента, для текстовых заполнений используются модалы, когда как для загрузки медиа-объекта, бот отправляет сообщение, в котором говорит, что пользователь должен ответить на это сообщение сообщением с медиа-объектом (если пользователь отвечает сообщением без медиа-файла, то выведется сообщение с ошибкой, на которое нужно будет ответить, чтобы загрузить медиа-файл).
 
 \begin{remark}
-    Визуальный вид списка NFT (Рисунок {\color{blue} \ref{fig.cancelsalenftforsale}}, Рисунок {\color{blue} \ref{fig.mynftlistonsale}}) меняется от их количества: если NFT меньше 7, то не будет кнопок <<+7>>, <<-7>>, которые будут подгружать следующие/предыдущие 7 NFT. Это сделано для того, чтобы в один момент не подгружать все NFT с блокчейна.
+    Визуальный вид списка NFT (Рисунок {\color{blue} \ref{fig.cancelsalenftforsale}}, Рисунок {\color{blue} \ref{fig.mynftlistcansale}}) меняется от их количества: если NFT меньше 7, то не будет кнопок <<+7>>, <<-7>>, которые будут подгружать следующие/предыдущие 7 NFT. Это сделано для того, чтобы в один момент не подгружать все NFT с блокчейна.
 
 \end{remark}
-
-// Лущ Иван. Здесь еще будет про смену цены
-
 
 \subsection{Развертывание бота}
 	Чтобы развернуть наш проект в интернете используется Alibaba cloud ecs (Elastic Compute Service). Для этого используется проксирование с помощью nginx (Рисунок {\color{blue} \ref{fig.nginxganservice}}).
