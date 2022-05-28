@@ -4,6 +4,7 @@
 На данный момент существует большое количество NFT маркетплейсов: opensea\cite{opensea}, rarible\cite{rarible}, solanart\cite{solanart}. Если брать маркетплейсы только на базе NEAR Protocol, тогда существуют такие примеры как: Paras\cite{paras}, Mintbase\cite{mintbase}. Остановимся на них поподробнее.
 
 \paragraph{Paras}
+\label{section.theory.paras}
 
 Paras является наиболее популярным, интерфейс взаимодействия представлен пользователю в веб-браузере по адресу paras.id. Для того, чтобы авторизоваться нужно использовать
 предоставить свой NEAR кошелек. Paras предоставляет огромное количество функций:
@@ -15,7 +16,7 @@ Paras является наиболее популярным, интерфейс
     \item Уничтожить свой NFT токен.
     \item Получить продаваемые NFT токены со следующей фильтрацией:
         \begin{enumerate}
-            \item Фильтрация по содержимому токена(картинке) - пиксель арт, фотографии, иллюстрации и так далее.
+            \item Фильтрация по содержимому токена (картинки) - пиксель арт, фотографии, иллюстрации и так далее.
             \item Фильтрация по времени создания.
             \item Фильтрация по максимальной цене.
             \item Фильтрация по минимальной цене.
@@ -29,18 +30,17 @@ Smart-контракты Paras лежат в открытом доступе\cit
     Обычно smart-контракты DApps принято выкладывать в открытый доступ, чтобы любой пользователь мог их посмотреть и полностью доверять сервису.
 \end{remark}
 
-С точки зрения написания smart-контрактов Paras имеет абсолютно такую же структуру NFT smart-контракта, потому что они придерживаются стандарта \cite{nftstandart}(см. {\color{blue} \ref{section.main.smart.struct}}).
-Дополнительно они привязывают каждый токен к какой-то конкретной коллекции и не позволяют создавать токен без привязки к коллекции.
-Схема выглядит таким образом:
+С точки зрения написания smart-контрактов Paras имеет абсолютно такую же структуру NFT smart-контракта, потому что они придерживаются стандарта \cite{nftstandart} (см. {\color{blue} \ref{section.main.smart.struct}}).
+Дополнительно они привязывают каждый токен к какой-то конкретной коллекции и не позволяют создавать токен без привязки к коллекции (Рисунок {\color{blue} \ref{fig.parascollections}}).
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[height=60mm]{fig/parascollections.png}
 	\caption{NFT токены и колекции в paras}
     \label{fig.parascollections}
 \end{figure}
 
-Smart-контракт маркетплейса paras предоставляет дополнительную функцию, как выставление оффера(предложения о покупке) на любой NFT токен. Эту функцию мы планируем позаимствовать в ближайшем будущем.
+Smart-контракт маркетплейса paras предоставляет дополнительную функцию, как выставление оффера (предложения о покупке) на любой NFT токен. Эту функцию мы планируем позаимствовать в ближайшем будущем.
 
 % \begin{listing}
 % \begin{minted}[breaklines,fontsize=\scriptsize]{js}
@@ -67,7 +67,7 @@ Smart-контракт маркетплейса paras предоставляет
 % \caption{Структура NFT}
 % \end{listing}
 
-Paras, как и большинство маркетплейсов хранит медиа-файл и метаданные NFT на IPFS\cite{ipfs}(см. {\color{blue} \ref{section.main.bot.storage}}). IPFS предоставляется сервисом fleek\cite{fleek}. В качестве ссылки на медиа-файл и метаданные они хранят CID, а не полный URL, это связанно с тем, что минт NFT таким образом будет гораздо дешевле, ведь хранение в NEAR, довольно дорогое(см. {\color{blue} \ref{section.main.bot.struct}}). URL восстанавливается с помощью вызова метода <<nft\_metadata>> у NFT контракта для получения нужного шлюза(Листинг {\color{blue}\ref{lst.parasnftmetadatastruct}}), а после CID подставляется в URL этого шлюза(Листинг {\color{blue}\ref{lst.pastecidnearwallet}}), где при неуказании берется шлюз от cloudflare, который по опыту слабодоступен.
+Paras, как и большинство маркетплейсов хранит медиа-файл и метаданные NFT на IPFS\cite{ipfs} (см. {\color{blue} \ref{section.main.bot.storage}}). IPFS предоставляется сервисом fleek\cite{fleek}. В качестве ссылки на медиа-файл и метаданные они хранят CID, а не полный URL, это связанно с тем, что минт NFT таким образом будет гораздо дешевле, ведь хранение в NEAR, довольно дорогое (см. {\color{blue} \ref{section.main.bot.struct}}). URL восстанавливается с помощью вызова метода <<nft\_metadata>> у NFT контракта для получения нужного шлюза (Листинг {\color{blue}\ref{lst.parasnftmetadatastruct}}), а после CID подставляется в URL этого шлюза (Листинг {\color{blue}\ref{lst.pastecidnearwallet}}), где при неуказании берется шлюз от cloudflare, который по опыту слабодоступен.
 
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{js}
@@ -127,9 +127,103 @@ function buildMediaUrl(media, base_uri) {
 
 Mintbase является менее популярным маркетплейсом, однако он предоставляем гораздо больше категорий NFT, но все ключевые функции такие же. В качестве новых категорий выступают: 3D изображение, gif, профессиональные фотографии, аудиодорожки, произведения художников.
 
-Smart-контракты Mintbase на половину открыты(некоторые в открытом доступе, некоторые нет)\cite{mintbasecontracts}.
+Smart-контракты Mintbase на половину открыты (некоторые в открытом доступе, некоторые нет)\cite{mintbasecontracts}. С высокоуровневой точки зрения контракты Mintbase обладают совершенно другой архитектурой в отличие от Paras, так как в них вводится новый уровень абстракции.
+Mintbase поддерживает структуру состающую из следующих взаимосвязанных сущностей: Store, Thing, Token.
+\begin{enumerate}
+    \item Store - NFT smart-контракт (децентрализованное API).
+    \item Thing - тип NFT (коллекция токенов).
+    \item Token - определенная NFT с уникальным владельцем.
+\end{enumerate}
+Касательно Thing, Token - все понятно, это просто коллекция и токен из конкретной колекции, а вот Store - обозначает магазин, который может выпускать колекции с токенами.
+Чтобы пользователю начать создавать/продавать NFT ему нужно сначала создать свой Store smart-контракт. Для этого mintbase написала Factory библиотеку для создания своих Store.
+После этого владелец от лица своего Store сможет создавать новые NFT токены и коллекции токенов.
 
-// Лущ, Басалаев, Кусиденов. TODO
+Резюмируя, получается что пользователь создает свой маркетплейс контракт и использует его для покупки/продажи/создания с другими маркетплейс контрактами пользователей. Paras в свою очередь дает один уникальный маркетплейс контракт с которым взаимодействуют пользователи.
+
+Mintbase хранит метаданные NFT в Arweave. Как уже говорилось, Mintbase очень сильно отошел от стандарта, что проявляется и выдаваемой структуре. Разницу можно заметить в полях <<metadata>>, <<royalty>> (см. {\color{blue} \ref{section.main.smart.struct.royalties}}) и <<split\_owners>> (Листинг {\color{blue} \ref{lst.mintbase.nftstruct}}), также почти все метаданные NFT хранятся в распределенном хранилище. <<royalty>> и <<split\_owners>> нужны для <<Forever Royalties>> и <<Split Revenues>>. <<Forever Royalties>> это вечные проценты, которые нельзя поменять, после создания NFT, когда как <<Split Revenues>> это процентные доходы при продажи, которые слетают каждую продажу. Если взглянуть на структуру метаданных в распределенном хранилище (Листинг {\color{blue} \ref{lst.mintbase.nftstructmeta}}), то можно заметить, что <<royalty>> дублируется (не понятно для чего), существуют стандартные поля описания, названия, атрибутов NFT, ссылки на социальные сети, ссылка на медиа-объект, а также тип NFT - стандарт NFT.
+
+\begin{definition}
+    Arweave\cite{arweave} - это протокол для постоянного хранения данных. Данный протокол связывает людей, у которых есть место на жестком диске, с теми, кому нужны данные ресурсы. Над Arweave построена децентрализованная сеть, которая называется permaweb\cite{permaweb}. С точки зрения функционала, данное хранилище, но запрашивание метаданных и самого объекта происходит через GraphQL\cite{graphql}. GraphQL - инструмент для создания API.
+\end{definition}
+
+\begin{listing}
+\begin{minted}[breaklines,fontsize=\scriptsize]{js}
+{
+    token_id: '194',
+    owner_id: 'puma_zul.near',
+    approved_account_ids: { 'market.mintbase1.near': 75 },
+    metadata: {
+        < Все поля как в стандарте NEP-171 null >
+        extra: 'art',
+        reference: 'smHkXU8rCq1Ggft1SPqTOpFw9sQxCwRg9kSNM7RatZ4',
+    },
+    royalty: {
+        split_between: {
+        'house_of_zul_nft_auctio.near': { numerator: 2650 },
+        'polytechnic.near': { numerator: 2450 },
+        'puma_zul.near': { numerator: 2500 },
+        'genieve_dawkins.near': { numerator: 2400 }
+        },
+        percentage: { numerator: 1000 }
+    },
+    split_owners: {
+        split_between: {
+        'polytechnic.near': { numerator: 2250 },
+        'house_of_zul_nft_auctio.near': { numerator: 7750 }
+        }
+    },
+    minter: 'puma_zul.near',
+    loan: null,
+    composeable_stats: { local_depth: 0, cross_contract_children: 0 },
+    origin_key: null
+}
+
+\end{minted}
+\caption{Структура NFT в Mintbase}
+\label{lst.mintbase.nftstruct}
+\end{listing}
+
+\begin{listing}
+\begin{minted}[breaklines,fontsize=\scriptsize]{json}
+{
+    "category":"art",
+    "description":"...",
+    "copies":5,
+    "media_hash":"jvnFdtx-XIOoRPJMeS_JhHG_zMcP_PzRvPgMOOcLgMU",
+    "lock":null,
+    "visibility":"safe",
+    "youtube_url":null,
+    "animation_url":"...",
+    "animation_hash":"...",
+    "document":null,
+    "document_hash":null,
+    "royalty":{
+        "genieve_dawkins.near":2400,
+        "house_of_zul_nft_auctio.near":2650,
+        "puma_zul.near":2500,
+        "polytechnic.near":2450
+    },
+    "royalty_perc":0.1,
+    "split_revenue":{
+        "polytechnic.near":2250,
+        "house_of_zul_nft_auctio.near":7750
+    },
+    "tags":["oil","canvas","zul","azul "],
+    "media":"https://arweave.net/jvnFdtx-XIOoRPJMeS_JhHG_zMcP_PzRvPgMOOcLgMU",
+    "extra":[
+        {"trait_type":"Start Date","value":1652943600,"display_type":"date"},
+        ...
+    ],
+    "title":"...",
+    "store":"eremod.mintbase1.near",
+    "external_url":"htttps://eremod.com",
+    "type":"NEP171"
+}
+
+\end{minted}
+\caption{Структура метеданных NFT в распределенном хранилище в Mintbase}
+\label{lst.mintbase.nftstructmeta}
+\end{listing}
 
 \subsection{Сервис на основе генеративно-состязательной сети}
 // Токкожин Арсен. TODO
