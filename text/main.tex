@@ -148,7 +148,7 @@ pub struct JsonToken {
 \label{nftcontract.tokenstructs}
 \end{listing}
 
-Структура NFT токена(листинг {\color{blue} \ref{nftcontract.tokenstructs}}) представляет из себя 3 связанные структуры:
+Структура NFT токена (Листинг {\color{blue} \ref{nftcontract.tokenstructs}}) представляет из себя 3 связанные структуры:
 \begin{enumerate}
     \item TokenMetadata - метаданные токена, где каждое из полей является опциональным.
     \item Token - для каждого токена образуется связь:
@@ -390,7 +390,7 @@ Token: {
 \end{listing}
 
 Если он решит добавить account\_2, account\_3, как доверенные тогда структура примет вид как в листинге {\color{blue}\ref{nftcontract.approval2}}.
-\begin{listing}[H]
+\begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 Token: {
     owner_id: account_1
@@ -1061,7 +1061,7 @@ Cо своего профиля (Рисунок {\color{blue} \ref{fig.profile}}
 
 \subsection{Развертывание бота}
 	Чтобы развернуть наш проект в интернете используется Alibaba cloud ecs (Elastic Compute Service). Для этого используется проксирование с помощью nginx (Рисунок {\color{blue} \ref{fig.nginxganservice}}).
-	\begin{figure}[H]
+	\begin{figure}
 		\centering
 		\includegraphics[height=40mm]{fig/nginxganservice.png}
 		\caption{Схема развертывания бота}
