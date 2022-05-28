@@ -6,7 +6,7 @@
 \subsection{Структура NFT smart-контракта}
 \label{section.main.smart.struct}
 В данной подглаве будет описываться строение NFT smart-контракта, написанного на языке Rust. Вся логика соответствует описанному стандарту NEP-171\cite{nftstandart}.
-\paragraph{NEAR sdk}
+\paragraph{NEAR SDK}
 Введем основные функции, структуры, декараторы, которые используются при написании smart-контрактов. Для этого необходим фреймворк near-sdk\cite{nearsdkrs}.
 
 Атрибуты:
@@ -18,7 +18,7 @@
 #[derive(PanicOnDefault)]                                       /* не позволяет инициализировать контракт дефолтными значениями, нужен метод new с декоратором init */
 #[payable]                                                      /* помечает метод, который может принимать депозит */
 \end{minted}
-\caption{Near sdk framework attributes}
+\caption{Атрибуты NEAR SDK фреймворк}
 \label{near.attributes}
 \end{listing}
 
@@ -32,7 +32,7 @@ UnorderedMap    /* Итерируемый словарь, который хра�
 UnorderedSet    /* Итерируемое множество объектов, которые хранятся в боре */
 LazyOption      /* Структура, которая лениво инициализируется */
 \end{minted}
-\caption{Near sdk framework structures}
+\caption{Структуры NEAR SDK фреймворк}
 \label{near.structures}
 \end{listing}
 
@@ -45,7 +45,7 @@ env::predecessor_account_id()       /* предыдущий аккаунт от 
 env::log_str()                      /* написать лог */
 env::prepaid_gas()                  /* количество gas предоставленного для call другой функции */
 \end{minted}
-\caption{Near sdk framework functions}
+\caption{Функции NEAR SDK фреймворк}
 \label{near.functions}
 \end{listing}
 
@@ -69,7 +69,7 @@ pub struct NFTContractMetadata {
     pub reference_hash: Option<Base64VecU8>,
 }
 \end{minted}
-\caption{NFT contract metadata}
+\caption{Метаданные NFT контракта}
 \label{nftcontract.metadata}
 \end{listing}
 
@@ -103,7 +103,7 @@ pub struct TokenMetadata {
     pub reference_hash: Option<Base64VecU8>,
 }
 \end{minted}
-\caption{NFT contract token metadata}
+\caption{NFT контракт структура TokenMetadata}
 \label{nftcontract.tokenmetadata}
 \end{listing}
 
@@ -144,11 +144,11 @@ pub struct JsonToken {
     pub royalty: HashMap<AccountId, u32>
 }
 \end{minted}
-\caption{NFT contract token structs}
+\caption{NFT контракт структура Token и JsonToken}
 \label{nftcontract.tokenstructs}
 \end{listing}
 
-Структура NFT токена представляет из себя 3 связанные структуры:
+Структура NFT токена(листинг {\color{blue} \ref{nftcontract.tokenstructs}}) представляет из себя 3 связанные структуры:
 \begin{enumerate}
     \item TokenMetadata - метаданные токена, где каждое из полей является опциональным.
     \item Token - для каждого токена образуется связь:
@@ -190,7 +190,7 @@ pub struct Contract {
 Так как это payable функция, то пользователь должен будет внести депозит для хранения информации о добавляемом токене. Лишний депозит вернется пользователю обратно.
 Также в отличие от Paras мы не обязуем пользователя привязывать токен к конкретной коллекции чем с одной стороны дали больше свободы пользователю, а с другой стороны упростили реализацию.
 
-Псевдокод будет выглядеть следующим образом (Листинг {\color{blue}\ref{nftcontract.mint}}):
+Псевдокод создание токена описан в листинге {\color{blue}\ref{nftcontract.mint}}.
 
 \begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
@@ -255,7 +255,7 @@ fn nft_token(token_id) -> Option<JsonToken> {
 
 Смоделируем пример, где мы хотим отправить из contract\_1 свой токен в другой контракт contract\_2 и выполнить в нем дополнительную сервисную логику(например contract\_2 это контракт маркетплейса, который должен будет выставить что-то на продажу).
 Тогда сервисная логика должна будет реализована в nft\_on\_transfer. Вызывать ее должен будет nft\_transfer\_call и завершать всю эту цепочку должна будет функция nft\_resolve\_transfer.
-Псевдокод функций будет выглядеть следующим образом (Листинг {\color{blue}\ref{nftcontract.transfer1}}):
+Псевдокод функций описан в листинге {\color{blue}\ref{nftcontract.transfer1}}.
 
 \begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
@@ -315,7 +315,7 @@ fn nft_resolve_transfer(
     return false
 }
 \end{minted}
-\caption{NFT contract transfer}
+\caption{NFT контракт transfer}
 \label{nftcontract.transfer1}
 \end{listing}
 
@@ -328,7 +328,7 @@ fn nft_resolve_transfer(
 \item nft\_token\_for\_owner - получить существующие токены для конкретного аккаунта, используя pagination.
 \end{enumerate}
 
-Псевдокод будет выглядеть следующим образом (Листинг {\color{blue}\ref{nftcontract.transfer}}):
+Псевдокод вышеописанных функций можно найти в листинге {\color{blue}\ref{nftcontract.transfer}}.
 
 \begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
@@ -368,7 +368,7 @@ pub fn nft_tokens_for_owner(
     }
 }
 \end{minted}
-\caption{NFT contract enumeration}
+\caption{NFT контракт enumeration}
 \label{nftcontract.transfer}
 \end{listing}
 
@@ -376,7 +376,7 @@ pub fn nft_tokens_for_owner(
 Необходимо добавить функционал передачи своего токена другим аккаунтом от своего имени\cite{approvalstandard}. Для этого будет хранить список доверенных аккаунтов (approved\_account\_ids).
 Также структура токена хранит next\_approval\_id, который изначально равен 0 и увеличивается на единицу при каждом новом добавленном доверенном аккаунте.
 
-Рассмотрим пример, где account\_1 решил создать токен, тогда у него будет следующая структура (Листинг {\color{blue}\ref{nftcontract.approval1}}):
+Рассмотрим пример, где account\_1 решил создать токен, тогда у него будет следующая структура, которая описана в листинге {\color{blue}\ref{nftcontract.approval1}}.
 \begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 Token: {
@@ -385,11 +385,11 @@ Token: {
     next_approval_id: 0
 }
 \end{minted}
-\caption{NFT contract approval management}
+\caption{NFT контракт approval management}
 \label{nftcontract.approval1}
 \end{listing}
 
-Если он решит добавить account\_2, account\_3, как доверенные тогда структура станет следующей (Листинг {\color{blue}\ref{nftcontract.approval2}}):
+Если он решит добавить account\_2, account\_3, как доверенные тогда структура примет вид как в листинге {\color{blue}\ref{nftcontract.approval2}}.
 \begin{listing}[H]
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 Token: {
@@ -401,7 +401,7 @@ Token: {
     next_approval_id: 2
 }
 \end{minted}
-\caption{NFT contract approval management}
+\caption{NFT контракт approval management}
 \label{nftcontract.approval2}
 \end{listing}
 
@@ -421,7 +421,7 @@ Approval Management не добавляет новых внешних view фу�
 \item nft\_payout - получить распределение баланса в зависимости от долей для конкретного token\_id.
 \item nft\_transfer\_payout - совершить перевод токена и вернуть распределение баланса от долей.
 \end{enumerate}
-Псевдокод будет выглядеть следующим образом (Листинги  {\color{blue}\ref{nftcontract.approval3}} и {\color{blue}\ref{nftcontract.approval4}}):
+Псевдокод данных функций можно найти в листингах {\color{blue}\ref{nftcontract.approval3}} и {\color{blue}\ref{nftcontract.approval4}}.
 \begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 fn nft_payout(token_id, balance) -> Payout {
@@ -448,7 +448,7 @@ fn nft_payout(token_id, balance) -> Payout {
     return result
 }
 \end{minted}
-\caption{NFT contract nft\_payout}
+\caption{NFT контракт nft\_payout}
 \label{nftcontract.approval3}
 \end{listing}
 
@@ -479,7 +479,7 @@ fn nft_transfer_payout(
     return result
 }
 \end{minted}
-\caption{NFT contract nft\_transfer\_payout}
+\caption{NFT контракт nft\_transfer\_payout}
 \label{nftcontract.approval4}
 \end{listing}
 
@@ -504,10 +504,10 @@ fn nft_transfer_payout(
 \begin{figure}[h!]
 	\centering
 	\includegraphics[height=70mm]{fig/marketplace.png}
-	\caption{Marketplace core functionality}
+	\caption{Маркетплейс контракт core functionality}
 \end{figure}
 
-Опишем структуру маркетплейс контракта (Листинг {\color{blue}\ref{marketplacecontract.struct}}):
+Структура маркетплейс контракта описана в листинге {\color{blue}\ref{marketplacecontract.struct}}.
 
 \begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
@@ -572,10 +572,10 @@ pub struct Contract {
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=70mm]{fig/sell.png}
-	\caption{Marketplace contract sell}
+	\caption{Выставление на продажу в маркетплейс контракте}
 \end{figure}
 
-Псевдокод описан в Листинге {\color{blue}\ref{marketplacecontract.onapprove}}.
+Псевдокод вышеописанного функционала можно увидеть в листинге {\color{blue}\ref{marketplacecontract.onapprove}}.
 
 \begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
@@ -608,7 +608,7 @@ fn nft_on_approve(token_id, owner_id, approval_id, sale_price) {
     );
 }
 \end{minted}
-\caption{Marketplace contract nft\_on\_approve}
+\caption{Маркетплейс контракт nft\_on\_approve}
 \label{marketplacecontract.onapprove}
 \end{listing}
 
@@ -616,7 +616,7 @@ fn nft_on_approve(token_id, owner_id, approval_id, sale_price) {
 Поэтому пользователь должен будет сам покупать хранилище и сам его освобождать, когда его токены продались и место освободилось. Именно для этого необходимо поле storage\_deposits в контракте.
 Для внесения near под хранение используется функция storage\_deposit, а для вывода near за неиспользуемое место storage\_withdraw. Логика их кажется тривиальной, поэтому псевдокод приводиться не будет.
 
-Изменение цены и отмена продажи, тоже выглядят достаточно тривиальными, напишем короткий псевдокод (Листинг {\color{blue}\ref{marketplacecontract.update}}).
+Изменение цены и отмена продажи, тоже выглядят достаточно тривиальными, функционал можно увидеть в коротком псевдокоде (Листинг {\color{blue}\ref{marketplacecontract.update}}).
 
 \begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
@@ -642,7 +642,7 @@ pub fn update_price(nft_contract_id, token_id, price) {
     own_contract.sales.UpdateByToken(token_id, price);
 }
 \end{minted}
-\caption{Marketplace contract update price/remove sale}
+\caption{Маркетплейс контракт изменение цены/отмена продажи}
 \label{marketplacecontract.update}
 \end{listing}
 
@@ -708,14 +708,14 @@ pub fn resolve_purchase(
     }
 }
 \end{minted}
-\caption{Marketplace contract buy}
+\caption{Маркетплейс контракт покупка токена}
 \label{marketplacecontract.buy}
 \end{listing}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=70mm]{fig/buy.png}
-	\caption{Marketplace contract buy}
+	\caption{Покупка токена}
     \label{marketplacecontract.buypng}
 \end{figure}
 
@@ -731,7 +731,7 @@ pub fn resolve_purchase(
 \item get\_sale - получить определенный продаваемый токен.
 \end{enumerate}
 
-Псевдокод данных функций будет выглядеть следующим образом (Листинг {\color{blue}\ref{marketplacecontract.enumeration}}):
+Псевдокод данных функций описан в листинге {\color{blue}\ref{marketplacecontract.enumeration}}.
 
 \begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
@@ -773,7 +773,7 @@ pub fn get_sale(nft_contract_token) -> Option<Sale> {
     own_contract.sales.get(nft_contract_token)
 }
 \end{minted}
-\caption{Marketplace contract enumeration}
+\caption{Маркетплейс контракт enumeration}
 \label{marketplacecontract.enumeration}
 \end{listing}
 
