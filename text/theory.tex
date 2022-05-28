@@ -128,11 +128,57 @@ Mintbase является менее популярным маркетплейс
 
 Smart-контракты Mintbase на половину открыты (некоторые в открытом доступе, некоторые нет)\cite{mintbasecontracts}.
 
-Mintbase хранит метаданные NFT в Arweave.
+Mintbase хранит метаданные NFT в Arweave. Как уже говорилось, Mintbase очень сильно отошел от стандарта, что проявляется и выдаваемой структуре. Разницу можно заметить в полях <<metadata>>, <<royalty>> и <<split\_owners>> (Листинг {\color{blue} \ref{lst.mintbase.nftstruct}}). Почти все метаданные NFT хранятся в распределенном хранилище.
 
 \begin{definition}
-    Arweave - это протокол для постоянного хранения данных. Данный протокол связывает людей, у которых есть место на жестком диске, с теми, кому нужны данные ресурсы.
+    Arweave\cite{arweave} - это протокол для постоянного хранения данных. Данный протокол связывает людей, у которых есть место на жестком диске, с теми, кому нужны данные ресурсы. Над Arweave построена децентрализованная сеть, которая называется permaweb\cite{permaweb}. С точки зрения функционала, данное хранилище, но запрашивание метаданных и самого объекта происходит через GraphQL\cite{graphql}. GraphQL - инструмент для создания API.
 \end{definition}
+
+\begin{listing}
+\begin{minted}[breaklines,fontsize=\scriptsize]{js}
+{
+    token_id: '194',
+    owner_id: 'puma_zul.near',
+    approved_account_ids: { 'market.mintbase1.near': 75 },
+    metadata: {
+        title: null,
+        description: null,
+        media: null,
+        media_hash: null,
+        copies: 5,
+        issued_at: null,
+        expires_at: null,
+        starts_at: null,
+        updated_at: null,
+        extra: 'art',
+        reference: 'smHkXU8rCq1Ggft1SPqTOpFw9sQxCwRg9kSNM7RatZ4',
+        reference_hash: null
+    },
+    royalty: {
+        split_between: {
+        'house_of_zul_nft_auctio.near': { numerator: 2650 },
+        'polytechnic.near': { numerator: 2450 },
+        'puma_zul.near': { numerator: 2500 },
+        'genieve_dawkins.near': { numerator: 2400 }
+        },
+        percentage: { numerator: 1000 }
+    },
+    split_owners: {
+        split_between: {
+        'polytechnic.near': { numerator: 2250 },
+        'house_of_zul_nft_auctio.near': { numerator: 7750 }
+        }
+    },
+    minter: 'puma_zul.near',
+    loan: null,
+    composeable_stats: { local_depth: 0, cross_contract_children: 0 },
+    origin_key: null
+}
+
+\end{minted}
+\caption{Структура NFT}
+\label{lst.mintbase.nftstruct}
+\end{listing}
 
 \subsection{Генеративно-состязательные сети}
 
