@@ -84,7 +84,7 @@ pub struct NFTContractMetadata {
 \item reference\_hash - SHA256 хэш от JSON на который ведет URL в поле reference.
 \end{enumerate}
 
-\begin{listing}[H]
+\begin{listing}
 \begin{minted}[breaklines,fontsize=\scriptsize]{rust}
 #[derive(BorshDeserialize, BorshSerialize, Serialize, Deserialize)]
 #[serde(crate = "near_sdk::serde")]
@@ -107,7 +107,7 @@ pub struct TokenMetadata {
 \label{nftcontract.tokenmetadata}
 \end{listing}
 
-Структура метаданных токена состоит из следующих полей:
+Структура метаданных токена (Листинг {\color{blue} \ref{nftcontract.tokenmetadata}}) состоит из следующих полей:
 \begin{enumerate}
 
 \item title - название NFT токена.
